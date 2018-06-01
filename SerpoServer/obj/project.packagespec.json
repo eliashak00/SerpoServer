@@ -1,0 +1,79 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/Users/eliashakansson/RiderProjects/SerpoServer/SerpoServer/SerpoServer.csproj",
+    "projectName": "SerpoServer",
+    "projectPath": "/Users/eliashakansson/RiderProjects/SerpoServer/SerpoServer/SerpoServer.csproj",
+    "outputPath": "/Users/eliashakansson/RiderProjects/SerpoServer/SerpoServer/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.0"
+    ],
+    "frameworks": {
+      "netcoreapp2.0": {
+        "projectReferences": {}
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.0": {
+      "dependencies": {
+        "IronPython": {
+          "target": "Package",
+          "version": "[2.7.8.1, )"
+        },
+        "LiteDB": {
+          "target": "Package",
+          "version": "[4.1.2, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.0.0, )",
+          "autoReferenced": true
+        },
+        "Nancy": {
+          "target": "Package",
+          "version": "[2.0.0-clinteastwood, )"
+        },
+        "Nancy.Authentication.Stateless": {
+          "target": "Package",
+          "version": "[2.0.0-clinteastwood, )"
+        },
+        "Nancy.Owin": {
+          "target": "Package",
+          "version": "[2.0.0-clinteastwood, )"
+        },
+        "Nancy.Validation.DataAnnotations": {
+          "target": "Package",
+          "version": "[2.0.0-clinteastwood, )"
+        },
+        "PetaPoco.Core.Compiled": {
+          "target": "Package",
+          "version": "[5.1.298-beta, )"
+        },
+        "RazorEngine.Core.NetCore": {
+          "target": "Package",
+          "version": "[4.5.2-rc1, )"
+        },
+        "jose-jwt": {
+          "target": "Package",
+          "version": "[2.4.0, )"
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

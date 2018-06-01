@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_SerpoServer.335576159.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="SerpoServer" t="IncludeRecursive">
+        <e p="AdminViews" t="Include">
+          <e p="cpy.html" t="Include" />
+          <e p="layout.html" t="Include" />
+          <e p="login.html" t="Include" />
+          <e p="main.html" t="Include" />
+          <e p="sidebar.html" t="Include" />
+          <e p="Static" t="Include">
+            <e p="css" t="Include" />
+            <e p="js" t="Include" />
+          </e>
+        </e>
+        <e p="Api" t="Include">
+          <e p="PageManager.cs" t="Include" />
+          <e p="ServiceManager.cs" t="Include" />
+          <e p="SettingsManager.cs" t="Include" />
+          <e p="StatManager.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Bootstrap.cs" t="Include" />
+        <e p="config.json" t="Include" />
+        <e p="ConfigurationProvider.cs" t="Include" />
+        <e p="Data" t="Include">
+          <e p="Cache" t="Include">
+            <e p="MemoryDatabase.cs" t="Include" />
+          </e>
+          <e p="Connection.cs" t="Include" />
+          <e p="Models" t="Include">
+            <e p="Enums" t="Include">
+              <e p="RequestMethods.cs" t="Include" />
+              <e p="ResponseMethods.cs" t="Include" />
+            </e>
+            <e p="spo_days.cs" t="Include" />
+            <e p="spo_page.cs" t="Include" />
+            <e p="spo_services.cs" t="Include" />
+            <e p="spo_settings.cs" t="Include" />
+            <e p="spo_site.cs" t="Include" />
+            <e p="spo_stats.cs" t="Include" />
+            <e p="spo_user.cs" t="Include" />
+          </e>
+          <e p="serposerver.sql" t="Include" />
+        </e>
+        <e p="error.log" t="Include" />
+        <e p="Errors" t="Include">
+          <e p="500.html" t="Include" />
+          <e p="Logger.cs" t="Include" />
+        </e>
+        <e p="Intepreter" t="Include">
+          <e p="PyRuntime.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.0" t="Include">
+              <e p="SerpoServer.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Routes" t="Include">
+          <e p="Admin" t="Include">
+            <e p="AccountModule.cs" t="Include" />
+            <e p="MainModule.cs" t="Include" />
+            <e p="PageModule.cs" t="Include" />
+            <e p="ServiceModule.cs" t="Include" />
+          </e>
+          <e p="DynamicModule.cs" t="Include" />
+        </e>
+        <e p="Security" t="Include">
+          <e p="Hashing.cs" t="Include" />
+          <e p="Identity.cs" t="Include" />
+          <e p="JwtToken.cs" t="Include" />
+        </e>
+        <e p="SerpoServer.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="SerpoServer.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>

@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="IronPython" Version="2.7.8.1" />
+    <PackageReference Include="jose-jwt" Version="2.4.0" />
+    <PackageReference Include="LiteDB" Version="4.1.2" />
+    <PackageReference Include="Nancy" Version="2.0.0-clinteastwood" />
+    <PackageReference Include="Nancy.Authentication.Stateless" Version="2.0.0-clinteastwood" />
+    <PackageReference Include="Nancy.Owin" Version="2.0.0-clinteastwood" />
+    <PackageReference Include="Nancy.Validation.DataAnnotations" Version="2.0.0-clinteastwood" />
+    <PackageReference Include="PetaPoco.Core.Compiled" Version="5.1.298-beta" />
+    <PackageReference Include="RazorEngine.Core.NetCore" Version="4.5.2-rc1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Errors\500.html" />
+    <EmbeddedResource Include="Errors\500.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AdminViews\Static\css" />
+    <Folder Include="AdminViews\Static\js" />
+  </ItemGroup>
+</Project>
