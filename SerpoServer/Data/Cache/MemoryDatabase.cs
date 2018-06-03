@@ -10,7 +10,7 @@ using LiteDB;
 
 namespace SerpoServer.Data.Cache
 {
-    public class MemoryDatabase
+    public static class MemoryDatabase
     {
         private static LiteDatabase db;
 

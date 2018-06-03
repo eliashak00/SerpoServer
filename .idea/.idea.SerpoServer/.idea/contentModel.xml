@@ -9,17 +9,23 @@
           <e p="cpy.html" t="Include" />
           <e p="layout.html" t="Include" />
           <e p="login.html" t="Include" />
-          <e p="main.html" t="Include" />
           <e p="sidebar.html" t="Include" />
           <e p="Static" t="Include">
-            <e p="css" t="Include" />
+            <e p="css" t="Include">
+              <e p="base.sass" t="Include" />
+            </e>
             <e p="js" t="Include" />
+          </e>
+          <e p="views" t="Include">
+            <e p="main.html" t="Include" />
+            <e p="pages.html" t="Include" />
           </e>
         </e>
         <e p="Api" t="Include">
           <e p="PageManager.cs" t="Include" />
           <e p="ServiceManager.cs" t="Include" />
           <e p="SettingsManager.cs" t="Include" />
+          <e p="SiteManager.cs" t="Include" />
           <e p="StatManager.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
@@ -44,12 +50,22 @@
             <e p="spo_stats.cs" t="Include" />
             <e p="spo_user.cs" t="Include" />
           </e>
+          <e p="NullDatabase.cs" t="Include" />
           <e p="serposerver.sql" t="Include" />
+        </e>
+        <e p="EmbeddedStatic" t="Include">
+          <e p="bootstrap.min.css" t="Include" />
+          <e p="bootstrap.min.js" t="Include" />
+          <e p="installerbac.png" t="Include" />
+          <e p="jquery.min.js" t="Include" />
         </e>
         <e p="error.log" t="Include" />
         <e p="Errors" t="Include">
           <e p="500.html" t="Include" />
           <e p="Logger.cs" t="Include" />
+        </e>
+        <e p="Install" t="Include">
+          <e p="install.html" t="Include" />
         </e>
         <e p="Intepreter" t="Include">
           <e p="PyRuntime.cs" t="Include" />
@@ -68,8 +84,11 @@
             <e p="MainModule.cs" t="Include" />
             <e p="PageModule.cs" t="Include" />
             <e p="ServiceModule.cs" t="Include" />
+            <e p="SettingsModule.cs" t="Include" />
+            <e p="StatModule.cs" t="Include" />
           </e>
           <e p="DynamicModule.cs" t="Include" />
+          <e p="InstallModule.cs" t="Include" />
         </e>
         <e p="Security" t="Include">
           <e p="Hashing.cs" t="Include" />

@@ -18,10 +18,10 @@ namespace SerpoServer.Api
     {
         private IDatabase db;
         private PyRuntime python;
-        public PageManager(PyRuntime python)
+        public PageManager(PyRuntime python, IDatabase db)
         {
             this.python = python;
-            db = new Connection().Get();
+            this.db = db;
         }
         public IEnumerable<spo_page> GetPages(string domain) =>
             db.Query<spo_page>(

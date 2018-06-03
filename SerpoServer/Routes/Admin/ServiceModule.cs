@@ -1,5 +1,6 @@
 ﻿using Nancy;
 using Nancy.ModelBinding;
+using Nancy.Security;
 using SerpoServer.Api;
 using SerpoServer.Data.Models;
 
@@ -9,8 +10,9 @@ namespace SerpoServer.Routes.Admin
     {
         public ServiceModule(ServiceManager svrc) : base("/admin/services")
         {
-            Get("/", x => View["services.html", svrc.GetServices()]);
-            Get("/createoredit", x => View["service-editor.html", svrc.GetService((int)Request.Query.id)]);
+            this.RequiresAuthentication();
+            Get("/", x => View["admin/views/services.html", new{availServices = svrc.GetServices(), active = svrc.GetSiteServices()}]);
+            Get("/createoredit", x => View["admin/views/service-editor.html", svrc.GetService((int)Request.Query.id)]);
             Post("/createoredit", x =>
             {
                 var service = this.BindAndValidate<spo_service>();
@@ -20,6 +22,13 @@ namespace SerpoServer.Routes.Admin
             {
                 var id = (int) x.id;
                 return svrc.Delete(id);
+            });
+            Put("/status/{id}", x =>
+            {
+                var id = (int) x.id;
+                svrc.ChangeStatus(id);
+                return HttpStatusCode.OK;
+                
             });
         }
     }

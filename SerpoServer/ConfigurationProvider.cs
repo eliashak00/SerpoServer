@@ -16,51 +16,28 @@ namespace SerpoServer
 {
     public class ConfigurationProvider
     {
-        private static readonly IRootPathProvider RootPath = TinyIoCContainer.Current.CanResolve<IRootPathProvider>()
-            ? TinyIoCContainer.Current.Resolve<IRootPathProvider>()
-            : new DefaultRootPathProvider();
+        private static IRootPathProvider RootPath => new DefaultRootPathProvider();
 
-        static ConfigurationProvider()
+        private static string FilePath => Path.Combine(RootPath.GetRootPath(), "config.json");
+        public static volatile spo_settings file;
+
+        public static void UpdateFile(spo_settings settings)
         {
-            updateFileVal();
+            var json = SimpleJson.SerializeObject(settings);
+            File.WriteAllText(FilePath, json);
+            file = settings;
         }
-
-        public static string file { get; private set; }
 
         public static spo_settings ConfigurationFile
         {
             get
             {
-                spo_settings fileObj;
-
-                ParseFile();
-                if (fileObj != null) return fileObj;
-                //retry
-                updateFileVal();
-                ParseFile();
-                if (fileObj == null) throw new ConfigurationException("No Config file");
-                return fileObj;
-
-                void ParseFile()
-                {
-                    var jsonObject = SimpleJson.DeserializeObject<spo_settings>(file);
-                    fileObj = jsonObject;
-                }
+                if (file != null) return file;
+                var fileContent = File.ReadAllText(FilePath);
+                var json = SimpleJson.DeserializeObject<spo_settings>(fileContent);
+                file = json;
+                return file;
             }
-        }
-
-        private static void updateFileVal()
-        {
-            var path = Path.Combine(RootPath.GetRootPath(),
-                "config.json");
-            if (!File.Exists(path))
-            {
-                var configFile = File.Create(path);
-                if (!configFile.CanWrite)
-                    throw new Exception("Config file not writeable");
-            }
-
-            file = File.ReadAllText(path);
         }
     }
 }

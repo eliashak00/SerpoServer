@@ -1,7 +1,11 @@
 ﻿using System;
+using PetaPoco;
+
 namespace SerpoServer.Data.Models
-{
-    public class spo_days
+{    
+    [TableName("spo_days")]
+    [PrimaryKey("day_id")]
+    public class spo_day
     {
         public int day_id;
         public spo_stats day_stat;

@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Nancy;
 using Nancy.ModelBinding;
+using Nancy.Security;
 using SerpoServer.Data.Models;
 using SerpoServer.Security;
 
@@ -10,7 +11,8 @@ namespace SerpoServer.Routes.Admin
     {
         public AccountModule(Identity idt) : base("/admin/account")
         {
-            Get("/", x => View["admin/account.html", idt.GetAll]);
+            this.RequiresAuthentication();
+            Get("/", x => View["admin/views/account.html", idt.GetAll]);
             Post("/createoredit", x =>
             {
                 var user = this.BindAndValidate<spo_user>();

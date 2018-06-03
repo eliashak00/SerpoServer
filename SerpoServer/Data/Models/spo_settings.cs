@@ -8,5 +8,6 @@
         public string emailpsw;
         public string emailport;
         public bool telemetry;
+        public string dbtype;
     }
 }

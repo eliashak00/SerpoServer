@@ -1,6 +1,7 @@
 ﻿
 using System.Collections.Generic;
 using Nancy;
+using Nancy.TinyIoc;
 using PetaPoco;
 using SerpoServer.Data.Models;
 using SerpoServer.Intepreter;
@@ -11,17 +12,30 @@ namespace SerpoServer.Api
     {
         private IDatabase db;
         private PyRuntime python;
-        
-        public ServiceManager(PyRuntime python)
+        private int site;
+        public ServiceManager(PyRuntime python, IDatabase db)
         {
             this.python = python;
-            db = new Data.Connection().Get();
+            this.db = db;
+            var ctx = TinyIoCContainer.Current.Resolve<NancyContext>();
+            if(ctx.Parameters != null)
+                site = ctx.Parameters.site;
         }
 
         public IEnumerable<spo_service> GetServices() => db.Query<spo_service>("SELECT * FROM spo_services");
 
+        public IEnumerable<spo_service> GetSiteServices() => db.Query<spo_service>("SELECT * FROM spo_services WHERE service_site = @0",  site);
+        
         public spo_service GetService(int id) =>
-            db.SingleOrDefault<spo_service>("SELECT * FROM spo_services WHERE service_id = @0", id);
+            db.SingleOrDefault<spo_service>("SELECT * FROM spo_services WHERE service_id = @0 ", id);
+
+        
+        public void ChangeStatus(int id)
+        {
+            var service = GetService(id);
+            if(service == null) return;
+            db.Execute("REPLACE INTO spo_service_rel VALUES sr_site = @0, sr_service = @1",site, id);
+        }
         
         public HttpStatusCode CreateOrEdit(spo_service service)
         {

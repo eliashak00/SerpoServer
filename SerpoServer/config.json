@@ -3,5 +3,6 @@
   "emailserver": "",
   "emailuser": "",
   "emailpsw": "",
-  "emailport": ""
+  "emailport": "",
+  "telemetry": "false"
 }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Install</title>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/bootstrap.min.js"></script>
+    <style>
+        body{
+            background: url('/static/installerbac.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<script>
+    $(document).ready(function (){
+        $("#step2").hide();
+        $('#step1 button').click(function () {
+            $.ajax({
+                url: "/install/step1",
+                method: "POST",
+                data: $("#step1").serialize(),
+                beforeSend: function(){
+                    $("#step1 button").html(`<img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>`);
+                },
+                success: function (response) {
+                    if (response.statusCode === 200){
+                        $("#step1").hide();
+                        $("#step2").show();
+                    }
+                    if (response.statusCode === 400){
+                        $("#errMsg").text("Failed to connect to DB, Make sure that all parameters are correct!");
+                    }
+                },
+
+            })
+        });
+        $('#step2 button').click(function () {
+            $.ajax({
+                url: "/install/step2",
+                method: "POST",
+                data: $("#step2").serialize(),
+                beforeSend: function(){
+                    $("#step2 button").html(`<img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>`);
+                },
+                success: function (response) {
+                    if (response.statusCode === 200){
+                        window.location = "/";
+                    }
+                    if (response.statusCode === 400){
+                        $("#errMsg").text("Failed to proceed! Make sure that the passwords are equal and the email is valid!");
+                    }
+                },
+
+            })
+        });
+    });
+</script>
+<main class="mx-auto p-2 bg-light">
+    <div class="form-group">
+        <p class="text-danger" id="errMsg"></p>
+        <form id="step1">
+            <select class="form-control" name="dbtype">
+                <option value="mysql">My SQL</option>
+                <option value="mssql">MS SQL(SQL Server)</option>
+            </select>
+            <input required type="text" class="form-control" name="dbhost">
+            <input required type="number" class="form-control" name="dbport">
+            <input required type="text" class="form-control" name="dbname">
+            <input required type="text" class="form-control" name="dbuser">
+            <input required type="text" class="form-control" name="dbpsw">
+
+            <button class="btn btn-primary">Continue</button>
+        </form>
+        <form id="step2">
+            <input required type="email" class="form-control" name="email">
+            <input required type="password" class="form-control" name="psw">
+            <input required type="password" class="form-control" name="confpsw">
+            <button class="btn btn-primary">Continue</button>
+        </form>
+    </div>
+</main>
+</body>
+</html>

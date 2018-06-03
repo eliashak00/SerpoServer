@@ -29,24 +29,13 @@ namespace SerpoServer.Security
         private static readonly IList<Tuple<string, string, byte[]>> CurrentUsers =
             new List<Tuple<string, string, byte[]>>();
 
-        public Identity()
+        public Identity(IDatabase db)
         {
-            db = new SerpoServer.Data.Connection().Get();
+            this.db = db;
         }
-
-        public IEnumerable<spo_user> GetAll
-        {
-            get
-            {
-                var data = db.Query<spo_user>("SELECT * FROM spo_users").ToList();
-                data.ForEach(u => u.user_password = null);
-                data.ForEach(u => u.user_salt = null);
-                return data;
-            }
-        }
-
         public void Initialize(IPipelines pipelines)
         {
+            
             try
             {
                 if (db.FirstOrDefault<spo_user>("SELECT * FROM spo_users") != null)
@@ -62,8 +51,7 @@ namespace SerpoServer.Security
 
             var config = new StatelessAuthenticationConfiguration(x =>
             {
-        
-               var token = x.Request.IsAjaxRequest() ? x.Request.Headers.Authorization : (string) x.Request.Query.user;
+                var token = x.Request.IsAjaxRequest() ? x.Request.Headers.Authorization : (string) x.Request.Query.user;
                 if (string.IsNullOrWhiteSpace(token))
                 {
                     return null;
@@ -83,6 +71,19 @@ namespace SerpoServer.Security
             });
             StatelessAuthentication.Enable(pipelines, config);
         }
+        
+
+        public IEnumerable<spo_user> GetAll
+        {
+            get
+            {
+                var data = db.Query<spo_user>("SELECT * FROM spo_users").ToList();
+                data.ForEach(u => u.user_password = null);
+                data.ForEach(u => u.user_salt = null);
+                return data;
+            }
+        }
+
 
         public string Login(string email, string password)
         {

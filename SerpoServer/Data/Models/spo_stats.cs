@@ -1,5 +1,9 @@
-﻿namespace SerpoServer.Data.Models
+﻿using PetaPoco;
+
+namespace SerpoServer.Data.Models
 {
+    [TableName("spo_stats")]
+    [PrimaryKey("stat_id")]
     public class spo_stats
     {
         public int stat_id;

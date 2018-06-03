@@ -18,18 +18,18 @@ CREATE TABLE IF NOT EXISTS spo_pages(
   page_view VARCHAR(2000),
   page_method INT NOT NULL,
   page_response INT NOT NULL,
-  page_site INT FOREIGN KEY REFERENCES spo_sites(site_id)
+  page_site INT REFERENCES spo_sites(site_id)
 );
 CREATE TABLE IF NOT EXISTS spo_stats(
   stat_id INT PRIMARY KEY,
-  stat_site INT FOREIGN KEY REFERENCES spo_sites(site_id),
-  
+  stat_site INT REFERENCES spo_sites(site_id)
+
 );
 CREATE TABLE IF NOT EXISTS spo_days(
   day_id INT PRIMARY KEY,
-  day_stat INT FOREIGN KEY REFERENCES spo_stats(stat_id),
+  day_stat INT REFERENCES spo_stats(stat_id),
   day_views INT NOT NULL
-  
+
 );
 CREATE TABLE IF NOT EXISTS spo_services(
   service_id INT PRIMARY KEY,
@@ -41,4 +41,3 @@ CREATE TABLE IF NOT EXISTS spo_service_rel(
   sr_site INT REFERENCES spo_sites(site_id),
   sr_service INT REFERENCES spo_sites(site_id)
 );
-CREATE VIEW 

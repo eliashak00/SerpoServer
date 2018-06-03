@@ -18,10 +18,7 @@ namespace SerpoServer.Api
         {
             if (settings.connstring == null)
                 return HttpStatusCode.BadRequest;
-            var path = Path.Combine(root.GetRootPath(),
-                "config.json");
-            var json = SimpleJson.SerializeObject(settings);
-            File.WriteAllText(json, path);            
+            ConfigurationProvider.UpdateFile(settings);
             return HttpStatusCode.OK;
         }
     }

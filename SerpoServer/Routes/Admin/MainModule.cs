@@ -1,4 +1,5 @@
 ﻿using Nancy;
+using Nancy.Security;
 using SerpoServer.Security;
 
 namespace SerpoServer.Routes.Admin
@@ -7,14 +8,14 @@ namespace SerpoServer.Routes.Admin
     {
         public MainModule() : base("/admin")
         {
+            this.RequiresAuthentication();
             Get("/", x =>
             {
                 if (Context.CurrentUser == null)
                     return View["auth.html"];
-                if (((string) Request.Query.site) == null)
-                    return View["site.html"];
-                return View["main.html"];
+                return !Request.Cookies.TryGetValue("site", out var site)? View["admin/site.html"] : View["admin/views/main.html"];
             });
+       
             
         }
     }
