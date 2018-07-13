@@ -6,8 +6,10 @@ namespace SerpoServer.Data.Models
     [PrimaryKey("stat_id")]
     public class spo_stats
     {
-        public int stat_id;
-        public spo_site stat_site;
-        public int total_views;
+        [Column("stat_id")]
+        public int stat_id { get; set; }
+        [Column("stat_site")]
+        public spo_site stat_site { get; set; }
+        public int total_views { get; set; }
     }
 }

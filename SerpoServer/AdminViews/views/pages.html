@@ -1,3 +1,22 @@
-@Master['layout.html'];
+@Master['shared/layout.html'];
+
+@Section['js']pages.js@EndSection
+
+
 @Section['content']
+<div class="float-left">
+    <a href="/admin/pages/createoredit" class="btn btn-primary">Create new</a>
+</div>
+<div class="row">
+    @Each.Pages
+<div class="col-md-2 card">
+    <div class="card-body">
+        <h5 class="card-title">@Current.page_route</h5>
+        <h6 class="card-subtitle mb-2 text-muted">@Current.page_methods</h6>
+        <a href="/admin/pages/editor/@Current.page_id" class="card-link">Edit</a>
+        <a onclick="pages.remove(@Current.page_id)" class="card-link">Delete</a>
+    </div>
+</div>
+    @EndEach
+</div>
 @EndSection

@@ -8,18 +8,25 @@ namespace SerpoServer.Data.Models
     [PrimaryKey("page_id")]
     public class spo_page
     {
-        public int page_id;
-        [Required]
-        public int page_site;
-        [Required]
-        public string page_route;
+        [Column("page_id")]
+        public int page_id { get; set; }
         
-        public string page_script;
-        public string page_view;
+        [Column("page_site")] 
+        public int page_site { get; set; }
         
-        [Required]
-        public RequestMethods page_methods;
-        [Required]
-        public ResponseMethods page_resposne;
+        [Column("page_route")]
+        public string page_route { get; set; }
+        
+        [Column("page_script")]
+        public string page_script { get; set; }
+        
+        [Column("page_view")]
+        public string page_view { get; set; }
+        
+        [Column("page_methods")]
+        public RequestMethods page_methods { get; set; }
+        
+        [Column("page_response")]
+        public ResponseMethods page_resposne { get; set; }
     }
 }

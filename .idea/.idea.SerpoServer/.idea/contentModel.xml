@@ -6,19 +6,423 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="SerpoServer" t="IncludeRecursive">
         <e p="AdminViews" t="Include">
-          <e p="cpy.html" t="Include" />
-          <e p="layout.html" t="Include" />
-          <e p="login.html" t="Include" />
-          <e p="sidebar.html" t="Include" />
           <e p="Static" t="Include">
             <e p="css" t="Include">
+              <e p="base.css" t="Include" />
+              <e p="base.css.map" t="Include" />
               <e p="base.sass" t="Include" />
+              <e p="bootstrap.min.css" t="Include" />
+              <e p="fontawesome.css" t="Include" />
+              <e p="sidebar.css" t="Include" />
             </e>
-            <e p="js" t="Include" />
+            <e p="js" t="Include">
+              <e p="ace" t="Include">
+                <e p="ace.js" t="Include" />
+                <e p="ext-beautify.js" t="Include" />
+                <e p="ext-elastic_tabstops_lite.js" t="Include" />
+                <e p="ext-emmet.js" t="Include" />
+                <e p="ext-error_marker.js" t="Include" />
+                <e p="ext-keybinding_menu.js" t="Include" />
+                <e p="ext-language_tools.js" t="Include" />
+                <e p="ext-linking.js" t="Include" />
+                <e p="ext-modelist.js" t="Include" />
+                <e p="ext-options.js" t="Include" />
+                <e p="ext-searchbox.js" t="Include" />
+                <e p="ext-settings_menu.js" t="Include" />
+                <e p="ext-spellcheck.js" t="Include" />
+                <e p="ext-split.js" t="Include" />
+                <e p="ext-static_highlight.js" t="Include" />
+                <e p="ext-statusbar.js" t="Include" />
+                <e p="ext-textarea.js" t="Include" />
+                <e p="ext-themelist.js" t="Include" />
+                <e p="ext-whitespace.js" t="Include" />
+                <e p="keybinding-emacs.js" t="Include" />
+                <e p="keybinding-vim.js" t="Include" />
+                <e p="mode-abap.js" t="Include" />
+                <e p="mode-abc.js" t="Include" />
+                <e p="mode-actionscript.js" t="Include" />
+                <e p="mode-ada.js" t="Include" />
+                <e p="mode-apache_conf.js" t="Include" />
+                <e p="mode-applescript.js" t="Include" />
+                <e p="mode-asciidoc.js" t="Include" />
+                <e p="mode-asl.js" t="Include" />
+                <e p="mode-assembly_x86.js" t="Include" />
+                <e p="mode-autohotkey.js" t="Include" />
+                <e p="mode-batchfile.js" t="Include" />
+                <e p="mode-bro.js" t="Include" />
+                <e p="mode-c9search.js" t="Include" />
+                <e p="mode-c_cpp.js" t="Include" />
+                <e p="mode-cirru.js" t="Include" />
+                <e p="mode-clojure.js" t="Include" />
+                <e p="mode-cobol.js" t="Include" />
+                <e p="mode-coffee.js" t="Include" />
+                <e p="mode-coldfusion.js" t="Include" />
+                <e p="mode-csharp.js" t="Include" />
+                <e p="mode-csound_document.js" t="Include" />
+                <e p="mode-csound_orchestra.js" t="Include" />
+                <e p="mode-csound_score.js" t="Include" />
+                <e p="mode-csp.js" t="Include" />
+                <e p="mode-css.js" t="Include" />
+                <e p="mode-curly.js" t="Include" />
+                <e p="mode-d.js" t="Include" />
+                <e p="mode-dart.js" t="Include" />
+                <e p="mode-diff.js" t="Include" />
+                <e p="mode-django.js" t="Include" />
+                <e p="mode-dockerfile.js" t="Include" />
+                <e p="mode-dot.js" t="Include" />
+                <e p="mode-drools.js" t="Include" />
+                <e p="mode-edifact.js" t="Include" />
+                <e p="mode-eiffel.js" t="Include" />
+                <e p="mode-ejs.js" t="Include" />
+                <e p="mode-elixir.js" t="Include" />
+                <e p="mode-elm.js" t="Include" />
+                <e p="mode-erlang.js" t="Include" />
+                <e p="mode-forth.js" t="Include" />
+                <e p="mode-fortran.js" t="Include" />
+                <e p="mode-ftl.js" t="Include" />
+                <e p="mode-gcode.js" t="Include" />
+                <e p="mode-gherkin.js" t="Include" />
+                <e p="mode-gitignore.js" t="Include" />
+                <e p="mode-glsl.js" t="Include" />
+                <e p="mode-gobstones.js" t="Include" />
+                <e p="mode-golang.js" t="Include" />
+                <e p="mode-graphqlschema.js" t="Include" />
+                <e p="mode-groovy.js" t="Include" />
+                <e p="mode-haml.js" t="Include" />
+                <e p="mode-handlebars.js" t="Include" />
+                <e p="mode-haskell.js" t="Include" />
+                <e p="mode-haskell_cabal.js" t="Include" />
+                <e p="mode-haxe.js" t="Include" />
+                <e p="mode-hjson.js" t="Include" />
+                <e p="mode-html.js" t="Include" />
+                <e p="mode-html_elixir.js" t="Include" />
+                <e p="mode-html_ruby.js" t="Include" />
+                <e p="mode-ini.js" t="Include" />
+                <e p="mode-io.js" t="Include" />
+                <e p="mode-jack.js" t="Include" />
+                <e p="mode-jade.js" t="Include" />
+                <e p="mode-java.js" t="Include" />
+                <e p="mode-javascript.js" t="Include" />
+                <e p="mode-json.js" t="Include" />
+                <e p="mode-jsoniq.js" t="Include" />
+                <e p="mode-jsp.js" t="Include" />
+                <e p="mode-jssm.js" t="Include" />
+                <e p="mode-jsx.js" t="Include" />
+                <e p="mode-julia.js" t="Include" />
+                <e p="mode-kotlin.js" t="Include" />
+                <e p="mode-latex.js" t="Include" />
+                <e p="mode-less.js" t="Include" />
+                <e p="mode-liquid.js" t="Include" />
+                <e p="mode-lisp.js" t="Include" />
+                <e p="mode-livescript.js" t="Include" />
+                <e p="mode-logiql.js" t="Include" />
+                <e p="mode-lsl.js" t="Include" />
+                <e p="mode-lua.js" t="Include" />
+                <e p="mode-luapage.js" t="Include" />
+                <e p="mode-lucene.js" t="Include" />
+                <e p="mode-makefile.js" t="Include" />
+                <e p="mode-markdown.js" t="Include" />
+                <e p="mode-mask.js" t="Include" />
+                <e p="mode-matlab.js" t="Include" />
+                <e p="mode-maze.js" t="Include" />
+                <e p="mode-mel.js" t="Include" />
+                <e p="mode-mixal.js" t="Include" />
+                <e p="mode-mushcode.js" t="Include" />
+                <e p="mode-mysql.js" t="Include" />
+                <e p="mode-nix.js" t="Include" />
+                <e p="mode-nsis.js" t="Include" />
+                <e p="mode-objectivec.js" t="Include" />
+                <e p="mode-ocaml.js" t="Include" />
+                <e p="mode-pascal.js" t="Include" />
+                <e p="mode-perl.js" t="Include" />
+                <e p="mode-pgsql.js" t="Include" />
+                <e p="mode-php.js" t="Include" />
+                <e p="mode-pig.js" t="Include" />
+                <e p="mode-plain_text.js" t="Include" />
+                <e p="mode-powershell.js" t="Include" />
+                <e p="mode-praat.js" t="Include" />
+                <e p="mode-prolog.js" t="Include" />
+                <e p="mode-properties.js" t="Include" />
+                <e p="mode-protobuf.js" t="Include" />
+                <e p="mode-python.js" t="Include" />
+                <e p="mode-r.js" t="Include" />
+                <e p="mode-razor.js" t="Include" />
+                <e p="mode-rdoc.js" t="Include" />
+                <e p="mode-red.js" t="Include" />
+                <e p="mode-redshift.js" t="Include" />
+                <e p="mode-rhtml.js" t="Include" />
+                <e p="mode-rst.js" t="Include" />
+                <e p="mode-ruby.js" t="Include" />
+                <e p="mode-rust.js" t="Include" />
+                <e p="mode-sass.js" t="Include" />
+                <e p="mode-scad.js" t="Include" />
+                <e p="mode-scala.js" t="Include" />
+                <e p="mode-scheme.js" t="Include" />
+                <e p="mode-scss.js" t="Include" />
+                <e p="mode-sh.js" t="Include" />
+                <e p="mode-sjs.js" t="Include" />
+                <e p="mode-smarty.js" t="Include" />
+                <e p="mode-snippets.js" t="Include" />
+                <e p="mode-soy_template.js" t="Include" />
+                <e p="mode-space.js" t="Include" />
+                <e p="mode-sparql.js" t="Include" />
+                <e p="mode-sql.js" t="Include" />
+                <e p="mode-sqlserver.js" t="Include" />
+                <e p="mode-stylus.js" t="Include" />
+                <e p="mode-svg.js" t="Include" />
+                <e p="mode-swift.js" t="Include" />
+                <e p="mode-tcl.js" t="Include" />
+                <e p="mode-tex.js" t="Include" />
+                <e p="mode-text.js" t="Include" />
+                <e p="mode-textile.js" t="Include" />
+                <e p="mode-toml.js" t="Include" />
+                <e p="mode-tsx.js" t="Include" />
+                <e p="mode-turtle.js" t="Include" />
+                <e p="mode-twig.js" t="Include" />
+                <e p="mode-typescript.js" t="Include" />
+                <e p="mode-vala.js" t="Include" />
+                <e p="mode-vbscript.js" t="Include" />
+                <e p="mode-velocity.js" t="Include" />
+                <e p="mode-verilog.js" t="Include" />
+                <e p="mode-vhdl.js" t="Include" />
+                <e p="mode-wollok.js" t="Include" />
+                <e p="mode-xml.js" t="Include" />
+                <e p="mode-xquery.js" t="Include" />
+                <e p="mode-yaml.js" t="Include" />
+                <e p="snippets" t="Include">
+                  <e p="abap.js" t="Include" />
+                  <e p="abc.js" t="Include" />
+                  <e p="actionscript.js" t="Include" />
+                  <e p="ada.js" t="Include" />
+                  <e p="apache_conf.js" t="Include" />
+                  <e p="applescript.js" t="Include" />
+                  <e p="asciidoc.js" t="Include" />
+                  <e p="asl.js" t="Include" />
+                  <e p="assembly_x86.js" t="Include" />
+                  <e p="autohotkey.js" t="Include" />
+                  <e p="batchfile.js" t="Include" />
+                  <e p="bro.js" t="Include" />
+                  <e p="c9search.js" t="Include" />
+                  <e p="c_cpp.js" t="Include" />
+                  <e p="cirru.js" t="Include" />
+                  <e p="clojure.js" t="Include" />
+                  <e p="cobol.js" t="Include" />
+                  <e p="coffee.js" t="Include" />
+                  <e p="coldfusion.js" t="Include" />
+                  <e p="csharp.js" t="Include" />
+                  <e p="csound_document.js" t="Include" />
+                  <e p="csound_orchestra.js" t="Include" />
+                  <e p="csound_score.js" t="Include" />
+                  <e p="csp.js" t="Include" />
+                  <e p="css.js" t="Include" />
+                  <e p="curly.js" t="Include" />
+                  <e p="d.js" t="Include" />
+                  <e p="dart.js" t="Include" />
+                  <e p="diff.js" t="Include" />
+                  <e p="django.js" t="Include" />
+                  <e p="dockerfile.js" t="Include" />
+                  <e p="dot.js" t="Include" />
+                  <e p="drools.js" t="Include" />
+                  <e p="edifact.js" t="Include" />
+                  <e p="eiffel.js" t="Include" />
+                  <e p="ejs.js" t="Include" />
+                  <e p="elixir.js" t="Include" />
+                  <e p="elm.js" t="Include" />
+                  <e p="erlang.js" t="Include" />
+                  <e p="forth.js" t="Include" />
+                  <e p="fortran.js" t="Include" />
+                  <e p="ftl.js" t="Include" />
+                  <e p="gcode.js" t="Include" />
+                  <e p="gherkin.js" t="Include" />
+                  <e p="gitignore.js" t="Include" />
+                  <e p="glsl.js" t="Include" />
+                  <e p="gobstones.js" t="Include" />
+                  <e p="golang.js" t="Include" />
+                  <e p="graphqlschema.js" t="Include" />
+                  <e p="groovy.js" t="Include" />
+                  <e p="haml.js" t="Include" />
+                  <e p="handlebars.js" t="Include" />
+                  <e p="haskell.js" t="Include" />
+                  <e p="haskell_cabal.js" t="Include" />
+                  <e p="haxe.js" t="Include" />
+                  <e p="hjson.js" t="Include" />
+                  <e p="html.js" t="Include" />
+                  <e p="html_elixir.js" t="Include" />
+                  <e p="html_ruby.js" t="Include" />
+                  <e p="ini.js" t="Include" />
+                  <e p="io.js" t="Include" />
+                  <e p="jack.js" t="Include" />
+                  <e p="jade.js" t="Include" />
+                  <e p="java.js" t="Include" />
+                  <e p="javascript.js" t="Include" />
+                  <e p="json.js" t="Include" />
+                  <e p="jsoniq.js" t="Include" />
+                  <e p="jsp.js" t="Include" />
+                  <e p="jssm.js" t="Include" />
+                  <e p="jsx.js" t="Include" />
+                  <e p="julia.js" t="Include" />
+                  <e p="kotlin.js" t="Include" />
+                  <e p="latex.js" t="Include" />
+                  <e p="less.js" t="Include" />
+                  <e p="liquid.js" t="Include" />
+                  <e p="lisp.js" t="Include" />
+                  <e p="livescript.js" t="Include" />
+                  <e p="logiql.js" t="Include" />
+                  <e p="lsl.js" t="Include" />
+                  <e p="lua.js" t="Include" />
+                  <e p="luapage.js" t="Include" />
+                  <e p="lucene.js" t="Include" />
+                  <e p="makefile.js" t="Include" />
+                  <e p="markdown.js" t="Include" />
+                  <e p="mask.js" t="Include" />
+                  <e p="matlab.js" t="Include" />
+                  <e p="maze.js" t="Include" />
+                  <e p="mel.js" t="Include" />
+                  <e p="mixal.js" t="Include" />
+                  <e p="mushcode.js" t="Include" />
+                  <e p="mysql.js" t="Include" />
+                  <e p="nix.js" t="Include" />
+                  <e p="nsis.js" t="Include" />
+                  <e p="objectivec.js" t="Include" />
+                  <e p="ocaml.js" t="Include" />
+                  <e p="pascal.js" t="Include" />
+                  <e p="perl.js" t="Include" />
+                  <e p="pgsql.js" t="Include" />
+                  <e p="php.js" t="Include" />
+                  <e p="pig.js" t="Include" />
+                  <e p="plain_text.js" t="Include" />
+                  <e p="powershell.js" t="Include" />
+                  <e p="praat.js" t="Include" />
+                  <e p="prolog.js" t="Include" />
+                  <e p="properties.js" t="Include" />
+                  <e p="protobuf.js" t="Include" />
+                  <e p="python.js" t="Include" />
+                  <e p="r.js" t="Include" />
+                  <e p="razor.js" t="Include" />
+                  <e p="rdoc.js" t="Include" />
+                  <e p="red.js" t="Include" />
+                  <e p="redshift.js" t="Include" />
+                  <e p="rhtml.js" t="Include" />
+                  <e p="rst.js" t="Include" />
+                  <e p="ruby.js" t="Include" />
+                  <e p="rust.js" t="Include" />
+                  <e p="sass.js" t="Include" />
+                  <e p="scad.js" t="Include" />
+                  <e p="scala.js" t="Include" />
+                  <e p="scheme.js" t="Include" />
+                  <e p="scss.js" t="Include" />
+                  <e p="sh.js" t="Include" />
+                  <e p="sjs.js" t="Include" />
+                  <e p="smarty.js" t="Include" />
+                  <e p="snippets.js" t="Include" />
+                  <e p="soy_template.js" t="Include" />
+                  <e p="space.js" t="Include" />
+                  <e p="sparql.js" t="Include" />
+                  <e p="sql.js" t="Include" />
+                  <e p="sqlserver.js" t="Include" />
+                  <e p="stylus.js" t="Include" />
+                  <e p="svg.js" t="Include" />
+                  <e p="swift.js" t="Include" />
+                  <e p="tcl.js" t="Include" />
+                  <e p="tex.js" t="Include" />
+                  <e p="text.js" t="Include" />
+                  <e p="textile.js" t="Include" />
+                  <e p="toml.js" t="Include" />
+                  <e p="tsx.js" t="Include" />
+                  <e p="turtle.js" t="Include" />
+                  <e p="twig.js" t="Include" />
+                  <e p="typescript.js" t="Include" />
+                  <e p="vala.js" t="Include" />
+                  <e p="vbscript.js" t="Include" />
+                  <e p="velocity.js" t="Include" />
+                  <e p="verilog.js" t="Include" />
+                  <e p="vhdl.js" t="Include" />
+                  <e p="wollok.js" t="Include" />
+                  <e p="xml.js" t="Include" />
+                  <e p="xquery.js" t="Include" />
+                  <e p="yaml.js" t="Include" />
+                </e>
+                <e p="theme-ambiance.js" t="Include" />
+                <e p="theme-chaos.js" t="Include" />
+                <e p="theme-chrome.js" t="Include" />
+                <e p="theme-clouds.js" t="Include" />
+                <e p="theme-clouds_midnight.js" t="Include" />
+                <e p="theme-cobalt.js" t="Include" />
+                <e p="theme-crimson_editor.js" t="Include" />
+                <e p="theme-dawn.js" t="Include" />
+                <e p="theme-dracula.js" t="Include" />
+                <e p="theme-dreamweaver.js" t="Include" />
+                <e p="theme-eclipse.js" t="Include" />
+                <e p="theme-github.js" t="Include" />
+                <e p="theme-gob.js" t="Include" />
+                <e p="theme-gruvbox.js" t="Include" />
+                <e p="theme-idle_fingers.js" t="Include" />
+                <e p="theme-iplastic.js" t="Include" />
+                <e p="theme-katzenmilch.js" t="Include" />
+                <e p="theme-kr_theme.js" t="Include" />
+                <e p="theme-kuroir.js" t="Include" />
+                <e p="theme-merbivore.js" t="Include" />
+                <e p="theme-merbivore_soft.js" t="Include" />
+                <e p="theme-mono_industrial.js" t="Include" />
+                <e p="theme-monokai.js" t="Include" />
+                <e p="theme-pastel_on_dark.js" t="Include" />
+                <e p="theme-solarized_dark.js" t="Include" />
+                <e p="theme-solarized_light.js" t="Include" />
+                <e p="theme-sqlserver.js" t="Include" />
+                <e p="theme-terminal.js" t="Include" />
+                <e p="theme-textmate.js" t="Include" />
+                <e p="theme-tomorrow.js" t="Include" />
+                <e p="theme-tomorrow_night.js" t="Include" />
+                <e p="theme-tomorrow_night_blue.js" t="Include" />
+                <e p="theme-tomorrow_night_bright.js" t="Include" />
+                <e p="theme-tomorrow_night_eighties.js" t="Include" />
+                <e p="theme-twilight.js" t="Include" />
+                <e p="theme-vibrant_ink.js" t="Include" />
+                <e p="theme-xcode.js" t="Include" />
+                <e p="worker-coffee.js" t="Include" />
+                <e p="worker-css.js" t="Include" />
+                <e p="worker-html.js" t="Include" />
+                <e p="worker-javascript.js" t="Include" />
+                <e p="worker-json.js" t="Include" />
+                <e p="worker-lua.js" t="Include" />
+                <e p="worker-php.js" t="Include" />
+                <e p="worker-xml.js" t="Include" />
+                <e p="worker-xquery.js" t="Include" />
+              </e>
+              <e p="bootstrap.min.js" t="Include" />
+              <e p="cookie.js" t="Include" />
+              <e p="dom.js" t="Include" />
+              <e p="http.js" t="Include" />
+              <e p="jq.js" t="Include" />
+              <e p="pages.js" t="Include" />
+            </e>
+            <e p="webfonts" t="Include">
+              <e p="fa-brands-400.eot" t="Include" />
+              <e p="fa-brands-400.svg" t="Include" />
+              <e p="fa-brands-400.ttf" t="Include" />
+              <e p="fa-brands-400.woff" t="Include" />
+              <e p="fa-brands-400.woff2" t="Include" />
+              <e p="fa-regular-400.eot" t="Include" />
+              <e p="fa-regular-400.svg" t="Include" />
+              <e p="fa-regular-400.ttf" t="Include" />
+              <e p="fa-regular-400.woff" t="Include" />
+              <e p="fa-regular-400.woff2" t="Include" />
+              <e p="fa-solid-900.eot" t="Include" />
+              <e p="fa-solid-900.svg" t="Include" />
+              <e p="fa-solid-900.ttf" t="Include" />
+              <e p="fa-solid-900.woff" t="Include" />
+              <e p="fa-solid-900.woff2" t="Include" />
+            </e>
           </e>
           <e p="views" t="Include">
             <e p="main.html" t="Include" />
+            <e p="page-editor.html" t="Include" />
             <e p="pages.html" t="Include" />
+            <e p="shared" t="Include">
+              <e p="layout.html" t="Include" />
+              <e p="sidebar.html" t="Include" />
+              <e p="site.html" t="Include" />
+            </e>
           </e>
         </e>
         <e p="Api" t="Include">
@@ -49,20 +453,29 @@
             <e p="spo_site.cs" t="Include" />
             <e p="spo_stats.cs" t="Include" />
             <e p="spo_user.cs" t="Include" />
+            <e p="View" t="Include">
+              <e p="Login.cs" t="Include" />
+            </e>
           </e>
           <e p="NullDatabase.cs" t="Include" />
           <e p="serposerver.sql" t="Include" />
+          <e p="serposervermssql.sql" t="Include" />
         </e>
         <e p="EmbeddedStatic" t="Include">
           <e p="bootstrap.min.css" t="Include" />
           <e p="bootstrap.min.js" t="Include" />
+          <e p="common.css" t="Include" />
+          <e p="common.js" t="Include" />
           <e p="installerbac.png" t="Include" />
           <e p="jquery.min.js" t="Include" />
         </e>
         <e p="error.log" t="Include" />
         <e p="Errors" t="Include">
+          <e p="401.html" t="Include" />
+          <e p="404.html" t="Include" />
           <e p="500.html" t="Include" />
           <e p="Logger.cs" t="Include" />
+          <e p="StatusCodes.cs" t="Include" />
         </e>
         <e p="Install" t="Include">
           <e p="install.html" t="Include" />
@@ -78,6 +491,7 @@
           </e>
         </e>
         <e p="Program.cs" t="Include" />
+        <e p="RootPathProvider.cs" t="Include" />
         <e p="Routes" t="Include">
           <e p="Admin" t="Include">
             <e p="AccountModule.cs" t="Include" />
@@ -86,6 +500,7 @@
             <e p="ServiceModule.cs" t="Include" />
             <e p="SettingsModule.cs" t="Include" />
             <e p="StatModule.cs" t="Include" />
+            <e p="ToolsModule.cs" t="Include" />
           </e>
           <e p="DynamicModule.cs" t="Include" />
           <e p="InstallModule.cs" t="Include" />

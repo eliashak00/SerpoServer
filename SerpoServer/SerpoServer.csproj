@@ -25,6 +25,7 @@
     <PackageReference Include="Owin" Version="1.0.0" />
     <PackageReference Include="PetaPoco.Core.Compiled" Version="5.1.302-beta" />
     <PackageReference Include="RazorEngine.Core.NetCore" Version="4.5.2-rc1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.5.0" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Errors\500.html" />
@@ -40,9 +41,22 @@
     <EmbeddedResource Include="EmbeddedStatic\jquery.min.js" />
     <None Remove="Install\install.html" />
     <EmbeddedResource Include="Install\install.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AdminViews\Static\js" />
+    <None Remove="EmbeddedStatic\installerbac.png" />
+    <EmbeddedResource Include="EmbeddedStatic\installerbac.png" />
+    <None Remove="Errors\404.html" />
+    <EmbeddedResource Include="Errors\404.html" />
+    <None Remove="EmbeddedStatic\common.js" />
+    <EmbeddedResource Include="EmbeddedStatic\common.js" />
+    <None Remove="EmbeddedStatic\common.css" />
+    <EmbeddedResource Include="EmbeddedStatic\common.css" />
+    <None Remove="Data\serposerver.sql" />
+    <EmbeddedResource Include="Data\serposerver.sql" />
+    <None Remove="AdminViews\Static\js\http.js" />
+    <EmbeddedResource Include="AdminViews\Static\js\http.js" />
+    <None Remove="AdminViews\Static\js\dom.js" />
+    <EmbeddedResource Include="AdminViews\Static\js\dom.js" />
+    <None Remove="Errors\401.html" />
+    <EmbeddedResource Include="Errors\401.html" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Data.SqlClient, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

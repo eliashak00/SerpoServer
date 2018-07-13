@@ -7,9 +7,13 @@ namespace SerpoServer.Data.Models
     [PrimaryKey("service_id")]
     public class spo_service
     {
-        public int service_id;
-        public string service_name;
-        public string service_script;
-        public IEnumerable<spo_site> service_sites;
+        [Column("service_id")]
+        public int service_id { get; set; }
+        [Column("service_name")]
+        public string service_name { get; set; }
+        [Column("service_script")]
+        public string service_script { get; set; }
+        [Ignore]
+        public IEnumerable<spo_site> service_sites { get; set; }
     }
 }

@@ -1,6 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
+using System.Data.SqlClient;
+using System.Reflection;
+using MySql.Data.MySqlClient;
+using Nancy;
+using Nancy.Extensions;
 using PetaPoco;
 using PetaPoco.Core;
 using PetaPoco.Providers;
@@ -9,31 +15,73 @@ namespace SerpoServer.Data
 {
     public class Connection : IDatabase
     {
-        private IDatabase db;
-        public Connection()
+        private static IDatabase _db;
+        private IDatabase db
         {
-            if (ConfigurationProvider.ConfigurationFile.dbtype == "mysql")
+            get
             {
-                db = DatabaseConfiguration.Build()
-                    .UsingProvider<MySqlDatabaseProvider>()
-                    .UsingConnectionString(ConfigurationProvider.ConfigurationFile.connstring)
-                    .Create();
-            }
-            else if(ConfigurationProvider.ConfigurationFile.dbtype == "mssql")
-            {
-                db = DatabaseConfiguration.Build()
-                    .UsingProvider<SqlServerDatabaseProvider>()
-                    .UsingConnectionString(ConfigurationProvider.ConfigurationFile.connstring)
-                    .Create();
-            }
-            else
-            {
-                db = null;
+                if (_db != null) return _db;
+           
+                if (string.IsNullOrWhiteSpace(ConfigurationProvider.ConfigurationFile.connstring) || !DbExists()) return new NullDatabase();
+                string script = "";
+                IDatabase result;
+                if (ConfigurationProvider.ConfigurationFile.dbtype == "mysql")
+                {
+                    result = DatabaseConfiguration.Build()
+                        .UsingProvider<MySqlDatabaseProvider>()
+                        .UsingConnectionString(ConfigurationProvider.ConfigurationFile.connstring)
+                        .Create();
+                    script = Assembly.GetExecutingAssembly().GetManifestResourceStream("SerpoServer.Data.serposerver.sql").AsString();
+                }
+                else
+                {
+                    result = DatabaseConfiguration.Build()
+                        .UsingProvider<SqlServerDatabaseProvider>()
+                        .UsingConnectionString(ConfigurationProvider.ConfigurationFile.connstring)
+                        .Create();
+                    script = Assembly.GetExecutingAssembly().GetManifestResourceStream("SerpoServer.Data.serposervermssql.sql").AsString();
+                }
+                _db = result;
+             
+                
+                _db?.Execute(script);
+                return _db;
             }
         }
 
+        private bool DbExists()
+        {
+            DbConnection conn = null;
+            switch (ConfigurationProvider.ConfigurationFile.dbtype)
+            {
+                case "mssql":
+                    conn = new SqlConnection(ConfigurationProvider.ConfigurationFile.connstring);
+
+                    break;
+                case "mysql":
+                    conn = new MySqlConnection(ConfigurationProvider.ConfigurationFile.connstring);
+                    break;
+            }
+
+            if (conn == null) return false;
+            try
+            {
+                conn.Open();
+                conn.Close();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                conn.Dispose();
+            }
+        }
         public void Dispose()
         {
+        
             db.Dispose();
         }
 

@@ -6,43 +6,50 @@
 // ################################################
 
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Security.Principal;
 using IronPython.SQLite;
 using Jose;
+using Nancy;
 using Nancy.Authentication.Stateless;
 using Nancy.Bootstrapper;
 using Nancy.Extensions;
+using Nancy.Responses;
+using Nancy.TinyIoc;
 using PetaPoco;
 using SerpoCMS.Core.Security;
+using SerpoServer.Api;
+using SerpoServer.Data;
 using SerpoServer.Data.Cache;
 using SerpoServer.Data.Models;
 
 namespace SerpoServer.Security
 {
-    public class Identity
+    public static class Identity
     {
         private const int logoutTimeLimit = 2;
-        private IDatabase db;
+        private static IDatabase db => TinyIoCContainer.Current.Resolve<Connection>();
         private static readonly IList<Tuple<string, string, byte[]>> CurrentUsers =
             new List<Tuple<string, string, byte[]>>();
+        
+        
+        private static readonly IDictionary<string, spo_user> UserCache = new ConcurrentDictionary<string, spo_user>();
 
-        public Identity(IDatabase db)
-        {
-            this.db = db;
-        }
-        public void Initialize(IPipelines pipelines)
+        public static void Initialize(IPipelines pipelines)
         {
             
             try
             {
                 if (db.FirstOrDefault<spo_user>("SELECT * FROM spo_users") != null)
                 {
-                    var memDb = MemoryDatabase.Current.GetCollection<spo_user>("userCache");
-                    var users = db.Fetch<spo_user>("SELECT * FROM spo_users");
-                    memDb.InsertBulk(users);
+                    foreach (var usr in db.Query<spo_user>("SELECT * FROM spo_users"))
+                    {
+                        UserCache.Add(usr.user_email, usr);
+                    }
+                  
                 }
             }
             catch
@@ -51,29 +58,38 @@ namespace SerpoServer.Security
 
             var config = new StatelessAuthenticationConfiguration(x =>
             {
-                var token = x.Request.IsAjaxRequest() ? x.Request.Headers.Authorization : (string) x.Request.Query.user;
+                var token = "";
+                if (x.Request.IsAjaxRequest())
+                   token = x.Request.Headers.Authorization;
+                else if (x.Request.Cookies.TryGetValue("auth", out var cookie))
+                    token = cookie;
+        
+                
                 if (string.IsNullOrWhiteSpace(token))
                 {
                     return null;
                 }
+
+                string key;
+                if (token.Contains('/'))
+                {
+                    var tokenObj = token.Split('/');
+                    key = tokenObj.First();
+                }
                 else
                 {
-                    var claim = GetUserClaim(token);
+                    key = token;
                     
-                    if ((string) x.Request.Query.site == null || claim == null)
-                    {
-                        x.Response.Headers["Location"] = "/admin";
-                        return null;
-                    }
-                
-                    return claim;
                 }
+
+        
+                return GetUserClaim(key);
             });
             StatelessAuthentication.Enable(pipelines, config);
         }
         
 
-        public IEnumerable<spo_user> GetAll
+        public static IEnumerable<spo_user> GetAll
         {
             get
             {
@@ -85,7 +101,7 @@ namespace SerpoServer.Security
         }
 
 
-        public string Login(string email, string password)
+        public static string Login(string email, string password)
         {
             var user = MemoryDatabase.Current.GetCollection<spo_user>("userCache").FindOne(u => u.user_email == email) ??
                        db.FirstOrDefault<spo_user>("SELECT * FROM spo_users WHERE user_email = @0", email);
@@ -114,10 +130,12 @@ namespace SerpoServer.Security
                     var token = JWT.Decode<JwtToken>(key, user.Item3, JweAlgorithm.DIR, JweEncryption.A128CBC_HS256);
                     if (DateTime.Parse(token.Exp).CompareTo(DateTime.Now) >
                         logoutTimeLimit) continue;
-                    return MemoryDatabase.Current.GetCollection<spo_user>("userCache").FindOne(u => u.user_email == token.Email);
+
+                    return UserCache.FirstOrDefault(x => x.Key == token.Email).Value;
                 }
                 catch
                 {
+                    continue;
                 }
 
             return null;
@@ -129,7 +147,7 @@ namespace SerpoServer.Security
             return user == null ? null : new ClaimsPrincipal(new ClaimsIdentity(user.user_email));
         }
 
-        public void Logout(string key)
+        public static void Logout(string key)
         {
             foreach (var user in CurrentUsers)
                 try
@@ -143,26 +161,23 @@ namespace SerpoServer.Security
                 }
         }
 
-        public void CreateOrEdit(spo_user info)
+        public static void CreateOrEdit(spo_user info)
         {
             var storedUser = info.user_id > 0
                 ? MemoryDatabase.Current.GetCollection<spo_user>("userCache").FindOne(u => u.user_email == info.user_email)
-                : new spo_user();
-
+                : info;
             if (info.user_password != null)
             {
                 storedUser.user_password = Hashing.SHA512(info.user_password);
                 storedUser.user_salt = Convert.ToBase64String(Hashing.RandomBytes());
             }
-
             storedUser.user_avatar = info.user_avatar ?? "stockavatar.jpg";
-
-            if (info.user_nickname != null)
-                storedUser.user_nickname = info.user_nickname;
+            if (info.user_nick != null)
+                storedUser.user_nick = info.user_nick;
 
             if (info.user_email != null)
                 storedUser.user_email = info.user_email;
-
+                
             if (info.user_id > 0)
             {
                 db.Update(storedUser);
@@ -170,18 +185,17 @@ namespace SerpoServer.Security
             else
             {
                 storedUser.user_registerd = DateTime.Now;
-
                 db.Insert("spo_users", storedUser);
             }
         }
 
-        public void Delete(int id)
+        public static void Delete(int id)
         {
             db.Delete<spo_user>("DELETE FROM spo_users WHERE user_id = @0", id);
         }
 
 
-        public spo_user GetUserById(int id)
+        public static spo_user GetUserById(int id)
         {
             return db.Single<spo_user>("SELECT * user_id, user_email, user_avatar FROM spo_users WHERE user_id = @0",
                 id);

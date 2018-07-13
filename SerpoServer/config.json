@@ -1,8 +1,1 @@
-{
-  "connstring": "",
-  "emailserver": "",
-  "emailuser": "",
-  "emailpsw": "",
-  "emailport": "",
-  "telemetry": "false"
-}
+{"connstring":"password=GTX!560ti;user id=root;server=localhost;port=32768;database=spoTest","emailserver":null,"emailuser":null,"emailpsw":null,"emailport":null,"telemetry":false,"dbtype":"mysql"}

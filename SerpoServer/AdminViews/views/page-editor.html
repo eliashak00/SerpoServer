@@ -1,0 +1,88 @@
+@Master['shared/layout.html'];
+
+@Section['js']pages.js@EndSection
+
+
+@Section['content']
+
+
+<form>
+
+        <div class="row">
+            <p class="m-1">
+            <a onclick="save()" class="btn btn-primary">Save Changes</a>
+            <a id="checkErr" onclick="checkErrrors()" class="btn btn-primary">Debug Script</a>
+            </p>
+    <input class="col-md-4 form-control m-1" type="text" value="@Model.page_route" id="pageRoute" placeholder="Route...">
+        <select id="pageMethod" class="col-md-4 form-control m-1">
+            <option value="">SELECT METHOD</option>
+            <option value="0">GET</option>
+            <option value="1">POST</option>
+            <option value="2">PUT</option>
+            <option value="3">DELETE</option>
+        </select>
+            <select onchange="viewChange()" id="pageType" class="col-md 4 form-control m-1">
+                <option value="">SELECT VIEW</option>
+                <option value="0">VIEW</option>
+                <option value="1">JSON</option>
+            </select>
+
+            <div class="col-md-3 m-1">
+                <label>Python Script:</label>
+                <div id="pageScript"></div>
+            </div>
+            <div class="col-md m-1">
+                <label>HTML View:</label>
+                <div id="pageView"></div>
+            </div>
+            <script>
+                
+                let editor = ace.edit("pageView");
+                editor.setTheme("ace/theme/monokai");
+                editor.session.setMode("ace/mode/html");
+                let editor2 = ace.edit("pageScript");
+                editor2.setTheme("ace/theme/monokai");
+                editor2.session.setMode("ace/mode/python");
+                function save() {
+
+                    pages.createoredit(@Model.page_id, dom.getValue('pageRoute'), editor2.getValue(), @Model.page_site ,editor.getValue(), dom.getValue('pageMethod'), dom.getValue('pageType'));
+                }
+                function checkErrrors() {
+                    let script = editor2.getValue();
+                    if (script == null) return; 
+                    let obj = {
+                        script: script
+                    };
+                    http.post("/admin/tools/script/debug", obj, function (data, status) {
+                        if (status === 200){
+                            if (data.errors != null){
+                                dom.setError(data.errors);
+                            } 
+                        } 
+                    });
+                }
+                function viewChange() {
+                    let value = dom.getValue('pageType');
+                    let elm = document.getElementById('pageScript');
+                    elm = elm.parentNode;
+                    if(value === 'json'){
+                        dom.remove('pageView', true);
+                        if (elm.classList.contains('col-md-3')){
+                            elm.classList.remove('col-md-3');
+                            elm.classList.add('col-md-9');
+                            elm.classList.add('mx-auto');
+                        }
+                    }
+                    else{
+                        dom.show('pageView', true);
+                        elm.classList.remove('col-md-9');
+                        elm.classList.add('col-md-3');
+                        elm.classList.remove('mx-auto');
+                    }
+                }
+            </script>
+        </div>
+
+
+</form>
+@EndSection

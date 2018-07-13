@@ -9,27 +9,27 @@ namespace SerpoServer.Routes.Admin
 {
     public class AccountModule : NancyModule
     {
-        public AccountModule(Identity idt) : base("/admin/account")
+        public AccountModule() : base("/admin/account")
         {
             this.RequiresAuthentication();
-            Get("/", x => View["admin/views/account.html", idt.GetAll]);
+            Get("/", x => View["account.html", Identity.GetAll]);
             Post("/createoredit", x =>
             {
                 var user = this.BindAndValidate<spo_user>();
                 if(user == null) return HttpStatusCode.BadRequest;
-                idt.CreateOrEdit(user);
+                Identity.CreateOrEdit(user);
                 return HttpStatusCode.OK;
             });
             Delete("/remove/{id}", x =>
             {
                 if(x.id == null)
                     return HttpStatusCode.BadRequest;
-                idt.Delete((int)x.id);
+                Identity.Delete((int)x.id);
                 return HttpStatusCode.OK;
             });
             Delete("/logout", x =>
             {
-                idt.Logout(Request.Headers.Authorization);
+                Identity.Logout(Request.Headers.Authorization);
                 return HttpStatusCode.OK;
             });
         }

@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text.Encodings.Web;
 using Nancy;
 using Nancy.Json.Simple;
+using Nancy.Responses;
+using Nancy.TinyIoc;
 using PetaPoco;
 using RazorEngine;
 using RazorEngine.Templating;
@@ -16,12 +19,12 @@ namespace SerpoServer.Api
 {
     public class PageManager
     {
-        private IDatabase db;
+        private IDatabase db => TinyIoCContainer.Current.Resolve<Connection>();
         private PyRuntime python;
-        public PageManager(PyRuntime python, IDatabase db)
+        public PageManager(PyRuntime python)
         {
             this.python = python;
-            this.db = db;
+
         }
         public IEnumerable<spo_page> GetPages(string domain) =>
             db.Query<spo_page>(
@@ -32,6 +35,8 @@ namespace SerpoServer.Api
             "SELECT * FROM spo_pages INNER JOIN spo_sites ON spo_sites.site_id = spo_pages.page_site WHERE spo_sites.site_domain = @0 AND spo_pages.page_route = @1 AND page_method = @2",
             domain, path, method);
 
+        public spo_page GetPage(int id) => db.SingleOrDefault<spo_page>(
+            "SELECT * FROM spo_pages WHERE page_id = @0", id);
         public HttpStatusCode CreateOrEdit(spo_page data)
         {
             if (data.page_script != null)
@@ -54,17 +59,30 @@ namespace SerpoServer.Api
         {
             var result = new Response();
             var page = GetPage(domain,method, path);
-            if (page == null)
-            {
+            if(page == null)
+            {               
+                page = GetPage(domain, RequestMethods.Get, "NOTFOUND");
+                if(page == null)
+                    result = new EmbeddedFileResponse(Assembly.GetExecutingAssembly(),
+                        "SerpoServer.Errors", "404.html");
+                else
+                    page.page_resposne = ResponseMethods.View;
+                
                 result.StatusCode = HttpStatusCode.NotFound;
                 goto ReturnPoint;
             }
-
-            if (page.page_methods != method)
+            else
             {
-                result.StatusCode = HttpStatusCode.MethodNotAllowed;
-                goto ReturnPoint;
+                if (page.page_methods != method)
+                {
+                    result.StatusCode = HttpStatusCode.MethodNotAllowed;
+                }
+
             }
+
+     
+
+
 
             if (page.page_resposne == ResponseMethods.View)
             {
@@ -96,8 +114,7 @@ namespace SerpoServer.Api
                 result.Contents = s => s.Write(bytes, 0, bytes.Length);
 
             }
-
-            ReturnPoint:                
+            ReturnPoint:
                 return result;
         }
 }

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/AdminViews/Static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/AdminViews/Static/css/base.css">
+    <title>SerpoServer - Admin</title>
+</head>
+<body>
+
+<form class="mx-auto p-2 small-form">
+    <h5 class="m-2">SerpoServer Login</h5>
+    <input class="form-control m-2" id="email" required type="email" placeholder="Email..."/>
+    <input class="form-control m-2" id="password" required type="password" placeholder="Password..."/>
+
+    <button type="button" onclick="login()" id="loginBtn" class="btn btn-primary m-2">Login</button>
+    <script>
+        function login() {
+            let data = {
+                Email: dom.getValue("email"),
+                Password: dom.getValue("password")
+            };
+            http.post("/admin/account/login", data, function (response, status) {
+                localStorage.setItem('auth', response.token);
+                Cookies.set("auth", response.token);
+                location.reload();
+            }, function (response, status) {
+                if (status === 400){
+                    dom.setValue("loginBtn", "Email or password are incorrect!");
+                }
+                else {
+                    dom.setValue("loginBtn", "An error occured!");
+                }
+
+            });
+
+        }
+    </script>
+</form>
+
+
+<script src="/AdminViews/Static/js/http.js"></script>
+<script src="/AdminViews/Static/js/cookie.js"></script>
+<script src="/AdminViews/Static/js/dom.js"></script>
+<script src="/AdminViews/Static/bootstrap.min.js"></script>
+</body>
+</html>

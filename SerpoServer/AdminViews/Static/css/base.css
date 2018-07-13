@@ -1,0 +1,43 @@
+body {
+  background: #3b4660;
+  font: "Helvetica Neue", "Calibri", sans-serif;
+  color: whitesmoke;
+}
+
+nav {
+  background: #0a1225;
+}
+
+nav a {
+  color: whitesmoke;
+}
+
+#wrapper {
+  margin-top: 50px;
+}
+
+.small-form {
+  max-width: 30%;
+  margin-top: 110px;
+}
+
+.card {
+  color: black;
+}
+
+#errMsg {
+  display: none;
+}
+
+.ace_editor {
+  position: unset !important;
+  height: 300px !important;
+}
+
+@media screen and (max-width: 500px) {
+  .small-form {
+    max-width: 90%;
+  }
+}
+
+/*# sourceMappingURL=base.css.map */

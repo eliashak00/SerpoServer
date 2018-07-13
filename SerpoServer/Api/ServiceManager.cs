@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Nancy;
 using Nancy.TinyIoc;
 using PetaPoco;
+using SerpoServer.Data;
 using SerpoServer.Data.Models;
 using SerpoServer.Intepreter;
 
@@ -10,13 +11,13 @@ namespace SerpoServer.Api
 {
     public class ServiceManager
     {
-        private IDatabase db;
+        private IDatabase db => TinyIoCContainer.Current.Resolve<IDatabase>();
         private PyRuntime python;
         private int site;
-        public ServiceManager(PyRuntime python, IDatabase db)
+        public ServiceManager(PyRuntime python)
         {
             this.python = python;
-            this.db = db;
+    
             var ctx = TinyIoCContainer.Current.Resolve<NancyContext>();
             if(ctx.Parameters != null)
                 site = ctx.Parameters.site;

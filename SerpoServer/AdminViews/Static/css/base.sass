@@ -1,15 +1,37 @@
-$background: whitesmoke
-$implBackground: black
-$textColor: black
+$rgba-primary-0: rgba( 21, 31, 55,1)
+$rgba-primary-1: rgba( 59, 70, 96,1)
+$rgba-primary-2: rgba( 35, 45, 70,1)
+$rgba-primary-3: rgba( 10, 18, 37,1)
+$rgba-primary-4: rgba(  2,  8, 20,1)
 $font: 'Helvetica Neue', 'Calibri', sans-serif
 
-html
-  min-height: 100%
+
 body
-  height: 100%
-  background: $background
-  color: $textColor
+  background: $rgba-primary-1
   font: $font
-nav .navbar
-  background: $implBackground
+  color: whitesmoke
   
+nav
+  background: $rgba-primary-3
+nav a
+  color: whitesmoke
+  
+#wrapper
+  margin-top: 50px
+  
+.small-form
+  max-width: 30%
+  margin-top: 110px
+  
+.card
+  color: black
+#errMsg
+  display: none
+.ace_editor
+  position: unset !important
+  height: 300px !important
+  
+
+@media screen and (max-width: 500px)
+  .small-form
+    max-width: 90%

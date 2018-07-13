@@ -1,16 +1,23 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
 using System.Reflection;
+using Community.CsharpSqlite;
+using IronPython.Runtime.Operations;
 using Nancy;
 using Nancy.Bootstrapper;
 using Nancy.Configuration;
 using Nancy.Conventions;
 using Nancy.Diagnostics;
+using Nancy.Embedded.Conventions;
 using Nancy.Extensions;
 using Nancy.Responses;
+using Nancy.Responses.Negotiation;
 using Nancy.TinyIoc;
 using Nancy.ViewEngines;
 using PetaPoco;
 using RazorEngine;
+using RazorEngine.Templating;
 using SerpoServer.Api;
 using SerpoServer.Data;
 using SerpoServer.Data.Models;
@@ -27,11 +34,37 @@ namespace SerpoServer
 
         private static IPipelines _pipelines;
         protected override void RequestStartup(TinyIoCContainer container, IPipelines pipelines, NancyContext context)
-        {     
-            var site = container.Resolve<SiteManager>();
-            var reqSite = context.Request.Url.Path.Contains("/admin") ? site.GetSite((int)context.Request.Query.site) : site.GetSite(context.Request.Url.BasePath);
-            if(reqSite != null)
-                context.Parameters.site = reqSite;
+        {
+
+           spo_site urlSite = null;
+            if (context.IsAjaxRequest())
+            {
+                var key = context.Request.Headers.Authorization;
+                if (key.Contains("/"))
+                {
+                    var site = int.Parse(key.Split("/").Last());
+                    urlSite = SiteManager.GetSiteById(site);
+                }
+            }
+            else
+            {
+                dynamic siteId = null;
+                if (context.Request.Url.Path.Contains("/admin"))
+                {
+                    if(context.Request.Cookies.TryGetValue("site", out var site) && !string.IsNullOrWhiteSpace(site))
+                        siteId = int.Parse(site);
+                }
+                else
+                {
+                    siteId = context.Request.Url.HostName;
+                }
+
+                if(siteId != null)
+                    urlSite = siteId is int ? SiteManager.GetSiteById((int)siteId) : SiteManager.GetSiteByDom((string)siteId);
+            }
+
+            context.Items.Add("site", urlSite);
+
             base.RequestStartup(container, pipelines, context);
         }
 
@@ -47,8 +80,7 @@ namespace SerpoServer
                 });
 
 
-            Nancy.Embedded.Conventions.EmbeddedStaticContentConventionBuilder.AddDirectory("/static",
-                Assembly.GetExecutingAssembly(), "SerpoServer.EmbeddedStatic", ".css", ".js", ".png");
+   
             
             pipelines.OnError.AddItemToStartOfPipeline((x, e) =>
             {
@@ -68,44 +100,52 @@ namespace SerpoServer
                 else
                 {
                     x.Response = new EmbeddedFileResponse(Assembly.GetExecutingAssembly(),
-                        "SerpoServer.Errors.500.html", "500.html");
+                        "SerpoServer.Errors", "500.html");
                 }
-
                 return e;
             });
-     
-            if (string.IsNullOrWhiteSpace(ConfigurationProvider.ConfigurationFile.connstring))
+            container.Register(typeof(IDatabase) ,typeof(Connection));
+            pipelines.BeforeRequest.InsertBefore("installBlock",c =>
             {
-                container.Register<IDatabase>(new NullDatabase());
-                pipelines.BeforeRequest.InsertBefore("installBlock",c =>
-                {
+                if (!install) return null;
      
-                    if (c.IsAjaxRequest() && c.Request.Path.Contains("/install/"))
-                        return null;
-                    c.Response = new EmbeddedFileResponse(Assembly.GetExecutingAssembly(), "SerpoServer.Install.install.html", ".html");
-                    return c.Response;
-                });
-         
-            }
-            else
-            {
-                container.Register<IDatabase>(new Connection());
-            }
+                if (c.Request.Path.Contains("/install/") || c.Request.Path.Contains("/static/"))
+                    return null;
 
+                   
+                c.Response = new EmbeddedFileResponse(Assembly.GetExecutingAssembly(), "SerpoServer.Install", "install.html");
+                return c.Response;
+            });
+            install = string.IsNullOrWhiteSpace(ConfigurationProvider.ConfigurationFile.connstring);
+
+            if (!install)
+            {
+                Identity.Initialize(pipelines);
+            }
             _pipelines = pipelines;
         }
 
+        private static bool install;
+       
+
         public static void DisableBlock()
         {
-            _pipelines.BeforeRequest.RemoveByName("instalBlock");
-            TinyIoCContainer.Current.Unregister<IDatabase>();
-            TinyIoCContainer.Current.Register<IDatabase>(new Connection());
+            
+            install = false;
+            Identity.Initialize(_pipelines);
+            
         }
+
+        protected override IRootPathProvider RootPathProvider => new RootPathProvider();
 
         protected override void ConfigureConventions(NancyConventions nancyConventions)
         {
-            nancyConventions.ViewLocationConventions.Add((s,d,c) => "AdminViews/" + s);
+            nancyConventions.ViewLocationConventions.Add((s,d,c) => "AdminViews/views/" + s);
+          
             nancyConventions.StaticContentsConventions.AddDirectory("AdminViews/Static/");
+
+            
+            
            
             base.ConfigureConventions(nancyConventions);
         }
@@ -114,7 +154,8 @@ namespace SerpoServer
         {
             return new DisabledDiagnostics();
         }
-
+   
+    
         public override void Configure(INancyEnvironment environment)
         {
             environment.Views(true, true);

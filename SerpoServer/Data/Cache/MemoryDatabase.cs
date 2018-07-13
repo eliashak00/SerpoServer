@@ -12,19 +12,8 @@ namespace SerpoServer.Data.Cache
 {
     public static class MemoryDatabase
     {
-        private static LiteDatabase db;
+        public static LiteDatabase Current = new LiteDatabase(new MemoryStream());
 
-        public static LiteDatabase Current
-        {
-            get
-            {
-                if (db != null) return db;
-                var memStream = new MemoryStream();
-                db = new LiteDatabase(memStream);
-                return db;
-            }
-            private set => db = value;
-        }
 
         public static LiteCollection<T> GetCollectionByType<T>()
         {

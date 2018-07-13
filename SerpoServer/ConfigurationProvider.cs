@@ -16,7 +16,7 @@ namespace SerpoServer
 {
     public class ConfigurationProvider
     {
-        private static IRootPathProvider RootPath => new DefaultRootPathProvider();
+        private static IRootPathProvider RootPath => new RootPathProvider();
 
         private static string FilePath => Path.Combine(RootPath.GetRootPath(), "config.json");
         public static volatile spo_settings file;
@@ -36,6 +36,10 @@ namespace SerpoServer
                 var fileContent = File.ReadAllText(FilePath);
                 var json = SimpleJson.DeserializeObject<spo_settings>(fileContent);
                 file = json;
+                if (file == null)
+                {
+                    UpdateFile(new spo_settings());
+                }
                 return file;
             }
         }

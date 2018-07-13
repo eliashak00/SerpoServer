@@ -10,11 +10,10 @@ namespace SerpoServer.Api
 {
     public class StatManager
     {
-        private IDatabase db;
+        private IDatabase db => TinyIoCContainer.Current.Resolve<IDatabase>();
         private int site;
-        public StatManager(IDatabase db)
+        public StatManager()
         {
-            this.db = db;
             var ctx = TinyIoCContainer.Current.Resolve<NancyContext>();
             if(ctx.Parameters != null)
                 site = ctx.Parameters.site;

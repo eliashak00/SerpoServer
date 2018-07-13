@@ -1,4 +1,6 @@
-﻿using Nancy;
+﻿using System.Reflection;
+using Nancy;
+using Nancy.Responses;
 using PetaPoco;
 using SerpoServer.Api;
 using SerpoServer.Data.Models.Enums;
@@ -57,6 +59,11 @@ namespace SerpoServer.Routes
                 var dom = Request.Url.HostName;
                 var path = (string) x.path;
                 return pm.GenereateResponse(dom , RequestMethods.Delete, path);
+            });
+            Get("/static/{file}", x =>
+            {
+                return new EmbeddedFileResponse(Assembly.GetExecutingAssembly(), "SerpoServer.EmbeddedStatic",
+                        (string) x.file);
             });
         }
     }
