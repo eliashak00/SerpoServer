@@ -1,7 +1,9 @@
 ﻿using System.Linq;
 using Nancy;
+using Nancy.Extensions;
 using Nancy.ModelBinding;
 using Nancy.Security;
+using Newtonsoft.Json;
 using SerpoServer.Data.Models;
 using SerpoServer.Security;
 
@@ -15,7 +17,7 @@ namespace SerpoServer.Routes.Admin
             Get("/", x => View["account.html", Identity.GetAll]);
             Post("/createoredit", x =>
             {
-                var user = this.BindAndValidate<spo_user>();
+                var user = JsonConvert.DeserializeObject<spo_user>(Request.Body.AsString());
                 if(user == null) return HttpStatusCode.BadRequest;
                 Identity.CreateOrEdit(user);
                 return HttpStatusCode.OK;

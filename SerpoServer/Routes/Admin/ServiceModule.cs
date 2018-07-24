@@ -1,6 +1,8 @@
 ﻿using Nancy;
+using Nancy.Extensions;
 using Nancy.ModelBinding;
 using Nancy.Security;
+using Newtonsoft.Json;
 using SerpoServer.Api;
 using SerpoServer.Data.Models;
 
@@ -15,7 +17,7 @@ namespace SerpoServer.Routes.Admin
             Get("/createoredit", x => View["admin/views/service-editor.html", svrc.GetService((int)Request.Query.id)]);
             Post("/createoredit", x =>
             {
-                var service = this.BindAndValidate<spo_service>();
+                var service = JsonConvert.DeserializeObject<spo_service>(Request.Body.AsString());
                 return service == null ? HttpStatusCode.BadRequest : svrc.CreateOrEdit(service);
             });
             Delete("/delete/{id}", x =>

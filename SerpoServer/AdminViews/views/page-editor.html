@@ -7,49 +7,68 @@
 
 
 <form>
+<div class="row">
+    <div class="col-lg-auto p-1">
+        <a onclick="save()" class="btn btn-primary btn-wide">Save Changes</a>
+        <a id="checkErr" onclick="checkErrrors()" class="btn btn-primary btn-wide mt-2">Debug Script</a>
+    </div>
+    <div class="col-lg-9">
+    
+            <input onchange="checkRoute()" class="form-control" type="text" value="@Model.page_route" id="pageRoute" placeholder="Route...">
+            <select id="pageMethod" class=" form-control mt-2">
 
-        <div class="row">
-            <p class="m-1">
-            <a onclick="save()" class="btn btn-primary">Save Changes</a>
-            <a id="checkErr" onclick="checkErrrors()" class="btn btn-primary">Debug Script</a>
-            </p>
-    <input class="col-md-4 form-control m-1" type="text" value="@Model.page_route" id="pageRoute" placeholder="Route...">
-        <select id="pageMethod" class="col-md-4 form-control m-1">
-            <option value="">SELECT METHOD</option>
-            <option value="0">GET</option>
-            <option value="1">POST</option>
-            <option value="2">PUT</option>
-            <option value="3">DELETE</option>
-        </select>
-            <select onchange="viewChange()" id="pageType" class="col-md 4 form-control m-1">
+                <option value="">SELECT METHOD</option>
+                <option value="0">GET</option>
+                <option value="1">POST</option>
+                <option value="2">PUT</option>
+                <option value="3">DELETE</option>
+            </select>
+            <select onchange="viewChange()" id="pageType" class="form-control mt-2">
                 <option value="">SELECT VIEW</option>
                 <option value="0">VIEW</option>
                 <option value="1">JSON</option>
             </select>
-
+        <div class="mt-2 row">
             <div class="col-md-3 m-1">
                 <label>Python Script:</label>
-                <div id="pageScript"></div>
+                <div id="pageScript">@Model.page_script</div>
             </div>
             <div class="col-md m-1">
                 <label>HTML View:</label>
-                <div id="pageView"></div>
+                <div id="pageView">@Model.page_view </div>
             </div>
             <script>
-                
+
                 let editor = ace.edit("pageView");
                 editor.setTheme("ace/theme/monokai");
-                editor.session.setMode("ace/mode/html");
+                editor.session.setMode("ace/mode/razor");
                 let editor2 = ace.edit("pageScript");
                 editor2.setTheme("ace/theme/monokai");
                 editor2.session.setMode("ace/mode/python");
+
+                let method = '@Model.page_methods';
+                if (method === 'Get')
+                    $("#pageMethod").val(0);
+                if (method === 'Post')
+                    $("#pageMethod").val(1);
+                if (method === 'Put')
+                    $("#pageMethod").val(2);
+                if (method === 'Delete')
+                    $("#pageMethod").val(3);
+
+                let resp = '@Model.page_response';
+                if (resp === 'View')
+                    $("#pageType").val(0);
+                if (resp === 'Rest')
+                    $("#pageType").val(1);
+
                 function save() {
 
                     pages.createoredit(@Model.page_id, dom.getValue('pageRoute'), editor2.getValue(), @Model.page_site ,editor.getValue(), dom.getValue('pageMethod'), dom.getValue('pageType'));
                 }
                 function checkErrrors() {
                     let script = editor2.getValue();
-                    if (script == null) return; 
+                    if (script == null) return;
                     let obj = {
                         script: script
                     };
@@ -57,16 +76,28 @@
                         if (status === 200){
                             if (data.errors != null){
                                 dom.setError(data.errors);
-                            } 
-                        } 
+                            }
+                        }
+                    });
+                }
+                function checkRoute(){
+                    let val = dom.getValue("pageRoute");
+                    http.get("/admin/pages/route?path=" + val, function (data, status) {
+                        if (status === 400) {
+                            dom.setError("The route " + val + " does already exist!");
+                        }
+                        else{
+                            dom.removeError();
+                        }
+
                     });
                 }
                 function viewChange() {
                     let value = dom.getValue('pageType');
-                    let elm = document.getElementById('pageScript');
-                    elm = elm.parentNode;
-                    if(value === 'json'){
+                    let elm = document.getElementById("pageScript").parentNode;
+                    if(value === 1){
                         dom.remove('pageView', true);
+
                         if (elm.classList.contains('col-md-3')){
                             elm.classList.remove('col-md-3');
                             elm.classList.add('col-md-9');
@@ -82,6 +113,9 @@
                 }
             </script>
         </div>
+    </div>
+</div>
+       
 
 
 </form>

@@ -13,5 +13,8 @@ namespace SerpoServer.Data.Models
       
         [Column("site_name")]
         public string site_name { get; set; }
+        
+        [Column("site_ssl")]
+        public bool site_ssl { get; set; }
     }
 }

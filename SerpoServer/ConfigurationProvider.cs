@@ -10,6 +10,7 @@ using System.IO;
 using Nancy;
 using Nancy.Json.Simple;
 using Nancy.TinyIoc;
+using Newtonsoft.Json;
 using SerpoServer.Data.Models;
 
 namespace SerpoServer
@@ -23,7 +24,7 @@ namespace SerpoServer
 
         public static void UpdateFile(spo_settings settings)
         {
-            var json = SimpleJson.SerializeObject(settings);
+            var json = JsonConvert.SerializeObject(settings);
             File.WriteAllText(FilePath, json);
             file = settings;
         }
@@ -34,7 +35,7 @@ namespace SerpoServer
             {
                 if (file != null) return file;
                 var fileContent = File.ReadAllText(FilePath);
-                var json = SimpleJson.DeserializeObject<spo_settings>(fileContent);
+                var json = JsonConvert.DeserializeObject<spo_settings>(fileContent);
                 file = json;
                 if (file == null)
                 {

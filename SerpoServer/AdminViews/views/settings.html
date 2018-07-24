@@ -1,0 +1,74 @@
+@Master['shared/layout.html'];
+
+@Section['js']settings.js@EndSection
+
+
+@Section['content']
+<form>
+    <div class="row">
+        <div class="col-md-auto">
+            <p>Currently editing: @Model.site.site_domain</p>
+            <a onclick="save()" class="btn btn-primary btn-wide">Save Changes</a>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-4">
+                    <label>Site settings:</label>
+                    <input class="m-1 form-control" id="siteDom" placeholder="Site Domain..." value="@Model.site.site_domain">
+                    <input class="m-1 form-control" id="siteName" placeholder="Site Name..." value="@Model.site.site_name">
+
+                   <div class="m-1  form-check">
+                     <input class="form-check-input" type="checkbox" id="siteSsl"  @If.Model.site.site_ssl checked    @EndIf>
+                       <label class="form-check-label">SSL Mode</label>
+                   </div>
+                   
+
+                 
+                </div>
+                <div class="col-md-4">
+                    <label>SerpoServer settings</label>
+
+                    <select onload="this.value = '@Model.settings.dbtype'" class="m-1 form-control" id="dbType">
+                        <option value="mysql">My SQL</option>
+                        <option value="mssql">MS SQL(SQL Server)</option>
+                    </select>
+
+                    <input class="m-1 form-control" id="dbString" placeholder="Connection String..." value="@Model.settings.connstring">
+                </div>
+                <div class="col-md-4">
+<label>Email Settings:</label>
+                    <input class="m-1 form-control" id="emailServer" placeholder="Email Server..." value="@Model.settings.emailserver">
+
+                    <input class="m-1 form-control" id="emailUser" placeholder="Email Username...." value="@Model.settings.emailuser">
+                    <input class="m-1 form-control" id="emailPsw" placeholder="Email Password..." value="@Model.settings.emailpsw">
+                    <input class="m-1 form-control" id="emailPort" placeholder="Email Port..." value="@Model.settings.emailport">
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+<script>
+    function save() {
+        let data = {
+            site_id: @Model.site.site_id,
+            site_domain: dom.getValue('siteDom'),
+            site_name: dom.getValue('siteName'),
+            site_ssl: dom.getValue('siteSsl') === 'on',
+            settings_dbtype: dom.getValue('dbType'),
+            settings_connstring: dom.getValue('dbString'),
+            settings_emailserver: dom.getValue('emailServer'),
+            settings_emailuser: dom.getValue('emailUser'),
+            settings_emailpsw: dom.getValue('emailPsw'),
+            settings_emailport: dom.getValue('emailPort')
+        };
+        http.post("/admin/settings/save", data, function (response,status) {
+            location.reload();
+        }, function (response,status) {
+            dom.setError("Failed to proceed with request!");
+        });
+    }
+</script>
+
+</form>
+@EndSection

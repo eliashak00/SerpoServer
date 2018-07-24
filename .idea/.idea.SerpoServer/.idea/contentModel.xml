@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.3.1/build/netcoreapp1.0/xunit.runner.reporters.netcoreapp10.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.3.1/build/netcoreapp1.0/xunit.runner.utility.netcoreapp10.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.3.1/build/netcoreapp1.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
     <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_SerpoServer.335576159.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
@@ -418,6 +421,7 @@
             <e p="main.html" t="Include" />
             <e p="page-editor.html" t="Include" />
             <e p="pages.html" t="Include" />
+            <e p="settings.html" t="Include" />
             <e p="shared" t="Include">
               <e p="layout.html" t="Include" />
               <e p="sidebar.html" t="Include" />
@@ -455,6 +459,7 @@
             <e p="spo_user.cs" t="Include" />
             <e p="View" t="Include">
               <e p="Login.cs" t="Include" />
+              <e p="SettingsViewModel.cs" t="Include" />
             </e>
           </e>
           <e p="NullDatabase.cs" t="Include" />
@@ -511,8 +516,22 @@
           <e p="JwtToken.cs" t="Include" />
         </e>
         <e p="SerpoServer.csproj" t="IncludeRecursive" />
+        <e p="SiteSelector.cs" t="Include" />
       </e>
       <e p="SerpoServer.sln" t="IncludeFlat" />
+      <e p="SerpoServer.Tests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.0" t="Include">
+              <e p="SerpoServer.Tests.AssemblyInfo.cs" t="Include" />
+              <e p="SerpoServer.Tests.Program.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="SerpoServer.Tests.csproj" t="IncludeRecursive" />
+        <e p="UnitTest1.cs" t="Include" />
+      </e>
     </e>
   </component>
 </project>

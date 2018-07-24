@@ -24,9 +24,24 @@
     <a class="navbar-brand" href="#">SerpoServer</a>
     <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle"> <i class="fas fa-bars"></i></a>
 
+    <script>
+        let currentSite = {};
+        http.get("/admin/site/get", function (data, status) {
+            if (status === 200){
+                let s = data.site;
+                if (s !== null){
+                    currentSite = s;
+                    $('#siteDom').text(currentSite.site_domain);
+                }
+            }
+            else{
 
-
+            }
+        });
+    </script>
+    <a class="ml-1 btn btn-secondary" href="/admin/site"><i class="fa fa-globe"></i></a>
 </nav>
+
 
 <div id="wrapper">
 
@@ -35,19 +50,19 @@
         <ul class="sidebar-nav">
     
             <li>
-                <a href="#">Pages</a>
+                <a href="/admin/pages">Pages</a>
             </li>
             <li>
-                <a href="#">Settings</a>
+                <a href="/admin/settings">Settings</a>
             </li>
             <li>
-                <a  href="#">Users</a>
+                <a  href="/admin/users">Users</a>
             </li>
             <li>
-                <a href="#">Themes</a>
+                <a href="/admin/themes">Themes</a>
             </li>
             <li>
-                <a  href="#">Addons</a>
+                <a  href="/admin/addons">Addons</a>
             </li>
         </ul>
     </div>

@@ -27,6 +27,6 @@ namespace SerpoServer.Data.Models
         public RequestMethods page_methods { get; set; }
         
         [Column("page_response")]
-        public ResponseMethods page_resposne { get; set; }
+        public ResponseMethods page_response { get; set; }
     }
 }

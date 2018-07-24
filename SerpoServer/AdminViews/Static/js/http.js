@@ -1,19 +1,16 @@
 const AUTHHEADER = 'Authorization';
 const AUTHKEY = 'auth';
 const http = {
-    'get': function (url) {
+    'get': function (url, success) {
         let xhr = new XMLHttpRequest();
         xhr.open('GET', url);
         xhr.setRequestHeader(AUTHHEADER, Cookies.get(AUTHKEY));
         xhr.onreadystatechange = function () {
-            let result = JSON.parse(this.responseText);
-            if (this.status === 200){
-                return result
-            }    
-            else{
-                console.log(result);
-                return null;
+            let result = null;
+            if (this.responseText) {
+                result = JSON.parse(this.responseText);
             }
+            success(result, this.status);
         };
         xhr.send();
     },

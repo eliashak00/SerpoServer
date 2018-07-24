@@ -1,9 +1,12 @@
 ﻿using System;
 using Nancy;
+using Nancy.Extensions;
 using Nancy.ModelBinding;
 using Nancy.Security;
+using Newtonsoft.Json;
 using SerpoServer.Api;
 using SerpoServer.Data.Models;
+using SerpoServer.Data.Models.View;
 
 namespace SerpoServer.Routes.Admin
 {
@@ -12,11 +15,11 @@ namespace SerpoServer.Routes.Admin
         public SettingsModule(SettingsManager settings) : base("/admin/settings")
         {
             this.RequiresAuthentication();
-            Get("/", x => View["admin/views/settings.html", ConfigurationProvider.ConfigurationFile]);
+            Get("/", x => View["settings.html", new{site = Context.GetSite(), settings = ConfigurationProvider.ConfigurationFile}]);
             Post("/save", x =>
             {
-                var data = this.Bind<spo_settings>();
-                return settings.SaveChanges(data);
+                var jsonObj = JsonConvert.DeserializeObject<SettingsViewModel>(Request.Body.AsString());
+                return settings.SaveChanges(jsonObj);
             });
         }
     }

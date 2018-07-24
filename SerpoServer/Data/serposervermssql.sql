@@ -21,7 +21,9 @@
     BEGIN
 CREATE TABLE spo_sites(
   site_id INT  PRIMARY KEY IDENTITY ,
-  site_domain VARCHAR(100)  
+  site_domain VARCHAR(100),
+  site_name VARCHAR(100),
+  site_ssl INT
 );
 END
 

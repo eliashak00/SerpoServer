@@ -34,6 +34,14 @@ nav a {
   height: 300px !important;
 }
 
+.btn-wide {
+  width: 100%;
+}
+
+.card-lg {
+  min-width: 200px;
+}
+
 @media screen and (max-width: 500px) {
   .small-form {
     max-width: 90%;

@@ -1,14 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Community.CsharpSqlite;
+using Google.Protobuf.WellKnownTypes;
 using Nancy;
 using Nancy.Extensions;
 using Nancy.Json.Simple;
 using Nancy.ModelBinding;
 using Nancy.Security;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using SerpoServer.Api;
 using SerpoServer.Data.Models;
 using SerpoServer.Data.Models.Enums;
+using Enum = System.Enum;
 
 namespace SerpoServer.Routes.Admin
 {
@@ -17,30 +22,33 @@ namespace SerpoServer.Routes.Admin
         public PageModule(PageManager pge) : base("/admin/pages")
         {
             this.RequiresAuthentication();
+            this.RequiresSite();
             Get("/", x =>
             {
-                var site = Context.Items.FirstOrDefault(y => y.Key == "site");
-                return site.Value == null?  View["shared/site.html", new{Sites = SiteManager.GetSites()}] : View["pages.html", new{Pages = pge.GetPages(((spo_site)site.Value).site_domain)}];
+                var sort = (string)Request.Query.sort;
+                var pages = sort != null? pge.GetPages(Context.GetSite().site_domain, Enum.Parse<RequestMethods>(sort, true)) : pge.GetPages(Context.GetSite().site_domain);
+                return View["pages.html", new {Pages = pages}];
             });
-            Get("/createoredit", x =>
-            {
-                var site = Context.Items.FirstOrDefault(y => y.Key == "site");
-                if(site.Value == null)
-                    return View["shared/site.html", new {Sites = SiteManager.GetSites()}];
-                return Request.Query.page != null ? View["page-editor.html", pge.GetPage((int)Request.Query.page)] : View["page-editor.html", new spo_page()];
-
-            });
+            Get("/createoredit", x => Request.Query.page != null ? View["page-editor.html", pge.GetPage((int)Request.Query.page)] : View["page-editor.html", new spo_page()]);
             Post("/createoredit", x =>
             {
 
-                var page = this.Bind<spo_page>();
-                
-                return page == null ? HttpStatusCode.BadRequest : pge.CreateOrEdit(page);
+                var page = JsonConvert.DeserializeObject<spo_page>(Request.Body.AsString());
+                page.page_site = Context.GetSite().site_id;
+                return pge.CreateOrEdit(page);
             });
             Delete("/delete/{id}", x =>
             {
                 var id = (int) x.id;
                 return pge.Delete(id);
+            });
+            Get("/route", x =>
+            {
+                var route = (string) Request.Query.path;
+          
+                return pge.GetPages(Context.GetSite().site_domain).FirstOrDefault(s => s.page_route == route) != null
+                    ? HttpStatusCode.BadRequest
+                    : HttpStatusCode.OK;
             });
         }
     }

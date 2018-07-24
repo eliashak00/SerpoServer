@@ -2,6 +2,7 @@
 using Nancy;
 using Nancy.Extensions;
 using Nancy.Json.Simple;
+using Newtonsoft.Json;
 using SerpoServer.Intepreter;
 
 namespace SerpoServer.Routes.Admin
@@ -12,7 +13,7 @@ namespace SerpoServer.Routes.Admin
         {
             Post("/script/debug", x =>
             {
-                var script = SimpleJson.DeserializeObject<scriptData>(Request.Body.AsString());
+                var script = JsonConvert.DeserializeObject<scriptData>(Request.Body.AsString());
                 if (script == null || string.IsNullOrWhiteSpace(script.script)) return HttpStatusCode.BadRequest;
                 try
                 {

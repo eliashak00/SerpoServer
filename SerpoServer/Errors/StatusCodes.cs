@@ -55,7 +55,7 @@ namespace SerpoServer.Errors
         {
             try
             {
-                if (context.IsAjaxRequest())
+                if (context.Request.IsAjaxRequest())
                 {
                     context.Response.StatusCode = statusCode;
                 }

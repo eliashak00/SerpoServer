@@ -8,6 +8,7 @@ using Nancy.Extensions;
 using Nancy.Json.Simple;
 using Nancy.ModelBinding;
 using Nancy.TinyIoc;
+using Newtonsoft.Json;
 using SerpoServer.Data;
 using SerpoServer.Data.Models;
 using SerpoServer.Intepreter;
@@ -65,7 +66,7 @@ namespace SerpoServer.Routes
             });
             Post("/step2", x =>
             {
-                var usr = SimpleJson.DeserializeObject<usrRequest>(Request.Body.AsString());
+                var usr = JsonConvert.DeserializeObject<usrRequest>(Request.Body.AsString());
                 if (usr == null) return HttpStatusCode.BadRequest;
                 if (usr.psw != usr.confpsw) return HttpStatusCode.BadRequest;
                 

@@ -10,36 +10,38 @@ CREATE TABLE IF NOT EXISTS spo_users
     user_registerd DATETIME
 );
 CREATE TABLE IF NOT EXISTS spo_sites(
-  site_id INT  AUTO_INCREMENT PRIMARY KEY AUTO_INCREMENT,
-  site_domain VARCHAR(100)  
+  site_id INT  AUTO_INCREMENT PRIMARY KEY,
+  site_domain VARCHAR(100),
+  site_name VARCHAR(100),
+  site_ssl INT
 );
 CREATE TABLE IF NOT EXISTS spo_pages(
-  page_id INT  AUTO_INCREMENT PRIMARY KEY AUTO_INCREMENT,
+  page_id INT  AUTO_INCREMENT PRIMARY KEY,
   page_route VARCHAR(20)  ,
   page_script VARCHAR(2000) ,
   page_view VARCHAR(2000) ,
-  page_method INT  ,
+  page_methods INT  ,
   page_response INT  ,
   page_site INT REFERENCES spo_sites(site_id)
 );
 CREATE TABLE IF NOT EXISTS spo_stats(
-  stat_id INT  AUTO_INCREMENT PRIMARY KEY AUTO_INCREMENT,
+  stat_id INT  AUTO_INCREMENT PRIMARY KEY ,
   stat_site INT REFERENCES spo_sites(site_id)
 
 );
 CREATE TABLE IF NOT EXISTS spo_days(
-  day_id INT  AUTO_INCREMENT PRIMARY KEY AUTO_INCREMENT,
+  day_id INT  AUTO_INCREMENT PRIMARY KEY,
   day_stat INT REFERENCES spo_stats(stat_id),
   day_views INT  
 
 );
 CREATE TABLE IF NOT EXISTS spo_services(
-  service_id INT  AUTO_INCREMENT PRIMARY KEY AUTO_INCREMENT,
+  service_id INT  AUTO_INCREMENT PRIMARY KEY,
   service_name VARCHAR(100)  ,
   service_script VARCHAR(5000)  
 );
 CREATE TABLE IF NOT EXISTS spo_service_rel(
-  sr_id INT  AUTO_INCREMENT PRIMARY KEY AUTO_INCREMENT,
+  sr_id INT  AUTO_INCREMENT PRIMARY KEY ,
   sr_site INT REFERENCES spo_sites(site_id),
   sr_service INT REFERENCES spo_sites(site_id)
 );

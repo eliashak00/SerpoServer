@@ -12,6 +12,7 @@ namespace SerpoServer.Routes
     {
         public DynamicModule(PageManager pm)
         {
+            
             Get("/", x =>
             {
                 var dom = Request.Url.HostName;
