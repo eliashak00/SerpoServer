@@ -11,7 +11,9 @@
         user_password      VARCHAR(200),
         user_salt VARCHAR(100),
         user_registerd     DATETIME,
-        user_avatar        VARCHAR(500)
+        user_avatar        VARCHAR(500),
+        user_role INT,
+        user_site INT
       );
     END
     
@@ -59,12 +61,24 @@ END
     BEGIN
 CREATE TABLE  spo_days(
   day_id INT  PRIMARY KEY IDENTITY,
-  day_stat INT REFERENCES spo_stats(stat_id),
-  day_views INT  
+  day_date DATE,
+  day_views INT,
+  day_site INT REFERENCES spo_sites(site_id)
 
 );
 END
-
+  IF NOT EXISTS(SELECT *
+                FROM sysobjects
+                WHERE Name = 'spo_modules')
+    BEGIN
+CREATE TABLE spo_modules(
+  module_id INT AUTO_INCREMENT PRIMARY KEY,
+  module_name VARCHAR(100),
+  module_active INT,
+  module_pos INT,
+  module_js VARCHAR(100)
+);
+END 
   IF NOT EXISTS(SELECT *
                 FROM sysobjects
                 WHERE Name = 'spo_services')

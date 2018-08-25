@@ -1,7 +1,7 @@
 body {
-  background: #3b4660;
+  background: whitesmoke;
   font: "Helvetica Neue", "Calibri", sans-serif;
-  color: whitesmoke;
+  color: black;
 }
 
 nav {
@@ -40,6 +40,10 @@ nav a {
 
 .card-lg {
   min-width: 200px;
+}
+
+.list-group ul li {
+  width: 100%;
 }
 
 @media screen and (max-width: 500px) {

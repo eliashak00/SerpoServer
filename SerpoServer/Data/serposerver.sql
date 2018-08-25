@@ -7,7 +7,9 @@ CREATE TABLE IF NOT EXISTS spo_users
     user_password VARCHAR(200)  ,
     user_salt VARCHAR(100)  ,
       user_avatar VARCHAR(500)  ,
-    user_registerd DATETIME
+    user_registerd DATETIME,
+    user_site INT,
+    user_role INT
 );
 CREATE TABLE IF NOT EXISTS spo_sites(
   site_id INT  AUTO_INCREMENT PRIMARY KEY,
@@ -29,10 +31,18 @@ CREATE TABLE IF NOT EXISTS spo_stats(
   stat_site INT REFERENCES spo_sites(site_id)
 
 );
+CREATE TABLE IF NOT EXISTS spo_modules(
+  module_id INT AUTO_INCREMENT PRIMARY KEY,
+  module_name VARCHAR(100),
+  module_active INT,
+  module_pos INT,
+  module_js VARCHAR(100)
+)
 CREATE TABLE IF NOT EXISTS spo_days(
   day_id INT  AUTO_INCREMENT PRIMARY KEY,
-  day_stat INT REFERENCES spo_stats(stat_id),
-  day_views INT  
+  day_views INT,
+  day_site INT REFERENCES spo_sites(site_id),
+  day_date DATE
 
 );
 CREATE TABLE IF NOT EXISTS spo_services(

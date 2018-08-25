@@ -1,0 +1,44 @@
+@Master['shared/layout.html']
+@Section['js']users.js@EndSection
+@Section['content']
+<div class="row">
+    <div class="col-md-auto">
+        <a href="/admin/account/createoredit" class="btn btn-primary btn-wide">Create new</a>
+
+        <select onchange="sortAfter()" id="sorting" class="mt-2 form-control">
+            <option>Sort After</option>
+            <option value="global">Global Admin</option>
+            <option value="suser">Site User</option>
+            <option value="sadmin">Site Admin</option>
+
+        </select>
+        <script>
+            if (urlParams['sort']) {
+                dom.setValue("sorting", urlParams['sort']);
+            }
+            function sortAfter() {
+                let after = dom.getValue('sorting');
+                window.location = "/admin/account?sort=" + after;
+            }
+        </script>
+    </div>
+    <div class="col-md-9 mx-auto">
+
+        <div class="row">
+
+            @Each.Users
+            <div class="col-md-5 m-1 card card-lg">
+                <div class="card-body">
+                    <h5 class="card-title">@Current.user_nick</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@Current.user_role</h6>
+                    <a href="/admin/account/createoredit?user=@Current.user_id" class="card-link">Edit</a>
+                    <a onclick="users.remove(@Current.user_id)" href="" class="card-link">Delete</a>
+                </div>
+            </div>
+            @EndEach
+        </div>
+
+    </div>
+</div>
+
+@EndSection

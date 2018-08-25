@@ -9,11 +9,12 @@ namespace SerpoServer.Data.Models
     {
         [Column("day_id")]
         public int day_id { get; set; }
-        [Column("day_stat")]
-        public spo_stats day_stat { get; set; }
         [Column("day_views")]
         public int day_views { get; set; }
+        [Column("day_site")]
+        public int day_site { get; set; }
+        
         [Column("day_date")]
-        public DateTime day_date { get; set; }
+        public System.DateTime day_date { get; set; }
     }
 }

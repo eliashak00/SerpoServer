@@ -11,17 +11,18 @@
     <script src="/AdminViews/Static/js/cookie.js"></script>
     <script src="/AdminViews/Static/js/http.js"></script>
     <script src="/AdminViews/Static/js/jq.js"></script>
+    <script src="/AdminViews/Static/js/sortable.js"></script>
     <script src="/AdminViews/Static/js/dom.js"></script>
     <script src="/AdminViews/Static/js/ace/ace.js"></script>
-    <script src="/AdminViews/Static/bootstrap.min.js"></script>
+    <script src="/AdminViews/Static/js/charts.js"></script>
 
-
+    <script src="/AdminViews/Static/js/bootstrap.min.js"></script>
     <script src="/AdminViews/Static/js/@Section['js'];"></script>
     <title>SerpoServer - Admin</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg fixed-top">
-    <a class="navbar-brand" href="#">SerpoServer</a>
+    <a class="navbar-brand" href="/admin">SerpoServer</a>
     <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle"> <i class="fas fa-bars"></i></a>
 
     <script>
@@ -38,8 +39,12 @@
 
             }
         });
+        
+        
     </script>
+
     <a class="ml-1 btn btn-secondary" href="/admin/site"><i class="fa fa-globe"></i></a>
+
 </nav>
 
 
@@ -47,7 +52,7 @@
 
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
+        <ul class="sidebar-nav pt-4">
     
             <li>
                 <a href="/admin/pages">Pages</a>
@@ -56,14 +61,15 @@
                 <a href="/admin/settings">Settings</a>
             </li>
             <li>
-                <a  href="/admin/users">Users</a>
+                <a  href="/admin/account">Users</a>
             </li>
             <li>
-                <a href="/admin/themes">Themes</a>
+                <a href="/admin/sites">Sites</a>
             </li>
             <li>
                 <a  href="/admin/addons">Addons</a>
             </li>
+       
         </ul>
     </div>
 

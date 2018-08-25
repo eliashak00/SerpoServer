@@ -5,6 +5,7 @@ using Nancy.Json.Simple;
 using Nancy.TinyIoc;
 using Newtonsoft.Json;
 using PetaPoco;
+using SerpoServer.Data;
 using SerpoServer.Data.Models;
 using SerpoServer.Data.Models.View;
 
@@ -12,7 +13,12 @@ namespace SerpoServer.Api
 {
     public class SettingsManager
     {
-        private IDatabase db => TinyIoCContainer.Current.Resolve<IDatabase>();
+        private IDatabase db;
+
+        public SettingsManager(Connection db)
+        {
+            this.db = db;
+        }
         public HttpStatusCode SaveChanges(SettingsViewModel data)
         {
 

@@ -1,0 +1,29 @@
+@Master['shared/layout.html']
+@Section['js']sites.js@EndSection
+@Section['content']
+<div class="row">
+    <div class="col-md-auto">
+        <a href="/admin/site/createoredit" class="btn btn-primary btn-wide">Create new</a>
+
+    </div>
+    <div class="col-md-9 mx-auto">
+
+        <div class="row">
+            @Each.Sites
+            <div class="card m-1" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">@Current.site_name</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@Current.site_domain</h6>
+                    <a href="/admin/sites/createoredit?user=@Current.site_id" class="card-link">Edit</a>
+                    <a onclick="sites.remove(@Current.site_id)" href="" class="card-link">Delete</a></li>
+                </div>
+            </div>
+            @EndEach
+     
+           
+        </div>
+
+    </div>
+</div>
+
+@EndSection

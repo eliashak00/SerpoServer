@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using Nancy;
 using Nancy.Cookies;
@@ -16,15 +18,15 @@ namespace SerpoServer.Routes.Admin
 {
     public class MainModule : NancyModule
     {
-        public MainModule() : base("/admin")
+        public MainModule(ModuleManager md) : base("/admin")
         {
    
             Get("/", x =>
             {
                 this.RequiresAuthentication();
                 this.RequiresSite();
-                
-                return View["main.html"];
+               
+                return View["main.html", new {LeftColumn = md.ActiveModules(0), RightModule = md.ActiveModules(1)}];
                 
             });
                Post("/account/login", x =>

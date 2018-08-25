@@ -75,7 +75,7 @@ namespace SerpoServer.Routes
                     user_email = usr.email,
                     user_nick = "John Doe",
                     user_password = usr.psw,
-                    user_registerd = DateTime.Now
+                    user_registerd = System.DateTime.Now
                 };
                 
                 Identity.CreateOrEdit(usrObj);

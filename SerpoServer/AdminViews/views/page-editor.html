@@ -12,7 +12,7 @@
         <a onclick="save()" class="btn btn-primary btn-wide">Save Changes</a>
         <a id="checkErr" onclick="checkErrrors()" class="btn btn-primary btn-wide mt-2">Debug Script</a>
     </div>
-    <div class="col-lg-9">
+    <div class="col-lg-9 mx-auto">
     
             <input onchange="checkRoute()" class="form-control" type="text" value="@Model.page_route" id="pageRoute" placeholder="Route...">
             <select id="pageMethod" class=" form-control mt-2">
@@ -94,21 +94,21 @@
                 }
                 function viewChange() {
                     let value = dom.getValue('pageType');
-                    let elm = document.getElementById("pageScript").parentNode;
-                    if(value === 1){
-                        dom.remove('pageView', true);
+            
+                    if(value === "1"){
 
-                        if (elm.classList.contains('col-md-3')){
-                            elm.classList.remove('col-md-3');
-                            elm.classList.add('col-md-9');
-                            elm.classList.add('mx-auto');
+                        $("#pageView").parent().hide();
+                        if ( $("#pageScript").parent().hasClass("col-md-3")){
+                            $("#pageScript").parent().removeClass("col-md-3");
+                            $("#pageScript").parent().addClass("col-md-9");
+                            $("#pageScript").parent().addClass("mx-auto");
                         }
                     }
                     else{
-                        dom.show('pageView', true);
-                        elm.classList.remove('col-md-9');
-                        elm.classList.add('col-md-3');
-                        elm.classList.remove('mx-auto');
+                        $("#pageView").parent().show();
+                        $("#pageScript").parent().removeClass("col-md-9");
+                        $("#pageScript").parent().addClass("mx-auto");
+                        $("#pageScript").parent().addClass("col-md-3");
                     }
                 }
             </script>

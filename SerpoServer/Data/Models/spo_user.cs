@@ -1,6 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using PetaPoco;
+using SerpoServer.Data.Models.Enums;
+using SerpoServer.Data.Models.View;
 
 namespace SerpoServer.Data.Models
 {
@@ -22,7 +24,12 @@ namespace SerpoServer.Data.Models
         [Column("user_avatar")]
         public string user_avatar { get; set; }
         [Column("user_registerd")]
-        public DateTime user_registerd { get; set; }
+        public System.DateTime user_registerd { get; set; }
+        [Column("user_role")] 
+        public UserRoles user_role { get; set; }
+        [Column("user_site")]
+        public int user_site { get; set; }
+
 
     }
 }

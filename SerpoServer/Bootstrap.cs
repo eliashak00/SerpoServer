@@ -33,6 +33,7 @@ namespace SerpoServer
     {
 
         private static IPipelines _pipelines;
+
         protected override void RequestStartup(TinyIoCContainer container, IPipelines pipelines, NancyContext context)
         {
 

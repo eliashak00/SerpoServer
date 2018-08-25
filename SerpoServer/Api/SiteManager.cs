@@ -20,5 +20,7 @@ namespace SerpoServer.Api
             db.SingleOrDefault<spo_site>("SELECT * FROM spo_sites WHERE site_domain = @0", domain);
 
         public static spo_site GetSite(this NancyContext ctx) => GetSiteById((int) ctx.Parameters.site);
+        
+        
     }
 }

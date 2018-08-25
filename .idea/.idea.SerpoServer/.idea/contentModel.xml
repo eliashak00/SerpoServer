@@ -393,11 +393,19 @@
                 <e p="worker-xquery.js" t="Include" />
               </e>
               <e p="bootstrap.min.js" t="Include" />
+              <e p="charts.js" t="Include" />
               <e p="cookie.js" t="Include" />
               <e p="dom.js" t="Include" />
               <e p="http.js" t="Include" />
               <e p="jq.js" t="Include" />
+              <e p="modules" t="Include">
+                <e p="chart.js" t="Include" />
+                <e p="clock.js" t="Include" />
+              </e>
+              <e p="modules.js" t="Include" />
               <e p="pages.js" t="Include" />
+              <e p="sortable.js" t="Include" />
+              <e p="users.js" t="Include" />
             </e>
             <e p="webfonts" t="Include">
               <e p="fa-brands-400.eot" t="Include" />
@@ -418,23 +426,29 @@
             </e>
           </e>
           <e p="views" t="Include">
+            <e p="account-edit.html" t="Include" />
+            <e p="account.html" t="Include" />
             <e p="main.html" t="Include" />
+            <e p="modules.html" t="Include" />
             <e p="page-editor.html" t="Include" />
             <e p="pages.html" t="Include" />
             <e p="settings.html" t="Include" />
             <e p="shared" t="Include">
               <e p="layout.html" t="Include" />
-              <e p="sidebar.html" t="Include" />
               <e p="site.html" t="Include" />
             </e>
+            <e p="site-editor.html" t="Include" />
+            <e p="site.html" t="Include" />
           </e>
         </e>
         <e p="Api" t="Include">
+          <e p="ModuleManager.cs" t="Include" />
           <e p="PageManager.cs" t="Include" />
           <e p="ServiceManager.cs" t="Include" />
           <e p="SettingsManager.cs" t="Include" />
           <e p="SiteManager.cs" t="Include" />
           <e p="StatManager.cs" t="Include" />
+          <e p="UserManager.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Bootstrap.cs" t="Include" />
@@ -449,8 +463,10 @@
             <e p="Enums" t="Include">
               <e p="RequestMethods.cs" t="Include" />
               <e p="ResponseMethods.cs" t="Include" />
+              <e p="UserRoles.cs" t="Include" />
             </e>
             <e p="spo_days.cs" t="Include" />
+            <e p="spo_modules.cs" t="Include" />
             <e p="spo_page.cs" t="Include" />
             <e p="spo_services.cs" t="Include" />
             <e p="spo_settings.cs" t="Include" />
@@ -466,6 +482,7 @@
           <e p="serposerver.sql" t="Include" />
           <e p="serposervermssql.sql" t="Include" />
         </e>
+        <e p="DateTime.cs" t="Include" />
         <e p="EmbeddedStatic" t="Include">
           <e p="bootstrap.min.css" t="Include" />
           <e p="bootstrap.min.js" t="Include" />
@@ -501,9 +518,11 @@
           <e p="Admin" t="Include">
             <e p="AccountModule.cs" t="Include" />
             <e p="MainModule.cs" t="Include" />
+            <e p="ModulesModule.cs" t="Include" />
             <e p="PageModule.cs" t="Include" />
             <e p="ServiceModule.cs" t="Include" />
             <e p="SettingsModule.cs" t="Include" />
+            <e p="SiteModule.cs" t="Include" />
             <e p="StatModule.cs" t="Include" />
             <e p="ToolsModule.cs" t="Include" />
           </e>

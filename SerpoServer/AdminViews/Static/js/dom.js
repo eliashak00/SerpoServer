@@ -31,26 +31,38 @@ const dom = {
         element.style.display = 'none';
     },
     'remove': function (id, parent) {
-        const element = document.getElementById(id);
+        let element = document.getElementById(id);
         if (parent) {
             element.parentNode.style.display = 'none';
         }
         element.style.display = 'none';
     },
     'show': function (id, parent) {
-        const element = document.getElementById(id);
+        let element = document.getElementById(id);
         if (parent) {
             element.parentNode.style.display = 'block';
         }
         element.style.display = 'block';
     },
     'disable': function (id) {
-        const element = document.getElementById(id);
+        let element = document.getElementById(id);
         element.disabled = true;
     },
     'enable': function (id) {
-        const element = document.getElementById(id);
+       let  element = document.getElementById(id);
         element.disabled = false;
     }
     
 };
+let urlParams;
+(window.onpopstate = function () {
+    let match,
+        pl     = /\+/g,
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+        query  = window.location.search.substring(1);
+
+    urlParams = {};
+    while (match = search.exec(query))
+        urlParams[decode(match[1])] = decode(match[2]);
+})();

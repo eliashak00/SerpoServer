@@ -8,7 +8,7 @@
     <div class="col-md-auto">
         <a href="/admin/pages/createoredit" class="btn btn-primary btn-wide">Create new</a>
         
-        <select onload="this.value = " onchange="sortAfter()" id="sorting" class="mt-2 form-control">
+        <select onchange="sortAfter()" id="sorting" class="mt-2 form-control">
             <option>Sort After</option>
             <option value="get">GET</option>
             <option value="post">POST</option>
@@ -16,13 +16,16 @@
             <option value="delete">DELETE</option>
         </select>
         <script>
+            if (urlParams['sort']) {
+                dom.setValue("sorting", urlParams['sort']);
+            }
             function sortAfter() {
                 let after = dom.getValue('sorting');
                 window.location = "/admin/pages?sort=" + after;
             }
         </script>
     </div>
-    <div class="col-md-9">
+    <div class="col-md-9 mx-auto">
 
         <div class="row">
             

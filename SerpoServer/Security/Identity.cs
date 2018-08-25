@@ -109,7 +109,7 @@ namespace SerpoServer.Security
             var hashedPassword = Hashing.SHA512(password, user.user_salt);
             if (user.user_password != hashedPassword) return null;
             var key = Guid.NewGuid().ToString();
-            var exp = DateTime.Now.AddHours(logoutTimeLimit);
+            var exp = System.DateTime.Now.AddHours(logoutTimeLimit);
             var objPayload = new Dictionary<string, object>
             {
                 {"Email", user.user_email},
@@ -128,7 +128,7 @@ namespace SerpoServer.Security
                 try
                 {
                     var token = JWT.Decode<JwtToken>(key, user.Item3, JweAlgorithm.DIR, JweEncryption.A128CBC_HS256);
-                    if (DateTime.Parse(token.Exp).CompareTo(DateTime.Now) >
+                    if (System.DateTime.Parse(token.Exp).CompareTo(System.DateTime.Now) >
                         logoutTimeLimit) continue;
 
                     return UserCache.FirstOrDefault(x => x.Key == token.Email).Value;
@@ -184,7 +184,7 @@ namespace SerpoServer.Security
             }
             else
             {
-                storedUser.user_registerd = DateTime.Now;
+                storedUser.user_registerd = System.DateTime.Now;
                 db.Insert("spo_users", storedUser);
             }
         }
@@ -197,7 +197,7 @@ namespace SerpoServer.Security
 
         public static spo_user GetUserById(int id)
         {
-            return db.Single<spo_user>("SELECT * user_id, user_email, user_avatar FROM spo_users WHERE user_id = @0",
+            return db.Single<spo_user>("SELECT * FROM spo_users WHERE user_id = @0",
                 id);
         }
     }
