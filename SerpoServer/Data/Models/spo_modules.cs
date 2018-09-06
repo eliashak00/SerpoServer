@@ -6,6 +6,7 @@
         public string module_name { get; set; }
         public string module_js { get; set; }
         public int module_pos { get; set; }
+        public int module_lat { get; set; }
         public bool module_active { get; set; }
     }
 }

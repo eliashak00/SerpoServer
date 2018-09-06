@@ -36,10 +36,11 @@ CREATE TABLE IF NOT EXISTS spo_modules(
   module_name VARCHAR(100),
   module_active INT,
   module_pos INT,
+  module_lat INT,
   module_js VARCHAR(100)
-)
+);
 CREATE TABLE IF NOT EXISTS spo_days(
-  day_id INT  AUTO_INCREMENT PRIMARY KEY,
+  day_id INT AUTO_INCREMENT PRIMARY KEY ,
   day_views INT,
   day_site INT REFERENCES spo_sites(site_id),
   day_date DATE

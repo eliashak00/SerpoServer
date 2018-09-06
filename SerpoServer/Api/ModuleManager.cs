@@ -25,6 +25,7 @@ namespace SerpoServer.Api
         {
             return db.FirstOrDefault<spo_modules>("SELECT * FROM spo_modules WHERE module_id = @0", id);
         }
+
         public void CreateOrEdit(spo_modules module)
         {
             if (module.module_id == 0)

@@ -16,7 +16,7 @@
                 @Current.module_html
             @EndEach
 
-            <button type="button" class="pull-down btn btn-primary" data-toggle="modal" data-target="#adminEditor">
+            <button type="button" id="editAdmin" class="pull-down btn btn-primary" data-toggle="modal" data-target="#adminEditor">
                 Edit dashboard
             </button>
         </div>
@@ -34,44 +34,156 @@
             <div class="modal-body">
                 <div class="text-center row">
                     <div class="col-md-6">
-              <ul id="editorLeft"></ul>
+              <ul class="list-group" id="editorLeft"></ul>
                     </div>
                     <div  class="col-md-6">
-<ul id="editorRight"></ul>
+<ul class="list-group" class="editorRight" id="editorRight"></ul>
                     </div>
                 </div>
                 <script>
-                    let modules = http.get("/admin/modules/");
                     let modPosL = Array();
                     let modPosR = Array();
-                    for (let module in modules){
-
-                        if (module.module_pos === 1){
-                            modPosR.insert(module.module_id);
-                            $("#editorRight").append($`<li>${module.module_name}</li>`);
-                        }else{
-                            modPosL.insert(module.module_id);
-                            $("#editorLeft").append($`<li>${module.module_name}</li>`);
+                    let modLPosL = Array();
+                    let modLPosR = Array();
+                    let mods = {};
+                   http.get("/admin/modules/all/", function (modules, status) {
+                        if (status === 200){
+                      
+                            for (let i = 0; i < modules.length; i++){
+                                let module = modules[i];
+                                if (module.module_pos === 1){
+                                    modPosR.push(module.module_id);
+                                    modLPosR.push(module.module_lat);
+                                    $("#editorRight").append(`<li class="list-group-item" id="${module.module_id}">${module.module_name} <a class="alert-dismissible" role="alert" onclick="removeElm(${module.module_id})">&times;</a></li>`);
+                                }else{
+                                    modPosL.push(module.module_id);
+                                    modLPosL.push(module.module_lat);
+                                    $("#editorLeft").append(`<li class="list-group-item" id="${module.module_id}">${module.module_name} <a class="alert-dismissible" role="alert" onclick="removeElm(${module.module_id})">&times;</a></li>`);
+                                }
+                                $("#editorAddDrp").append(`<button class="dropdown-item" onclick="addItem(${module.module_id})" type="button">${module.module_name}</button>`);
+                                mods = modules;
+                                if (modules.length < 2){
+                                    $("#editorAddBtn").hide();
+                                }
+                            }
+                            $("#editorRight").sortable();
+                            $("#editorLeft").sortable();
+                            $("#editorLeft").sortable().bind('sortupdate', function() {
+                                updateOrder(0)
+                            });
+                            $("#editorRight").sortable().bind('sortupdate', function() {
+                                updateOrder(1)
+                            });
+                      
+                        } 
+                    });
+                    function addItem(id) {
+                        for (let m in mods){
+                            if (m.module_id === id){
+                                if (m.module_pos === 1){
+                                    modPosR.push(m.module_id);
+                                    modLPosR.push(modLPosR.length + 1);
+                                    $("#editorRight").append(`<li class="list-group-item" id="${m.module_id}">${m.module_name}</li>`);
+                                }else{
+                                    modPosL.push(m.module_id);
+                                    modLPosL.push(modLPosL.length + 1);
+                                    $("#editorLeft").append(`<li class="list-group-item" id="${m.module_id}">${m.module_name}</li>`);
+                                }
+                            }
                         }
                     }
-                    $("#editorRight").sortable();
-                    $("#editorLeft").sortable();
-                    $("#editorLeft").sortable().bind('sortupdate', function() {
-                        updateOrder(0)
-                    });
-                    $("#editorRight").sortable().bind('sortupdate', function() {
-                        updateOrder(1)
-                    });
+                    function removeElm(id) {
+                        let modPos = findModPos(id);
+                        if (modPos === 1){
+                            for (let i = 0; i < modPosR.length; i++){
+                                let p = modPosR[i];
+                                if (p === id){
+                                    modPosR.remove(i);
+                                }
+                            }
+                        }
+                        else{
+                            for (let i = 0; i < modPosL.length; i++){
+                                let p = modPosL[i];
+                                if (p === id){
+                                    modPosL.remove(i);
+                                }
+                            }
+                        }
+                    }
                     function updateOrder(pos) {
                         if (pos === 1){
-                            
+                            modPosR = [];
+                            $("#editorRight").each(function (i, obj) {
+                               modPosR.push(obj.attr("id"));
+                            });
+                        } else{
+                            modPosL = [];
+                            $("#editorLeft").each(function (i, obj) {
+                                modPosL.push(obj.attr("id"));
+                            });
+                        }
+                    }
+                    $("#editorAdd").click(function () {
+                      
+                    });
+                    $("#editorSave").click(function () {
+                        for (let m in mods) {
+                            let modPos = findModPos(m.module_id);
+                            m.module_pos = modPos;
+                            m.module_lat = findLPos(modPos);
+
+                        }
+                        let json = JSON.stringify(mods);
+                        http.post("/admin/modules/createoredit", json, function (data, status) {
+                            location.reload();
+                        });
+                    });
+                    function findModPos(id) {
+      
+                        for (let p in modPosR){
+                            if (p === id){
+                                return p;
+                            }
+                        }
+                        for (let p in modPosL){
+                            if (p === id){
+                                return p;
+                            }
+                        }
+                        return 0;
+                    }
+                    function findLPos(id, side) {
+                        if (side === 1){
+                            for (let i = 0; i < modLPosR.length; i++){
+                                let p = modLPosR[i];
+                                if (p === id){
+                                    return i; 
+                                }
+                            }
                         } 
+                        else{
+                            for (let i = 0; i < modLPosL.length; i++){
+                                let p = modLPosL[i];
+                                if (p === id){
+                                    return i;
+                                }
+                            }
+                        }
                     }
                 </script>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" id="editorAdd">Add item</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+               
+                <div  class="dropdown">
+                    <button id="editorAddBtn" aria-invalid="editorAdd" class="btn btn-secondary dropdown-toggle" type="button" joey data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Add item
+                    </button>
+                    <div class="dropdown-menu" id="editorAddDrp" aria-labelledby="dropdownMenu2">
+         
+                    </div>
+                </div>
+                <button type="button" id="editorSave" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>

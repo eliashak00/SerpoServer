@@ -1,16 +1,27 @@
 const AUTHHEADER = 'Authorization';
 const AUTHKEY = 'auth';
 const http = {
-    'get': function (url, success) {
+    'get': function (url, success, fail) {
         let xhr = new XMLHttpRequest();
-        xhr.open('GET', url);
+        xhr.open('GET', url, false);
         xhr.setRequestHeader(AUTHHEADER, Cookies.get(AUTHKEY));
         xhr.onreadystatechange = function () {
+
             let result = null;
             if (this.responseText) {
                 result = JSON.parse(this.responseText);
             }
-            success(result, this.status);
+
+            if (this.status === 200){
+                success(result, this.status);
+            }
+            else{
+                console.log(result);
+                fail(result, this.status);
+                dom.setError("Failed to proceed!");
+                return null;
+            }
+            
         };
         xhr.send();
     },
@@ -30,6 +41,7 @@ const http = {
             else{
                 console.log(result);
                 fail(result, this.status);
+                dom.setError("Failed to proceed!");
                 return null;
             }
         };
@@ -46,6 +58,8 @@ const http = {
             }
             else{
                 console.log(result);
+                fail(result, this.status);
+                dom.setError("Failed to proceed!");
                 return null;
             }
         };

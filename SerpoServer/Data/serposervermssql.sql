@@ -76,6 +76,7 @@ CREATE TABLE spo_modules(
   module_name VARCHAR(100),
   module_active INT,
   module_pos INT,
+  module_lat INT,
   module_js VARCHAR(100)
 );
 END 

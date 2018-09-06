@@ -393,6 +393,7 @@
                 <e p="worker-xquery.js" t="Include" />
               </e>
               <e p="bootstrap.min.js" t="Include" />
+              <e p="bootstrapmen.js" t="Include" />
               <e p="charts.js" t="Include" />
               <e p="cookie.js" t="Include" />
               <e p="dom.js" t="Include" />
@@ -404,6 +405,7 @@
               </e>
               <e p="modules.js" t="Include" />
               <e p="pages.js" t="Include" />
+              <e p="popper.js" t="Include" />
               <e p="sortable.js" t="Include" />
               <e p="users.js" t="Include" />
             </e>

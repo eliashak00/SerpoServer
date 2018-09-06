@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="/AdminViews/Static/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="/AdminViews/Static/css/sidebar.css">
     <link rel="stylesheet" href="/AdminViews/Static/css/base.css">
@@ -15,15 +16,23 @@
     <script src="/AdminViews/Static/js/dom.js"></script>
     <script src="/AdminViews/Static/js/ace/ace.js"></script>
     <script src="/AdminViews/Static/js/charts.js"></script>
-
+    <script src="/AdminViews/Static/js/popper.js"></script>
     <script src="/AdminViews/Static/js/bootstrap.min.js"></script>
+    <script src="/AdminViews/Static/js/bootstrapmen.js"></script>
     <script src="/AdminViews/Static/js/@Section['js'];"></script>
     <title>SerpoServer - Admin</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg fixed-top">
-    <a class="navbar-brand" href="/admin">SerpoServer</a>
-    <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle"> <i class="fas fa-bars"></i></a>
+<header>
+
+    <nav>
+        <a class="navbar-brand" href="/admin">SerpoServer</a>
+        <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle"> <i class="fas fa-bars"></i></a>
+
+
+
+        <a class="ml-1 btn btn-secondary" href="/admin/site"><i class="fa fa-globe"></i></a>
+    </nav>
 
     <script>
         let currentSite = {};
@@ -39,13 +48,11 @@
 
             }
         });
-        
-        
+
+
     </script>
+</header>
 
-    <a class="ml-1 btn btn-secondary" href="/admin/site"><i class="fa fa-globe"></i></a>
-
-</nav>
 
 
 <div id="wrapper">
