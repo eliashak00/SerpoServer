@@ -1,8 +1,12 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
+using IronPython.Modules;
 using Nancy;
 using Nancy.Extensions;
+using Nancy.Json.Simple;
 using Nancy.Security;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using SerpoServer.Api;
 using SerpoServer.Data.Models;
 
@@ -28,10 +32,10 @@ namespace SerpoServer.Routes.Admin
                 this.RequiresAuthentication();
                 return View["modules.html", new {Modules = manager.AllModules}];
             });
-            Get("/createoredit}", x =>
+            Get("/createoredit", x =>
             {
                 this.RequiresAuthentication();
-                return View["module-editor.html", new spo_modules()];
+                return View["module-editor.html", new spo_module()];
             });
             Get("/createoredit/{id}", x =>
             {
@@ -42,8 +46,25 @@ namespace SerpoServer.Routes.Admin
             Post("/createoredit", x =>
             {
                 this.RequiresAuthentication();
-                var data = JsonConvert.DeserializeObject<spo_modules>(Request.Body.AsString());
-                manager.CreateOrEdit(data);
+
+                var reqS = Request.Body.AsString();
+                var data = JArray.Parse(reqS);
+                
+                IList<spo_module> modules = new List<spo_module>();
+                foreach (var item in data)
+                {
+                    var obj = new spo_module
+                    {
+                        module_active = item["module_active"].Value<bool>(),
+                        module_id = item["module_id"].Value<int>(),
+                        module_lat = item["module_lat"].Value<int>(),
+                        module_name = item["module_name"].Value<string>(),
+                        module_js = item["module_js"].Value<string>(),
+                        module_pos = item["module_pos"].Value<int>()
+                    };
+                    modules.Add(obj);
+                }
+                manager.CreateOrEdit(modules);
                 return HttpStatusCode.OK;
             });
         }

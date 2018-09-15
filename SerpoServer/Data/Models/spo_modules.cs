@@ -1,7 +1,12 @@
-﻿namespace SerpoServer.Data.Models
+﻿using PetaPoco;
+
+namespace SerpoServer.Data.Models
 {
-    public class spo_modules
+    [TableName("spo_modules")]
+    [PrimaryKey("module_id")]
+    public class spo_module
     {
+
         public int module_id { get; set; }
         public string module_name { get; set; }
         public string module_js { get; set; }

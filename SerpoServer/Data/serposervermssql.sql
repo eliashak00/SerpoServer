@@ -100,3 +100,13 @@ CREATE TABLE spo_service_rel(
   sr_service INT REFERENCES spo_sites(site_id)
 );
 END
+  IF NOT EXISTS(SELECT *
+                FROM sysobjects
+                WHERE Name = 'spo_cruds')
+    BEGIN
+CREATE TABLE spo_cruds(
+  crud_id INT PRIMARY KEY IDENTITY,
+  crud_table VARCHAR(100),
+  crud_json VARCHAR(MAX)
+);
+END

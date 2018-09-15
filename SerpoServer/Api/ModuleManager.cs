@@ -13,34 +13,38 @@ namespace SerpoServer.Api
             this.db = db;
         }
 
-        public IEnumerable<spo_modules> ActiveModules(int pos) =>  db.Query<spo_modules>("SELECT * FROM spo_modules WHERE module_active = 1 AND module_pos = @0", pos);
-        public IEnumerable<spo_modules> AllModules =>  db.Query<spo_modules>("SELECT * FROM spo_modules");
+        public IEnumerable<spo_module> ActiveModules(int pos) =>  db.Query<spo_module>("SELECT * FROM spo_modules WHERE module_active = 1 AND module_pos = @0", pos);
+        public IEnumerable<spo_module> AllModules =>  db.Query<spo_module>("SELECT * FROM spo_modules");
         
         
-        public spo_modules GetModule(string name)
+        public spo_module GetModule(string name)
         {
-            return db.FirstOrDefault<spo_modules>("SELECT * FROM spo_modules WHERE module_name = @0", name);
+            return db.FirstOrDefault<spo_module>("SELECT * FROM spo_modules WHERE module_name = @0", name);
         }
-        public spo_modules GetModule(int id)
+        public spo_module GetModule(int id)
         {
-            return db.FirstOrDefault<spo_modules>("SELECT * FROM spo_modules WHERE module_id = @0", id);
+            return db.FirstOrDefault<spo_module>("SELECT * FROM spo_modules WHERE module_id = @0", id);
         }
 
-        public void CreateOrEdit(spo_modules module)
+        public void CreateOrEdit(IEnumerable<spo_module> modules)
         {
-            if (module.module_id == 0)
+            foreach (var module in modules)
             {
-                db.Insert(module);
+                if (module.module_id == 0)
+                {
+                    db.Insert(module);
+                }
+                else
+                {
+                    db.Update(module);
+                }
             }
-            else
-            {
-                db.Update(module);
-            }
+
     }
 
         public void Delete(int id)
         {
-            db.Delete<spo_modules>("DELETE FROM spo_modules WHERE module_id = @0", id);
+            db.Delete<spo_module>("DELETE FROM spo_modules WHERE module_id = @0", id);
         }
         
     }

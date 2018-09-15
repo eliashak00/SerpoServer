@@ -6,14 +6,14 @@
     <div class="text-center row">
         <div class="col-md-6">
             @Each.LeftColumn
-                @Current.module_html
+            @Current.module_js
             @EndEach
 
         </div>
         <div class="col-md-6">
 
             @Each.RightColumn
-                @Current.module_html
+            <p>test</p>
             @EndEach
 
             <button type="button" id="editAdmin" class="pull-down btn btn-primary" data-toggle="modal" data-target="#adminEditor">
@@ -41,149 +41,112 @@
                     </div>
                 </div>
                 <script>
-                    let modPosL = Array();
-                    let modPosR = Array();
-                    let modLPosL = Array();
-                    let modLPosR = Array();
-                    let mods = {};
+                    let mods = [];
                    http.get("/admin/modules/all/", function (modules, status) {
                         if (status === 200){
                       
                             for (let i = 0; i < modules.length; i++){
                                 let module = modules[i];
-                                if (module.module_pos === 1){
-                                    modPosR.push(module.module_id);
-                                    modLPosR.push(module.module_lat);
-                                    $("#editorRight").append(`<li class="list-group-item" id="${module.module_id}">${module.module_name} <a class="alert-dismissible" role="alert" onclick="removeElm(${module.module_id})">&times;</a></li>`);
-                                }else{
-                                    modPosL.push(module.module_id);
-                                    modLPosL.push(module.module_lat);
-                                    $("#editorLeft").append(`<li class="list-group-item" id="${module.module_id}">${module.module_name} <a class="alert-dismissible" role="alert" onclick="removeElm(${module.module_id})">&times;</a></li>`);
+                                if (module.module_active) {
+                                    if (module.module_pos === 1) {
+
+                                        $("#editorRight").append(`<li class="list-group-item" id="elem${module.module_id}">${module.module_name} <button class="ml-2 btn btn-outline-danger" onclick="removeElm(${module.module_id})">X</button></li>`);
+                                    } else {
+
+
+                                        $("#editorLeft").append(`<li class="list-group-item" id="elem${module.module_id}">${module.module_name} <button class="ml-2 btn btn-outline-danger" onclick="removeElm(${module.module_id})">X</button></li>`);
+                                    }
+                                    $("#editorAddDrp").append(`<button class="dropdown-item" id="addList${module.module_id}" onclick="addItem(${module.module_id})" type="button">${module.module_name}</button>`);
+                                    
                                 }
-                                $("#editorAddDrp").append(`<button class="dropdown-item" onclick="addItem(${module.module_id})" type="button">${module.module_name}</button>`);
-                                mods = modules;
-                                if (modules.length < 2){
-                                    $("#editorAddBtn").hide();
-                                }
+                        
+                            }
+                            mods = modules;
+                            if (modules.length < 2) {
+                                $("#editorAddBtn").hide();
                             }
                             $("#editorRight").sortable();
                             $("#editorLeft").sortable();
                             $("#editorLeft").sortable().bind('sortupdate', function() {
-                                updateOrder(0)
+                                updateOrder();
                             });
                             $("#editorRight").sortable().bind('sortupdate', function() {
-                                updateOrder(1)
+                                updateOrder();
                             });
                       
                         } 
                     });
                     function addItem(id) {
-                        for (let m in mods){
-                            if (m.module_id === id){
-                                if (m.module_pos === 1){
-                                    modPosR.push(m.module_id);
-                                    modLPosR.push(modLPosR.length + 1);
-                                    $("#editorRight").append(`<li class="list-group-item" id="${m.module_id}">${m.module_name}</li>`);
-                                }else{
-                                    modPosL.push(m.module_id);
-                                    modLPosL.push(modLPosL.length + 1);
-                                    $("#editorLeft").append(`<li class="list-group-item" id="${m.module_id}">${m.module_name}</li>`);
-                                }
+                        let module = getModule(id);
+                        module.module_active = true;
+                        if (module.module_id === id){
+                            if (module.module_pos === 1){
+                                $("#editorRight").append(`<li class="list-group-item" id="elem${module.module_id}">${module.module_name} <button class="ml-2 btn btn-outline-danger" onclick="removeElm(${module.module_id})">X</button></li>`);
+                            }else{
+                                $("#editorLeft").append(`<li class="list-group-item" id="elem${module.module_id}">${module.module_name} <button class="ml-2 btn btn-outline-danger" onclick="removeElm(${module.module_id})">X</button></li>`);
                             }
                         }
+                        $("#addList" + id).remove();
+                        mods.push(module);
+                        
                     }
                     function removeElm(id) {
-                        let modPos = findModPos(id);
-                        if (modPos === 1){
-                            for (let i = 0; i < modPosR.length; i++){
-                                let p = modPosR[i];
-                                if (p === id){
-                                    modPosR.remove(i);
-                                }
-                            }
-                        }
-                        else{
-                            for (let i = 0; i < modPosL.length; i++){
-                                let p = modPosL[i];
-                                if (p === id){
-                                    modPosL.remove(i);
-                                }
-                            }
-                        }
-                    }
-                    function updateOrder(pos) {
-                        if (pos === 1){
-                            modPosR = [];
-                            $("#editorRight").each(function (i, obj) {
-                               modPosR.push(obj.attr("id"));
-                            });
-                        } else{
-                            modPosL = [];
-                            $("#editorLeft").each(function (i, obj) {
-                                modPosL.push(obj.attr("id"));
-                            });
-                        }
-                    }
-                    $("#editorAdd").click(function () {
-                      
-                    });
-                    $("#editorSave").click(function () {
-                        for (let m in mods) {
-                            let modPos = findModPos(m.module_id);
-                            m.module_pos = modPos;
-                            m.module_lat = findLPos(modPos);
+                        let module = getModule(id);
+             
 
-                        }
-                        let json = JSON.stringify(mods);
-                        http.post("/admin/modules/createoredit", json, function (data, status) {
-                            location.reload();
-                        });
-                    });
-                    function findModPos(id) {
-      
-                        for (let p in modPosR){
-                            if (p === id){
-                                return p;
-                            }
-                        }
-                        for (let p in modPosL){
-                            if (p === id){
-                                return p;
-                            }
-                        }
-                        return 0;
+                        module.module_active = false;
+                        $("#editorAddDrp").append(`<button class="dropdown-item" id="addList${module.module_id}" onclick="addItem(${module.module_id})" type="button">${module.module_name}</button>`);
+                        $("#elem" + id).remove();
+                        modules.pop(module);
+                  
                     }
-                    function findLPos(id, side) {
-                        if (side === 1){
-                            for (let i = 0; i < modLPosR.length; i++){
-                                let p = modLPosR[i];
-                                if (p === id){
-                                    return i; 
-                                }
+                    function getModule(id) {
+                        for (let i = 0; i < mods.length; i++){
+                            let m = mods[i];
+                            if(m.module_id === id){
+                                return m;
                             }
                         } 
-                        else{
-                            for (let i = 0; i < modLPosL.length; i++){
-                                let p = modLPosL[i];
-                                if (p === id){
-                                    return i;
-                                }
-                            }
-                        }
+                    }
+                    function updateOrder() {
+                        let activeMods = [];
+                        let y = 0;
+                        $("#editorRight").each(function (i, obj) {
+                            let m = getModule(obj.attr("id"));
+                            m.module_pos = 1;
+                            m.module_lat = y;
+                            y++;
+                            activeMods.push(m);
+                        });
+                        y = 0;
+                        $("#editorLeft").each(function (i, obj) {
+                            let m = getModule(obj.attr("id"));
+                            m.module_pos = 0;
+                            m.module_lat = y;
+                            y++;
+                            activeMods.push(m);
+                        });
+                        mods = activeMods;
+                    }
+                    function save() {
+                    
+                        http.post("/admin/modules/createoredit", mods, function (data, status) {
+                            location.reload();
+                        });
                     }
                 </script>
             </div>
             <div class="modal-footer">
                
                 <div  class="dropdown">
-                    <button id="editorAddBtn" aria-invalid="editorAdd" class="btn btn-secondary dropdown-toggle" type="button" joey data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button id="editorAddBtn" aria-invalid="editorAdd" class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Add item
                     </button>
                     <div class="dropdown-menu" id="editorAddDrp" aria-labelledby="dropdownMenu2">
          
                     </div>
                 </div>
-                <button type="button" id="editorSave" class="btn btn-primary">Save changes</button>
+                <button type="button" onclick="save()" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>

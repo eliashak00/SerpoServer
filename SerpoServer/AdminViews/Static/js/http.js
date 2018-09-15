@@ -29,6 +29,7 @@ const http = {
         let xhr = new XMLHttpRequest();
         xhr.open('POST', url);
         xhr.setRequestHeader(AUTHHEADER, Cookies.get(AUTHKEY));
+        xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onreadystatechange = function () {
             let result = null;
             if (this.responseText) {

@@ -461,12 +461,14 @@
             <e p="MemoryDatabase.cs" t="Include" />
           </e>
           <e p="Connection.cs" t="Include" />
+          <e p="Crud.cs" t="Include" />
           <e p="Models" t="Include">
             <e p="Enums" t="Include">
               <e p="RequestMethods.cs" t="Include" />
               <e p="ResponseMethods.cs" t="Include" />
               <e p="UserRoles.cs" t="Include" />
             </e>
+            <e p="spo_crud.cs" t="Include" />
             <e p="spo_days.cs" t="Include" />
             <e p="spo_modules.cs" t="Include" />
             <e p="spo_page.cs" t="Include" />

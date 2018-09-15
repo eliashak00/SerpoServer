@@ -56,3 +56,8 @@ CREATE TABLE IF NOT EXISTS spo_service_rel(
   sr_site INT REFERENCES spo_sites(site_id),
   sr_service INT REFERENCES spo_sites(site_id)
 );
+CREATE TABLE IF NOT EXISTS spo_cruds(
+  crud_id INT  AUTO_INCREMENT PRIMARY KEY ,
+  crud_table VARCHAR(100),
+  crud_json LONGTEXT
+);
