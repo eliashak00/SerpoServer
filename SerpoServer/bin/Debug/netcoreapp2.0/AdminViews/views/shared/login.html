@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/admin/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/admin/static/css/base.css">
+    <title>SerpoServer - Admin</title>
+</head>
+<body>
+<main class="container-fluid">
+    <form class="mx-auto">
+        <input class="w3-input" id="email" required type="email" placeholder="Email..."/>
+        <input class="w3-input" id="password" required type="password" placeholder="Password..."/>
+
+        <button onclick="login()" id="loginBtn" class="w3-button">Login</button>
+        <script>
+            function login() {
+                let data = {
+                    Email: dom.getValue("email"),
+                    Password: dom.getValue("password")
+                };
+                http.post("/serpoadmin/account/login", JSON.stringify(data), function (response, status) {
+                    location.reload();
+                }, function (response, status) {
+                    if (status === 400){
+                        dom.setValue("loginBtn", "Email or password are incorrect!");
+                    }
+                    else{
+                        dom.setValue("loginBtn", "An error occured!");
+                    }
+                });
+                $()
+            }
+        </script>
+    </form>
+</main>
+
+<script src="/admin/static/js/jquery.min.js"></script>
+<script src="/admin/static/js/bootstrap.min.js"></script>
+</body>
+</html>

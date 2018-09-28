@@ -25,8 +25,10 @@ namespace SerpoServer.Routes.Admin
             {
                 this.RequiresAuthentication();
                 this.RequiresSite();
-               
-                return View["main.html", new {LeftColumn = md.ActiveModules(0), RightModule = md.ActiveModules(1)}];
+
+                var left = md.ActiveModules(0);
+                var right = md.ActiveModules(1);
+                return View["main.html", new {LeftColumn = left, RightColumn = right}];
                 
             });
                Post("/account/login", x =>

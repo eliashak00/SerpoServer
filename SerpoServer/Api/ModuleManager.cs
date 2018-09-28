@@ -13,7 +13,7 @@ namespace SerpoServer.Api
             this.db = db;
         }
 
-        public IEnumerable<spo_module> ActiveModules(int pos) =>  db.Query<spo_module>("SELECT * FROM spo_modules WHERE module_active = 1 AND module_pos = @0", pos);
+        public IEnumerable<spo_module> ActiveModules(int pos) =>  db.Fetch<spo_module>("SELECT * FROM spo_modules WHERE module_active = 1 AND module_pos = @0 ORDER BY module_lat", pos);
         public IEnumerable<spo_module> AllModules =>  db.Query<spo_module>("SELECT * FROM spo_modules");
         
         

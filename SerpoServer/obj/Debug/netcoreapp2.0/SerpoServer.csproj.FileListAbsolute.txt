@@ -1,0 +1,12 @@
+/Users/eliashakansson/RiderProjects/SerpoServer/SerpoServer/bin/Debug/netcoreapp2.0/SerpoServer.deps.json
+/Users/eliashakansson/RiderProjects/SerpoServer/SerpoServer/bin/Debug/netcoreapp2.0/SerpoServer.runtimeconfig.json
+/Users/eliashakansson/RiderProjects/SerpoServer/SerpoServer/bin/Debug/netcoreapp2.0/SerpoServer.runtimeconfig.dev.json
+/Users/eliashakansson/RiderProjects/SerpoServer/SerpoServer/bin/Debug/netcoreapp2.0/SerpoServer.dll
+/Users/eliashakansson/RiderProjects/SerpoServer/SerpoServer/bin/Debug/netcoreapp2.0/SerpoServer.pdb
+/Users/eliashakansson/RiderProjects/SerpoServer/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.csprojAssemblyReference.cache
+/Users/eliashakansson/RiderProjects/SerpoServer/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.csproj.CoreCompileInputs.cache
+/Users/eliashakansson/RiderProjects/SerpoServer/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.AssemblyInfoInputs.cache
+/Users/eliashakansson/RiderProjects/SerpoServer/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.AssemblyInfo.cs
+/Users/eliashakansson/RiderProjects/SerpoServer/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.dll
+/Users/eliashakansson/RiderProjects/SerpoServer/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.pdb
+/Users/eliashakansson/RiderProjects/SerpoServer/SerpoServer/bin/Debug/netcoreapp2.0/config.json

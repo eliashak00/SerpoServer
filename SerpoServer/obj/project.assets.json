@@ -1362,13 +1362,13 @@
           }
         }
       },
-      "MySql.Data/8.0.11": {
+      "MySql.Data/8.0.12": {
         "type": "package",
         "dependencies": {
           "Google.Protobuf": "3.5.1",
-          "System.Configuration.ConfigurationManager": "4.4.0",
-          "System.Security.Permissions": "4.4.0",
-          "System.Text.Encoding.CodePages": "4.0.1"
+          "System.Configuration.ConfigurationManager": "4.4.1",
+          "System.Security.Permissions": "4.4.1",
+          "System.Text.Encoding.CodePages": "4.4.0"
         },
         "compile": {
           "lib/netcoreapp2.0/MySql.Data.dll": {}
@@ -1884,7 +1884,7 @@
           "lib/netstandard1.5/System.ComponentModel.TypeConverter.dll": {}
         }
       },
-      "System.Configuration.ConfigurationManager/4.4.0": {
+      "System.Configuration.ConfigurationManager/4.4.1": {
         "type": "package",
         "dependencies": {
           "System.Security.Cryptography.ProtectedData": "4.4.0"
@@ -2798,7 +2798,7 @@
           "lib/netstandard2.0/System.Security.Cryptography.Xml.dll": {}
         }
       },
-      "System.Security.Permissions/4.4.0": {
+      "System.Security.Permissions/4.4.1": {
         "type": "package",
         "dependencies": {
           "System.Security.AccessControl": "4.4.0"
@@ -4647,10 +4647,10 @@
         "version.txt"
       ]
     },
-    "MySql.Data/8.0.11": {
-      "sha512": "P5zKcnM2SVtdHD6gfReymJguIYLhNL5Og8Qm5TC9MEsSupsAYrRu4AB4nsbalrjqqv8VHBqVREWsXg9lY+q03A==",
+    "MySql.Data/8.0.12": {
+      "sha512": "I2jGfuyeomrGJ+N9O+vuV2ucyeayf/tMFREKPdjUcs1/wUF0t+WgUnnzJmJl4sNePNR1fEvAGaGbVAo4uLSF2A==",
       "type": "package",
-      "path": "mysql.data/8.0.11",
+      "path": "mysql.data/8.0.12",
       "files": [
         "lib/net452/MySql.Data.dll",
         "lib/net452/MySql.Data.xml",
@@ -4660,7 +4660,7 @@
         "lib/netstandard1.6/MySql.Data.xml",
         "lib/netstandard2.0/MySql.Data.dll",
         "lib/netstandard2.0/MySql.Data.xml",
-        "mysql.data.8.0.11.nupkg.sha512",
+        "mysql.data.8.0.12.nupkg.sha512",
         "mysql.data.nuspec"
       ]
     },
@@ -5739,10 +5739,10 @@
         "system.componentmodel.typeconverter.nuspec"
       ]
     },
-    "System.Configuration.ConfigurationManager/4.4.0": {
-      "sha512": "gWwQv/Ug1qWJmHCmN17nAbxJYmQBM/E94QxKLksvUiiKB1Ld3Sc/eK1lgmbSjDFxkQhVuayI/cGFZhpBSodLrg==",
+    "System.Configuration.ConfigurationManager/4.4.1": {
+      "sha512": "jz3TWKMAeuDEyrPCK5Jyt4bzQcmzUIMcY9Ud6PkElFxTfnsihV+9N/UCqvxe1z5gc7jMYAnj7V1COMS9QKIuHQ==",
       "type": "package",
-      "path": "system.configuration.configurationmanager/4.4.0",
+      "path": "system.configuration.configurationmanager/4.4.1",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -5752,7 +5752,7 @@
         "ref/net461/System.Configuration.ConfigurationManager.xml",
         "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll",
         "ref/netstandard2.0/System.Configuration.ConfigurationManager.xml",
-        "system.configuration.configurationmanager.4.4.0.nupkg.sha512",
+        "system.configuration.configurationmanager.4.4.1.nupkg.sha512",
         "system.configuration.configurationmanager.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -8369,10 +8369,10 @@
         "version.txt"
       ]
     },
-    "System.Security.Permissions/4.4.0": {
-      "sha512": "ArK+Kh7BSqWhspqO3qe8R25MeUzBm3ZdWbYiN6Q0kLO3nR4dLeZzS03C0QUI/470w7pGRm7lUZ9sjfDQKJjRcQ==",
+    "System.Security.Permissions/4.4.1": {
+      "sha512": "l8IxQ9mEAkKv85uoEcjcYhrh+yTLZtLgNqb2T7QChTdKXh45EUnmKd+Ckdt1D+VYW2dk2Pb5MT+0zwQ74Jd2Xg==",
       "type": "package",
-      "path": "system.security.permissions/4.4.0",
+      "path": "system.security.permissions/4.4.1",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -8381,7 +8381,7 @@
         "ref/net461/System.Security.Permissions.dll",
         "ref/netstandard2.0/System.Security.Permissions.dll",
         "ref/netstandard2.0/System.Security.Permissions.xml",
-        "system.security.permissions.4.4.0.nupkg.sha512",
+        "system.security.permissions.4.4.1.nupkg.sha512",
         "system.security.permissions.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -9369,7 +9369,7 @@
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.Owin >= 4.0.0",
       "Microsoft.Owin.Hosting >= 4.0.0",
-      "MySql.Data >= 8.0.11",
+      "MySql.Data >= 8.0.12",
       "Nancy >= 2.0.0-pre1911",
       "Nancy.Authentication.Stateless >= 2.0.0-pre1911",
       "Nancy.Embedded >= 2.0.0-pre1911",
@@ -9475,7 +9475,7 @@
           },
           "MySql.Data": {
             "target": "Package",
-            "version": "[8.0.11, )"
+            "version": "[8.0.12, )"
           },
           "Nancy": {
             "target": "Package",

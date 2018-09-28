@@ -17,12 +17,13 @@ namespace SerpoServer.Routes.Admin
         public ModulesModule(ModuleManager manager) : base("/admin/modules")
         {
      
-            Get("/all", x => Response.AsJson(manager.AllModules.Where(m => m.module_active)));
+            Get("/all", x => Response.AsJson(manager.AllModules));
       
             Delete("/delete/{id}", x =>
             {
                 this.RequiresAuthentication();
                 var id = (int) x.id;
+             
                 manager.Delete(id);
                 return HttpStatusCode.OK;
             });

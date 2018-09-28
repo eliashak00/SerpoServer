@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
@@ -15,38 +16,36 @@ namespace SerpoServer.Data
 {
     public class Connection : IDatabase
     {
-        private static IDatabase _db;
-        private IDatabase db
+        private IDatabase db;
+
+        public Connection()
         {
-            get
-            {
-                if (_db != null) return _db;
            
-                if (string.IsNullOrWhiteSpace(ConfigurationProvider.ConfigurationFile.connstring) || !DbExists()) return new NullDatabase();
-                string script = "";
-                IDatabase result;
-                if (ConfigurationProvider.ConfigurationFile.dbtype == "mysql")
-                {
-                    result = DatabaseConfiguration.Build()
-                        .UsingProvider<MySqlDatabaseProvider>()
-                        .UsingConnectionString(ConfigurationProvider.ConfigurationFile.connstring)
-                        .Create();
-                    script = Assembly.GetExecutingAssembly().GetManifestResourceStream("SerpoServer.Data.serposerver.sql").AsString();
-                }
-                else
-                {
-                    result = DatabaseConfiguration.Build()
-                        .UsingProvider<SqlServerDatabaseProvider>()
-                        .UsingConnectionString(ConfigurationProvider.ConfigurationFile.connstring)
-                        .Create();
-                    script = Assembly.GetExecutingAssembly().GetManifestResourceStream("SerpoServer.Data.serposervermssql.sql").AsString();
-                }
-                _db = result;
+            if (string.IsNullOrWhiteSpace(ConfigurationProvider.ConfigurationFile.connstring) || !DbExists())
+                db = new NullDatabase();
+            string script = "";
+            IDatabase result;
+            if (ConfigurationProvider.ConfigurationFile.dbtype == "mysql")
+            {
+                result = DatabaseConfiguration.Build()
+                    .UsingProvider<MySqlDatabaseProvider>()
+                    .UsingConnectionString(ConfigurationProvider.ConfigurationFile.connstring)
+                    .Create();
+                script = Assembly.GetExecutingAssembly().GetManifestResourceStream("SerpoServer.Data.serposerver.sql").AsString();
+            }
+            else
+            {
+                result = DatabaseConfiguration.Build()
+                    .UsingProvider<SqlServerDatabaseProvider>()
+                    .UsingConnectionString(ConfigurationProvider.ConfigurationFile.connstring)
+                    .Create();
+                script = Assembly.GetExecutingAssembly().GetManifestResourceStream("SerpoServer.Data.serposervermssql.sql").AsString();
+            }
+            db = result;
              
                 
-                _db?.Execute(script);
-                return _db;
-            }
+            db?.Execute(script);
+           
         }
 
         private bool DbExists()

@@ -1,0 +1,1414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bb5cba17-2dee-4450-a2e6-88dc92e887d0" name="Default" comment="JS Changes">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/jq.js" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/jq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/modules/clock.js" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/modules/clock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/views/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/AdminViews/views/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/views/pages.html" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/AdminViews/views/pages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Api/ModuleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Api/ModuleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Api/PageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Api/PageManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Connection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Data/Connection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Crud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Data/Crud.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Models/spo_crud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Data/Models/spo_crud.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/serposerver.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Data/serposerver.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/serposervermssql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Data/serposervermssql.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Routes/Admin/MainModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Routes/Admin/MainModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Routes/Admin/ModulesModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Routes/Admin/ModulesModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/SerpoServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/SerpoServer.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/obj/SerpoServer.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/obj/SerpoServer.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/obj/project.packagespec.json" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="spoTest: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="spoTest: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="spo_cruds: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="spoTest: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="spo_modules: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="SerpoServer" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="page-crud.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/page-crud.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DynamicModule.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SerpoServer/Routes/DynamicModule.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+              <folding>
+                <marker date="1531605264498" expanded="false" signature="6:166" ph="..." />
+                <marker date="1531605264498" expanded="true" signature="243:2393" ph="{...}" />
+                <marker date="1531605264498" expanded="true" signature="294:2387" ph="{...}" />
+                <marker date="1531605264498" expanded="true" signature="343:539" ph="{...}" />
+                <marker date="1531605264498" expanded="true" signature="568:766" ph="{...}" />
+                <marker date="1531605264498" expanded="true" signature="794:991" ph="{...}" />
+                <marker date="1531605264498" expanded="true" signature="1022:1222" ph="{...}" />
+                <marker date="1531605264498" expanded="true" signature="1256:1452" ph="{...}" />
+                <marker date="1531605264498" expanded="true" signature="1487:1685" ph="{...}" />
+                <marker date="1531605264498" expanded="true" signature="1719:1916" ph="{...}" />
+                <marker date="1531605264498" expanded="true" signature="1953:2153" ph="{...}" />
+                <marker date="1531605264498" expanded="true" signature="2194:2375" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SerpoServer/Api/PageManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="795">
+              <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
+              <folding>
+                <marker date="1537722297981" expanded="false" signature="6:485" ph="..." />
+                <marker date="1537722297981" expanded="true" signature="543:4666" ph="{...}" />
+                <marker date="1537722297981" expanded="true" signature="817:899" ph="{...}" />
+                <marker date="1537722297981" expanded="true" signature="1980:2318" ph="{...}" />
+                <marker date="1537722297981" expanded="true" signature="2032:2125" ph="{...}" />
+                <marker date="1537722297981" expanded="true" signature="2364:2618" ph="{...}" />
+                <marker date="1537722297981" expanded="true" signature="2712:4664" ph="{...}" />
+                <marker date="1537722297981" expanded="true" signature="2936:3426" ph="{...}" />
+                <marker date="1537722297981" expanded="true" signature="3545:4218" ph="{...}" />
+                <marker date="1537722297981" expanded="true" signature="3665:3914" ph="{...}" />
+                <marker date="1537722297981" expanded="true" signature="3935:4019" ph="{...}" />
+                <marker date="1537722297981" expanded="true" signature="4235:4598" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crud-data.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/crud-data.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Program.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SerpoServer/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+              <folding>
+                <marker date="1527930282835" expanded="false" signature="6:231" ph="..." />
+                <marker date="1527930282835" expanded="true" signature="253:728" ph="{...}" />
+                <marker date="1527930282835" expanded="true" signature="273:726" ph="{...}" />
+                <marker date="1527930282835" expanded="true" signature="326:396" ph="{...}" />
+                <marker date="1527930282835" expanded="true" signature="626:720" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SerpoServer/config.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-column="207" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page-editor.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/page-editor.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="915">
+              <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModuleManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SerpoServer/Api/ModuleManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+              <folding>
+                <marker date="1537253266759" expanded="false" signature="6:104" ph="..." />
+                <marker date="1537253266759" expanded="true" signature="164:1473" ph="{...}" />
+                <marker date="1537253266759" expanded="true" signature="244:290" ph="{...}" />
+                <marker date="1537253266759" expanded="true" signature="649:777" ph="{...}" />
+                <marker date="1537253266759" expanded="true" signature="821:945" ph="{...}" />
+                <marker date="1537253266759" expanded="true" signature="1012:1315" ph="{...}" />
+                <marker date="1537253266759" expanded="true" signature="1066:1308" ph="{...}" />
+                <marker date="1537253266759" expanded="true" signature="1123:1198" ph="{...}" />
+                <marker date="1537253266759" expanded="true" signature="1219:1294" ph="{...}" />
+                <marker date="1537253266759" expanded="true" signature="1351:1458" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageModule.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+              <folding>
+                <marker date="1537633869735" expanded="false" signature="6:412" ph="..." />
+                <marker date="1537633869735" expanded="true" signature="492:3238" ph="{...}" />
+                <marker date="1537633869735" expanded="true" signature="580:3232" ph="{...}" />
+                <marker date="1537633869735" expanded="true" signature="692:1318" ph="{...}" />
+                <marker date="1537633869735" expanded="true" signature="797:947" ph="{...}" />
+                <marker date="1537633869735" expanded="true" signature="968:1287" ph="{...}" />
+                <marker date="1537633869735" expanded="true" signature="1355:1502" ph="{...}" />
+                <marker date="1537633869735" expanded="true" signature="1542:2097" ph="{...}" />
+                <marker date="1537633869735" expanded="true" signature="1606:1803" ph="{...}" />
+                <marker date="1537633869735" expanded="true" signature="1824:2072" ph="{...}" />
+                <marker date="1537633869735" expanded="true" signature="2138:2691" ph="{...}" />
+                <marker date="1537633869735" expanded="true" signature="2202:2383" ph="{...}" />
+                <marker date="1537633869735" expanded="true" signature="2404:2677" ph="{...}" />
+                <marker date="1537633869735" expanded="true" signature="2733:2884" ph="{...}" />
+                <marker date="1537633869735" expanded="true" signature="2917:3220" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spo_cruds" pinned="false" current-in-tab="false">
+        <entry file="das://c759f74e-e2e0-4b10-8879-11464392bcf9/schema/spoTest/table/spo_cruds">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Sass File" />
+        <option value="SCSS File" />
+        <option value="Less File" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>throw new NotImplementedException();</find>
+      <find>name</find>
+      <find>DEFAULT 0</find>
+      <find>NOT NULL</find>
+      <find>PRIMARY KEY</find>
+      <find>AUTO_INCREMENT</find>
+      <find>404</find>
+      <find>neg</find>
+      <find>NegotiateRes</find>
+      <find>&quot;</find>
+      <find>Current</find>
+      <find>spo_custom</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>return null;</replace>
+      <replace>id</replace>
+      <replace>PRIMARY KEY AUTO_INCREMENT</replace>
+      <replace>IDENTITY</replace>
+      <replace>'</replace>
+      <replace>Model</replace>
+      <replace>crud</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="elias.hakansson17@malmo.ntig.se &lt;gtx560tigtxtitan&gt;" />
+        <option value="Elias &lt;elias.hakansson17@malmo.ntig.se&gt;" />
+        <option value="eliashak00" />
+        <option value="Elias" />
+        <option value="ee" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/SerpoServer.Tests/UnitTest1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/91/94bc5bec/Route.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0A5C5AC1-2A76-458D-826A-46E21814BA06/02/9d38d301/DatabaseProvider.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Security/JwtToken.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/89/aff1c0bb/SimpleJson.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/046EF1B4-A4CF-4079-AA2E-EE83885437EA/e6/2380461b/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Connection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/PageManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Cache/MemoryDatabase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Security/Hashing.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E0429D2A-B304-460B-B391-D745D7C972C6/c6/86ce6fae/Assembly.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Intepreter/PyRuntime.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/ae/697ba252/NancyModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/RootPathProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/ConfigurationProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_settings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE2EAE56-603E-42A0-B121-7305E004F583/62/52a5ffa3/ViewRenderer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/24/93bdb374/NegotiatorExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/AccountModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Errors/StatusCodes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/83/f161b196/INancyModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/InstallModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0A5C5AC1-2A76-458D-826A-46E21814BA06/9f/8e16c2e2/MySqlDatabaseProvider.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Bootstrap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/View/Login.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/af/eb3a3fe9/Response.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/c1/33fea49a/NancyContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE2EAE56-603E-42A0-B121-7305E004F583/d1/37ec9626/NancyModule.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/shared/site.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5FADEC3E-08B1-464F-B092-C445D10C2829/e8/7302ce3d/InvokeContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5FADEC3E-08B1-464F-B092-C445D10C2829/41/d7225ed8/InvokeExt.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Errors/Logger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/CrudManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_services.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/ab/e57d9733/NegotiationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/ServiceManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/ServiceModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/b7/0fd4f72d/Negotiator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_user.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/b6/25773ce2/NegotiatedResponse.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_site.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_page.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/SiteSelector.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/cb/4218a030/DefaultNancyBootstrapper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/Enums/RequestMethods.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/Enums/ResponseMethods.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/bf/0ae07856/SecurityHooks.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/DateTime.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/View/SettingsViewModel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/a1/cb5c6932/ModuleSecurity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/ToolsModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E0429D2A-B304-460B-B391-D745D7C972C6/e8/798ddfff/Enum.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/DynamicModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/StatManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_days.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_stats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/SiteManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_modules.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/MainModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/StatModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/SettingsModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE2EAE56-603E-42A0-B121-7305E004F583/c7/a61d5ff6/MimeTypes.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/ModuleManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Security/Identity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE2EAE56-603E-42A0-B121-7305E004F583/6d/d0c53345/EmbeddedFileResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/UserManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/Enums/UserRoles.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_crud.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/ModulesModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/NullDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Crud.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE2EAE56-603E-42A0-B121-7305E004F583/f9/f35e047c/NancyContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/SiteModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/17/4914e8e3/GenericFileResponse.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8EB7B087-9E78-4DB9-B9EE-7C20BF7395CE/68/e8e44209/EmbeddedStaticContentConventionBuilder.cs" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/SerpoServer/Api/ThemeManager.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Api/SiteManager.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Routes/Admin/SiteModule.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/site.html" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/site-editor.html" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/shared/site.html" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/charts.js" />
+        <option value="$PROJECT_DIR$/SerpoServer/Data/Models/spo_user.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Routes/InstallModule.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Security/Identity.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/DateTime.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Data/Models/spo_days.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/account.html" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/dom.js" />
+        <option value="$PROJECT_DIR$/SerpoServer/Bootstrap.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Api/StatManager.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/modules/chart.js" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/modules.html" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/modules.js" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/sortable.js" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/css/base.sass" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/popper.js" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/bootstrapdrop.js" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/bootstrapmen.js" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/shared/layout.html" />
+        <option value="$PROJECT_DIR$/SerpoServer/Api/Crud.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Api/ServiceManager.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/http.js" />
+        <option value="$PROJECT_DIR$/SerpoServer/Data/Models/spo_modules.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/modules/clock.js" />
+        <option value="$PROJECT_DIR$/SerpoServer/Routes/Admin/MainModule.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Api/ModuleManager.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Data/Connection.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/jq.js" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/main.html" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/page-editor.html" />
+        <option value="$PROJECT_DIR$/SerpoServer/Data/Crud.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Routes/Admin/ModulesModule.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Data/serposerver.sql" />
+        <option value="$PROJECT_DIR$/SerpoServer/Data/serposervermssql.sql" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/cruds.js" />
+        <option value="$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c759f74e-e2e0-4b10-8879-11464392bcf9/console.sql" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/pages.html" />
+        <option value="$PROJECT_DIR$/SerpoServer/Api/CrudManager.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Data/Models/spo_crud.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/crud-worker.js" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/crud-data.html" />
+        <option value="$PROJECT_DIR$/SerpoServer/Api/PageManager.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/config.json" />
+        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/page-crud.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="173" />
+    <option name="y" value="63" />
+    <option name="width" value="1440" />
+    <option name="height" value="838" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SerpoServer (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/eliashakansson/Library/Preferences/Rider2018.1/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/b7/0fd4f72d/Negotiator.cs" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/SQL Dialects" value="MySQL" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="settings.editor.selected.configurable" value="RiderNuGetOptionsPageId" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/SerpoServer.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SerpoServer" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <envs>
+        <env name="ASPNETCORE_ENVIRONMENT" value="Development" />
+        <env name="ASPNETCORE_URLS" value="http://localhost:5050" />
+      </envs>
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/SerpoServer/SerpoServer.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.0" />
+      <browser url="http://localhost:5000" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb5cba17-2dee-4450-a2e6-88dc92e887d0" name="Default" comment="" />
+      <created>1527376368513</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1527376368513</updated>
+      <workItem from="1527376371105" duration="971000" />
+      <workItem from="1527406638126" duration="4543000" />
+      <workItem from="1527415204251" duration="15477000" />
+      <workItem from="1527520830487" duration="186000" />
+      <workItem from="1527839017954" duration="2787000" />
+      <workItem from="1527852421265" duration="5343000" />
+      <workItem from="1527866379899" duration="3643000" />
+      <workItem from="1527928387115" duration="23916000" />
+      <workItem from="1528208761250" duration="2046000" />
+      <workItem from="1528233871819" duration="5663000" />
+      <workItem from="1528469048048" duration="6795000" />
+      <workItem from="1528557788812" duration="9571000" />
+      <workItem from="1528635305661" duration="10790000" />
+      <workItem from="1528730796257" duration="3795000" />
+      <workItem from="1528822059633" duration="622000" />
+      <workItem from="1528989933671" duration="6251000" />
+      <workItem from="1529159694664" duration="117000" />
+      <workItem from="1529610975809" duration="2443000" />
+      <workItem from="1529689779605" duration="5593000" />
+      <workItem from="1530311995320" duration="3025000" />
+      <workItem from="1530368837732" duration="9058000" />
+      <workItem from="1530556973984" duration="5000" />
+      <workItem from="1530556991051" duration="5742000" />
+      <workItem from="1530786933161" duration="10339000" />
+      <workItem from="1530961082787" duration="24467000" />
+      <workItem from="1531167560100" duration="3968000" />
+      <workItem from="1531252545166" duration="533000" />
+      <workItem from="1531334556387" duration="17075000" />
+      <workItem from="1531566213635" duration="11560000" />
+      <workItem from="1531647331379" duration="10961000" />
+      <workItem from="1531715833971" duration="3165000" />
+      <workItem from="1531742192077" duration="1995000" />
+      <workItem from="1531769480777" duration="4248000" />
+      <workItem from="1531777977193" duration="16036000" />
+      <workItem from="1531901877321" duration="965000" />
+      <workItem from="1532016976135" duration="6298000" />
+      <workItem from="1532173488103" duration="4431000" />
+      <workItem from="1532251277581" duration="11486000" />
+      <workItem from="1532408860805" duration="2550000" />
+      <workItem from="1532617904793" duration="7669000" />
+      <workItem from="1532871829453" duration="3016000" />
+      <workItem from="1533042591539" duration="2673000" />
+      <workItem from="1533585641792" duration="7224000" />
+      <workItem from="1533717497861" duration="1382000" />
+      <workItem from="1533983797043" duration="4076000" />
+      <workItem from="1534244775481" duration="1276000" />
+      <workItem from="1534536405045" duration="1746000" />
+      <workItem from="1534855396675" duration="4759000" />
+      <workItem from="1534936335077" duration="785000" />
+      <workItem from="1535042223021" duration="10951000" />
+      <workItem from="1535232183953" duration="1377000" />
+      <workItem from="1535386164918" duration="834000" />
+      <workItem from="1535469130455" duration="11743000" />
+      <workItem from="1535643483422" duration="2047000" />
+      <workItem from="1536079903264" duration="118000" />
+      <workItem from="1536163542554" duration="8574000" />
+      <workItem from="1536299087278" duration="281000" />
+      <workItem from="1536863787872" duration="12782000" />
+      <workItem from="1537050881844" duration="824000" />
+      <workItem from="1537108102550" duration="3035000" />
+      <workItem from="1537246286595" duration="2856000" />
+      <workItem from="1537357647258" duration="10705000" />
+      <workItem from="1537456662629" duration="9845000" />
+      <workItem from="1537507212249" duration="15844000" />
+      <workItem from="1537714615461" duration="1381000" />
+      <workItem from="1537897660910" duration="2251000" />
+      <workItem from="1538068956492" duration="595000" />
+    </task>
+    <task id="LOCAL-00001" summary="First">
+      <created>1527842037771</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1527842037771</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First">
+      <created>1527984792253</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1527984792253</updated>
+    </task>
+    <task id="LOCAL-00003" summary="First">
+      <created>1531520286948</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1531520286948</updated>
+    </task>
+    <task id="LOCAL-00004" summary="First">
+      <created>1532467549517</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1532467549517</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Second">
+      <created>1535233629764</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1535233629764</updated>
+    </task>
+    <task id="LOCAL-00006" summary="JS Changes">
+      <created>1536269228330</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1536269228330</updated>
+    </task>
+    <task id="LOCAL-00007" summary="JS Changes">
+      <created>1537051832876</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1537051832876</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="389108000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32928476" />
+      <window_info anchor="right" id="Errors In Solution" order="3" weight="0.32991913" />
+      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
+      <window_info anchor="bottom" id="Unit Tests" order="10" weight="0.40890688" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39413682" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3273632" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.34008098" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49320653" visible="true" weight="0.33226836" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="4" weight="0.10915868" />
+      <window_info id="Structure" order="1" sideWeight="0.50286806" side_tool="true" weight="0.19527897" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3260606" />
+      <window_info id="Favorites" order="2" sideWeight="0.5067935" side_tool="true" weight="0.24494143" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32388663" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Build" order="14" weight="0.3213898" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.2994475" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.34008098" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39413682" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49320653" visible="true" weight="0.24494143" />
+      <window_info id="Structure" order="1" sideWeight="0.50286806" side_tool="true" weight="0.19527897" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32928476" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Unit Tests" order="10" weight="0.40890688" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.2994475" />
+      <window_info anchor="right" id="Errors In Solution" order="3" weight="0.32991913" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32388663" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.2676617" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3273632" />
+      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.5067935" side_tool="true" visible="true" weight="0.24494143" />
+      <window_info anchor="bottom" id="Build" order="14" weight="0.3213898" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.10915868" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" isUnityUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="First" />
+    <MESSAGE value="Second" />
+    <MESSAGE value="JS Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="JS Changes" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SerpoServer.Tests/UnitTest1.cs</url>
+          <line>28</line>
+          <properties documentPath="$PROJECT_DIR$/SerpoServer.Tests/UnitTest1.cs" initialLine="26">
+            <startOffsets>
+              <startOffset value="836" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="857" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="322" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SerpoServer/Api/PageManager.cs</url>
+          <line>101</line>
+          <properties documentPath="$PROJECT_DIR$/SerpoServer/Api/PageManager.cs" initialLine="92">
+            <startOffsets>
+              <startOffset value="3704" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="3775" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="352" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SerpoServer/Api/PageManager.cs</url>
+          <line>103</line>
+          <properties documentPath="$PROJECT_DIR$/SerpoServer/Api/PageManager.cs" initialLine="93">
+            <startOffsets>
+              <startOffset value="3816" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="3896" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="353" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/b6/25773ce2/NegotiatedResponse.cs</url>
+          <line>20</line>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/b6/25773ce2/NegotiatedResponse.cs" initialLine="20">
+            <startOffsets>
+              <startOffset value="865" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="884" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="362" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/b6/25773ce2/NegotiatedResponse.cs</url>
+          <line>24</line>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/b6/25773ce2/NegotiatedResponse.cs" initialLine="24">
+            <startOffsets>
+              <startOffset value="995" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="999" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="363" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SerpoServer/Api/PageManager.cs</url>
+          <line>59</line>
+          <properties documentPath="$PROJECT_DIR$/SerpoServer/Api/PageManager.cs" initialLine="54">
+            <startOffsets>
+              <startOffset value="2241" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="2270" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="371" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SerpoServer/Api/PageManager.cs</url>
+          <line>57</line>
+          <properties documentPath="$PROJECT_DIR$/SerpoServer/Api/PageManager.cs" initialLine="52">
+            <startOffsets>
+              <startOffset value="2178" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="2207" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="372" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SerpoServer.Tests/UnitTest1.cs</url>
+          <line>35</line>
+          <properties documentPath="$PROJECT_DIR$/SerpoServer.Tests/UnitTest1.cs" initialLine="35">
+            <startOffsets>
+              <startOffset value="983" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="1017" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="389" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs</url>
+          <line>24</line>
+          <properties documentPath="$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs" initialLine="18">
+            <startOffsets>
+              <startOffset value="500" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="537" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="390" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs</url>
+          <line>25</line>
+          <properties documentPath="$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs" initialLine="19">
+            <startOffsets>
+              <startOffset value="554" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="587" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="391" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SerpoServer/Routes/Admin/SettingsModule.cs</url>
+          <line>21</line>
+          <properties documentPath="$PROJECT_DIR$/SerpoServer/Routes/Admin/SettingsModule.cs" initialLine="21">
+            <startOffsets>
+              <startOffset value="736" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="773" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="392" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SerpoServer/Routes/Admin/SettingsModule.cs</url>
+          <line>20</line>
+          <properties documentPath="$PROJECT_DIR$/SerpoServer/Routes/Admin/SettingsModule.cs" initialLine="20">
+            <startOffsets>
+              <startOffset value="631" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="719" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="393" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs</url>
+          <line>42</line>
+          <properties documentPath="$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs" initialLine="36">
+            <startOffsets>
+              <startOffset value="1226" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="1242" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="394" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs</url>
+          <line>43</line>
+          <properties documentPath="$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs" initialLine="37">
+            <startOffsets>
+              <startOffset value="1255" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="1298" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="395" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SerpoServer/ConfigurationProvider.cs</url>
+          <line>27</line>
+          <properties documentPath="$PROJECT_DIR$/SerpoServer/ConfigurationProvider.cs" initialLine="27">
+            <startOffsets>
+              <startOffset value="-1" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="-1" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="396" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SerpoServer/ConfigurationProvider.cs</url>
+          <line>28</line>
+          <properties documentPath="$PROJECT_DIR$/SerpoServer/ConfigurationProvider.cs" initialLine="28">
+            <startOffsets>
+              <startOffset value="877" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="893" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="397" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SerpoServer/Api/StatManager.cs</url>
+          <line>28</line>
+          <properties documentPath="$PROJECT_DIR$/SerpoServer/Api/StatManager.cs" initialLine="28">
+            <startOffsets>
+              <startOffset value="752" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="854" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="412" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs</url>
+          <line>64</line>
+          <properties documentPath="$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs" initialLine="51">
+            <startOffsets>
+              <startOffset value="2336" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="2365" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="434" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs</url>
+          <line>63</line>
+          <properties documentPath="$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs" initialLine="50">
+            <startOffsets>
+              <startOffset value="2240" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="2316" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="435" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint log-message="true" log-stack="true" type="DotNet Exception Breakpoints">
+          <properties />
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="441" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="DotNetProject">
+        <watch expression="RootPath" />
+        <watch expression="$exception" />
+        <watch expression="db" />
+        <watch expression="_db" />
+        <watch expression="_db" />
+        <watch expression="CurrentUsers" />
+        <watch expression="pages" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="das://c759f74e-e2e0-4b10-8879-11464392bcf9/schema/spoTest/table/spo_days">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Api/UserManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/cb/4218a030/DefaultNancyBootstrapper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="176" column="40" selection-start-line="176" selection-start-column="40" selection-end-line="176" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Bootstrap.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Api/SiteManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="71" selection-start-line="21" selection-start-column="71" selection-end-line="21" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Api/StatManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/modules/chart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="65" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/AccountModule.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/modules.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/modules.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/sortable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/SerpoServer.csproj">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/dom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/css/base.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/popper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/bootstrapmen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="12757" selection-start-line="15" selection-start-column="12757" selection-end-line="15" selection-end-column="12757" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_page.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Api/ServiceManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_modules.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/http.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="65" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Intepreter/PyRuntime.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/shared/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/modules/clock.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c759f74e-e2e0-4b10-8879-11464392bcf9/schema/spoTest/table/spo_modules">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/MainModule.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Data/Connection.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="31" column="94" selection-start-line="31" selection-start-column="94" selection-end-line="31" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/jq.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="10364" selection-start-line="10364" selection-end-line="10364" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Data/Crud.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="86" selection-start-line="19" selection-start-column="86" selection-end-line="19" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/pages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="5" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Data/serposerver.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Data/serposervermssql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1635">
+          <caret line="109" column="28" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Security/Identity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="129" column="20" selection-start-line="129" selection-start-column="20" selection-end-line="129" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_days.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c759f74e-e2e0-4b10-8879-11464392bcf9/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="53" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/pages.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/ModulesModule.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Api/CrudManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_crud.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/cruds.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/crud-worker.js" />
+    <entry file="das://c759f74e-e2e0-4b10-8879-11464392bcf9/schema/spoTest/table/spo_cruds">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Api/ModuleManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding>
+            <marker date="1537253266759" expanded="false" signature="6:104" ph="..." />
+            <marker date="1537253266759" expanded="true" signature="164:1473" ph="{...}" />
+            <marker date="1537253266759" expanded="true" signature="244:290" ph="{...}" />
+            <marker date="1537253266759" expanded="true" signature="649:777" ph="{...}" />
+            <marker date="1537253266759" expanded="true" signature="821:945" ph="{...}" />
+            <marker date="1537253266759" expanded="true" signature="1012:1315" ph="{...}" />
+            <marker date="1537253266759" expanded="true" signature="1066:1308" ph="{...}" />
+            <marker date="1537253266759" expanded="true" signature="1123:1198" ph="{...}" />
+            <marker date="1537253266759" expanded="true" signature="1219:1294" ph="{...}" />
+            <marker date="1537253266759" expanded="true" signature="1351:1458" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/page-editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/crud-data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+          <folding>
+            <marker date="1537633869735" expanded="false" signature="6:412" ph="..." />
+            <marker date="1537633869735" expanded="true" signature="492:3238" ph="{...}" />
+            <marker date="1537633869735" expanded="true" signature="580:3232" ph="{...}" />
+            <marker date="1537633869735" expanded="true" signature="692:1318" ph="{...}" />
+            <marker date="1537633869735" expanded="true" signature="797:947" ph="{...}" />
+            <marker date="1537633869735" expanded="true" signature="968:1287" ph="{...}" />
+            <marker date="1537633869735" expanded="true" signature="1355:1502" ph="{...}" />
+            <marker date="1537633869735" expanded="true" signature="1542:2097" ph="{...}" />
+            <marker date="1537633869735" expanded="true" signature="1606:1803" ph="{...}" />
+            <marker date="1537633869735" expanded="true" signature="1824:2072" ph="{...}" />
+            <marker date="1537633869735" expanded="true" signature="2138:2691" ph="{...}" />
+            <marker date="1537633869735" expanded="true" signature="2202:2383" ph="{...}" />
+            <marker date="1537633869735" expanded="true" signature="2404:2677" ph="{...}" />
+            <marker date="1537633869735" expanded="true" signature="2733:2884" ph="{...}" />
+            <marker date="1537633869735" expanded="true" signature="2917:3220" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Routes/DynamicModule.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+          <folding>
+            <marker date="1531605264498" expanded="false" signature="6:166" ph="..." />
+            <marker date="1531605264498" expanded="true" signature="243:2393" ph="{...}" />
+            <marker date="1531605264498" expanded="true" signature="294:2387" ph="{...}" />
+            <marker date="1531605264498" expanded="true" signature="343:539" ph="{...}" />
+            <marker date="1531605264498" expanded="true" signature="568:766" ph="{...}" />
+            <marker date="1531605264498" expanded="true" signature="794:991" ph="{...}" />
+            <marker date="1531605264498" expanded="true" signature="1022:1222" ph="{...}" />
+            <marker date="1531605264498" expanded="true" signature="1256:1452" ph="{...}" />
+            <marker date="1531605264498" expanded="true" signature="1487:1685" ph="{...}" />
+            <marker date="1531605264498" expanded="true" signature="1719:1916" ph="{...}" />
+            <marker date="1531605264498" expanded="true" signature="1953:2153" ph="{...}" />
+            <marker date="1531605264498" expanded="true" signature="2194:2375" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Api/PageManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
+          <folding>
+            <marker date="1537722297981" expanded="false" signature="6:485" ph="..." />
+            <marker date="1537722297981" expanded="true" signature="543:4666" ph="{...}" />
+            <marker date="1537722297981" expanded="true" signature="817:899" ph="{...}" />
+            <marker date="1537722297981" expanded="true" signature="1980:2318" ph="{...}" />
+            <marker date="1537722297981" expanded="true" signature="2032:2125" ph="{...}" />
+            <marker date="1537722297981" expanded="true" signature="2364:2618" ph="{...}" />
+            <marker date="1537722297981" expanded="true" signature="2712:4664" ph="{...}" />
+            <marker date="1537722297981" expanded="true" signature="2936:3426" ph="{...}" />
+            <marker date="1537722297981" expanded="true" signature="3545:4218" ph="{...}" />
+            <marker date="1537722297981" expanded="true" signature="3665:3914" ph="{...}" />
+            <marker date="1537722297981" expanded="true" signature="3935:4019" ph="{...}" />
+            <marker date="1537722297981" expanded="true" signature="4235:4598" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding>
+            <marker date="1527930282835" expanded="false" signature="6:231" ph="..." />
+            <marker date="1527930282835" expanded="true" signature="253:728" ph="{...}" />
+            <marker date="1527930282835" expanded="true" signature="273:726" ph="{...}" />
+            <marker date="1527930282835" expanded="true" signature="326:396" ph="{...}" />
+            <marker date="1527930282835" expanded="true" signature="626:720" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="207" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/page-crud.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

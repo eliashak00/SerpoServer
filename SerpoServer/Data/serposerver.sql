@@ -59,5 +59,7 @@ CREATE TABLE IF NOT EXISTS spo_service_rel(
 CREATE TABLE IF NOT EXISTS spo_cruds(
   crud_id INT  AUTO_INCREMENT PRIMARY KEY ,
   crud_table VARCHAR(100),
+   crud_struct VARCHAR(1000),
+  crud_route VARCHAR(100),
   crud_json LONGTEXT
 );

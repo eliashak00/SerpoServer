@@ -396,6 +396,7 @@
               <e p="bootstrapmen.js" t="Include" />
               <e p="charts.js" t="Include" />
               <e p="cookie.js" t="Include" />
+              <e p="cruds.js" t="Include" />
               <e p="dom.js" t="Include" />
               <e p="http.js" t="Include" />
               <e p="jq.js" t="Include" />
@@ -430,8 +431,10 @@
           <e p="views" t="Include">
             <e p="account-edit.html" t="Include" />
             <e p="account.html" t="Include" />
+            <e p="crud-data.html" t="Include" />
             <e p="main.html" t="Include" />
             <e p="modules.html" t="Include" />
+            <e p="page-crud.html" t="Include" />
             <e p="page-editor.html" t="Include" />
             <e p="pages.html" t="Include" />
             <e p="settings.html" t="Include" />
@@ -444,6 +447,7 @@
           </e>
         </e>
         <e p="Api" t="Include">
+          <e p="CrudManager.cs" t="Include" />
           <e p="ModuleManager.cs" t="Include" />
           <e p="PageManager.cs" t="Include" />
           <e p="ServiceManager.cs" t="Include" />

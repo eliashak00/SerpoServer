@@ -5,20 +5,31 @@
 
     <div class="text-center row">
         <div class="col-md-6">
-            @Each.LeftColumn
-            @Current.module_js
-            @EndEach
+            @If.HasLeftColumn
+                @Each.LeftColumn
+            <div id="area@Current.module_name">
+                <script src="/AdminViews/Static/js/modules/@Current.module_js"></script>
+
+            </div>
+          
+                @EndEach
+            @EndIf
 
         </div>
         <div class="col-md-6">
-
-            @Each.RightColumn
-            <p>test</p>
-            @EndEach
-
-            <button type="button" id="editAdmin" class="pull-down btn btn-primary" data-toggle="modal" data-target="#adminEditor">
+            <button type="button" id="editAdmin" class="pull-down btn btn-primary mb-4" data-toggle="modal" data-target="#adminEditor">
                 Edit dashboard
             </button>
+            @If.HasRightColumn
+            @Each.RightColumn
+            <div id="area@Current.module_name">
+                <script src="/AdminViews/Static/js/modules/@Current.module_js"></script>
+               
+            </div>
+            @EndEach
+            @EndIf
+
+     
         </div>
     </div>
 
@@ -42,71 +53,61 @@
                 </div>
                 <script>
                     let mods = [];
-                   http.get("/admin/modules/all/", function (modules, status) {
-                        if (status === 200){
-                      
-                            for (let i = 0; i < modules.length; i++){
-                                let module = modules[i];
-                                if (module.module_active) {
-                                    if (module.module_pos === 1) {
+                    $(document).ready(function () {
+                        
+                        http.get("/admin/modules/all/", function (modules, status) {
+                            if (status === 200){
 
-                                        $("#editorRight").append(`<li class="list-group-item" id="elem${module.module_id}">${module.module_name} <button class="ml-2 btn btn-outline-danger" onclick="removeElm(${module.module_id})">X</button></li>`);
-                                    } else {
+                                for (let i = 0; i < modules.length; i++){
+                                    let module = modules[i];
+                                    if (module.module_active) {
+                                        if (module.module_pos === 1) {
+
+                                            $("#editorRight").append(`<li class="list-group-item" id="elem${module.module_id}">${module.module_name} <button class="ml-2 btn btn-outline-danger" onclick="removeElm(${module.module_id})">X</button></li>`);
+                                        } else {
 
 
-                                        $("#editorLeft").append(`<li class="list-group-item" id="elem${module.module_id}">${module.module_name} <button class="ml-2 btn btn-outline-danger" onclick="removeElm(${module.module_id})">X</button></li>`);
+                                            $("#editorLeft").append(`<li class="list-group-item" id="elem${module.module_id}">${module.module_name} <button class="ml-2 btn btn-outline-danger" onclick="removeElm(${module.module_id})">X</button></li>`);
+                                        }
                                     }
-                                    $("#editorAddDrp").append(`<button class="dropdown-item" id="addList${module.module_id}" onclick="addItem(${module.module_id})" type="button">${module.module_name}</button>`);
-                                    
-                                }
-                        
-                            }
-                            mods = modules;
-                            if (modules.length < 2) {
-                                $("#editorAddBtn").hide();
-                            }
-                            $("#editorRight").sortable();
-                            $("#editorLeft").sortable();
-                            $("#editorLeft").sortable().bind('sortupdate', function() {
-                                updateOrder();
-                            });
-                            $("#editorRight").sortable().bind('sortupdate', function() {
-                                updateOrder();
-                            });
-                      
-                        } 
-                    });
-                    function addItem(id) {
-                        let module = getModule(id);
-                        module.module_active = true;
-                        if (module.module_id === id){
-                            if (module.module_pos === 1){
-                                $("#editorRight").append(`<li class="list-group-item" id="elem${module.module_id}">${module.module_name} <button class="ml-2 btn btn-outline-danger" onclick="removeElm(${module.module_id})">X</button></li>`);
-                            }else{
-                                $("#editorLeft").append(`<li class="list-group-item" id="elem${module.module_id}">${module.module_name} <button class="ml-2 btn btn-outline-danger" onclick="removeElm(${module.module_id})">X</button></li>`);
-                            }
-                        }
-                        $("#addList" + id).remove();
-                        mods.push(module);
-                        
-                    }
-                    function removeElm(id) {
-                        let module = getModule(id);
-             
+                                    else{
 
-                        module.module_active = false;
-                        $("#editorAddDrp").append(`<button class="dropdown-item" id="addList${module.module_id}" onclick="addItem(${module.module_id})" type="button">${module.module_name}</button>`);
-                        $("#elem" + id).remove();
-                        modules.pop(module);
-                  
-                    }
+                                        $("#editorAddDrp").append(`<div class="dropdown-item" id="addList${module.module_id}" role="group" aria-label="Basic example">
+${module.module_name}
+<div class="btn-group ">
+  <button type="button" onclick="addItem(${module.module_id}, 0)" class="btn btn-secondary">Left</button>
+  <button type="button" onclick="addItem(${module.module_id}, 1)" class="btn btn-secondary">Right</button>
+  </div>
+</div>`);
+                                    }
+
+                                }
+                                mods = modules;
+                                if (modules.length < 2) {
+                                    $("#editorAddBtn").hide();
+                                }
+                                $("#editorRight").sortable();
+                                $("#editorLeft").sortable();
+                                $("#editorLeft").sortable().bind('sortupdate', function() {
+                                    updateOrder();
+                                });
+                                $("#editorRight").sortable().bind('sortupdate', function() {
+                                    updateOrder();
+                                });
+
+                            }
+                        });
+
+                        
+              
+                    });
                     function getModule(id) {
                         for (let i = 0; i < mods.length; i++){
                             let m = mods[i];
                             if(m.module_id === id){
                                 return m;
                             }
-                        } 
+                        }
                     }
                     function updateOrder() {
                         let activeMods = [];
@@ -129,10 +130,41 @@
                         mods = activeMods;
                     }
                     function save() {
-                    
+
                         http.post("/admin/modules/createoredit", mods, function (data, status) {
                             location.reload();
                         });
+                    }
+                    function addItem(id, pos) {
+                        let module = getModule(id);
+                        module.module_active = true;
+                        if (module.module_id === id){
+                            module.module_pos = pos;
+                            if (pos === 1){
+                                $("#editorRight").append(`<li class="list-group-item" id="elem${module.module_id}">${module.module_name} <button class="ml-2 btn btn-outline-danger" onclick="removeElm(${module.module_id})">X</button></li>`);
+                            }else{
+                                $("#editorLeft").append(`<li class="list-group-item" id="elem${module.module_id}">${module.module_name} <button class="ml-2 btn btn-outline-danger" onclick="removeElm(${module.module_id})">X</button></li>`);
+                            }
+                        }
+                        $("#addList" + id).remove();
+                        mods.push(module);
+
+                    }
+                    function removeElm(id) {
+                        let module = getModule(id);
+
+
+                        module.module_active = false;
+                        $("#editorAddDrp").append(`<div class="dropdown-item" id="addList${module.module_id}" role="group" aria-label="Basic example">
+${module.module_name}
+<div class="btn-group ">
+  <button type="button" onclick="addItem(${module.module_id}, 0)" class="btn btn-secondary">Left</button>
+  <button type="button" onclick="addItem(${module.module_id}, 1)" class="btn btn-secondary">Right</button>
+  </div>
+</div>`);
+                        $("#elem" + id).remove();
+                        modules.pop(module);
+
                     }
                 </script>
             </div>

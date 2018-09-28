@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Nancy.Diagnostics;
 using Nancy.TinyIoc;
 using Newtonsoft.Json;
 using PetaPoco;
@@ -14,6 +15,7 @@ namespace SerpoServer.Data
         private IDatabase db;
         public Crud(string tableName)
         {
+           
             db = TinyIoCContainer.Current.Resolve<Connection>();
             this.tableName = tableName;
 

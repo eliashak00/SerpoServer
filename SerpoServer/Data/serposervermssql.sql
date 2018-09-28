@@ -107,6 +107,8 @@ END
 CREATE TABLE spo_cruds(
   crud_id INT PRIMARY KEY IDENTITY,
   crud_table VARCHAR(100),
+  crud_struct VARCHAR(1000),
+  crud_route VARCHAR 100,
   crud_json VARCHAR(MAX)
 );
 END

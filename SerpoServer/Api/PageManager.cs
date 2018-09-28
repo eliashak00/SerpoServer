@@ -25,6 +25,7 @@ namespace SerpoServer.Api
         private IDatabase db;
         private PyRuntime python;
         private static IList<Tuple<string, RequestMethods, spo_page>> PageCache = new List<Tuple<string, RequestMethods, spo_page>>();
+        
         public PageManager(PyRuntime python, Connection db)
         {
             this.python = python;
