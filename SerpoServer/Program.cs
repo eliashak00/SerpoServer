@@ -1,12 +1,7 @@
-﻿using System;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Builder.Internal;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Owin;
-using Microsoft.Owin.Builder;
 using Nancy.Owin;
 using Owin;
-using SerpoServer;
 namespace SerpoServer
 {
     class Program
