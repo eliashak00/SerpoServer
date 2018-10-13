@@ -3,6 +3,7 @@
     public enum ResponseMethods
     {
         View,
-        Rest
+        Rest,
+        Crud
     }
 }

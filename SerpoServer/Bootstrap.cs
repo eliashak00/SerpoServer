@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
@@ -20,6 +21,7 @@ using RazorEngine;
 using RazorEngine.Templating;
 using SerpoServer.Api;
 using SerpoServer.Data;
+using SerpoServer.Data.Cache;
 using SerpoServer.Data.Models;
 using SerpoServer.Data.Models.Enums;
 using SerpoServer.Errors;
@@ -36,36 +38,34 @@ namespace SerpoServer
 
         protected override void RequestStartup(TinyIoCContainer container, IPipelines pipelines, NancyContext context)
         {
-
-           spo_site urlSite = null;
-            if (context.IsAjaxRequest())
-            {
-                var key = context.Request.Headers.Authorization;
-                if (key.Contains("/"))
+            spo_site urlSite = null;
+           
+            if (context.Request.Url.Path.Contains("/admin")){
+                if (context.IsAjaxRequest() && !string.IsNullOrWhiteSpace(context.Request.Headers.Authorization))
                 {
-                    var site = int.Parse(key.Split("/").Last());
-                    urlSite = SiteManager.GetSiteById(site);
+                    var key = context.Request.Headers.Authorization;
+                    if (key.Contains("/"))
+                    {
+                        var site = int.Parse(key.Split("/").Last());
+                        urlSite = SiteManager.GetSiteById(site);
+                    }
                 }
-            }
-            else
-            {
-                dynamic siteId = null;
-                if (context.Request.Url.Path.Contains("/admin"))
-                {
-                    if(context.Request.Cookies.TryGetValue("site", out var site) && !string.IsNullOrWhiteSpace(site))
+                else{
+                    dynamic siteId = null;
+                    if (context.Request.Cookies.TryGetValue("site", out var site) && !string.IsNullOrWhiteSpace(site))
                         siteId = int.Parse(site);
+                    if(siteId != null)
+                        urlSite = SiteManager.GetSiteById((int)siteId);
                 }
-                else
-                {
-                    siteId = context.Request.Url.HostName;
-                }
-
-                if(siteId != null)
-                    urlSite = siteId is int ? SiteManager.GetSiteById((int)siteId) : SiteManager.GetSiteByDom((string)siteId);
             }
+            else{
+                urlSite = SiteManager.GetSiteByDom(context.Request.Url.HostName);
+            }
+           
 
-            context.Items.Add("site", urlSite);
-
+            if(urlSite != null)
+                context.Items.Add("site", urlSite);
+            
             base.RequestStartup(container, pipelines, context);
         }
 

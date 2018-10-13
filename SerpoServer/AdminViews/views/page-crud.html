@@ -12,10 +12,20 @@
             <button onclick="save()" id="saveBtn" type="button" class="btn btn-primary btn-wide">Save Changes</button>
         </div>
         <div class="col-lg-9 mx-auto">
-
             <input onchange="checkRoute()" required class="form-control" type="text" value="@Model.crud_route" id="crudRoute" placeholder="Route...">
             <input class="form-control mt-2" value="@Model.crud_table" id="crudName" type="text" placeholder="Table Name(leave empty if you want it automatically generated)">
+            <div class="input-group mt-2">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
 
+                        <input type="checkbox" id="crudAuth" @If.Model.crud_auth checked @EndIf />
+
+                       
+
+                    </div>
+                </div>
+                <input type="text" class="form-control"  value="@Model.crud_password" id="crudPsw"   placeholder="Custom password(leave empty if you want it automatically generated)">
+            </div>
 <hr>
             <div class="mt-2 row">
                 <div class="col-md-4">
@@ -112,7 +122,7 @@
                         if (elem.Type === "id") {
                             ids++;
 
-                            $("#saveBtn").prop('disabled', !(ids >= 1));
+                            $("#saveBtn").prop('disabled', !(ids >= 1 && $("#crudRoute").val() != ""));
                         }
                     }
                 }
@@ -131,7 +141,7 @@
                 function save() {
 
 
-                    cruds.createoredit(@Model.crud_id, dom.getValue('crudRoute'), dom.getValue('crudName'), JSON.stringify(tableStruct));
+                    cruds.createoredit(@Model.crud_id, dom.getValue('crudRoute'),dom.getValue('crudAuth'),dom.getValue('crudPsw'), dom.getValue('crudName'), JSON.stringify(tableStruct));
                 }</script>
         </div>
     </div>

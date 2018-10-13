@@ -40,6 +40,7 @@ CREATE TABLE  spo_pages(
   page_view VARCHAR(2000) ,
   page_method INT  ,
   page_response INT  ,
+  page_crud INT REFERENCES spo_cruds(crud_id),
   page_site INT REFERENCES spo_sites(site_id)
 );
 END
@@ -108,7 +109,8 @@ CREATE TABLE spo_cruds(
   crud_id INT PRIMARY KEY IDENTITY,
   crud_table VARCHAR(100),
   crud_struct VARCHAR(1000),
-  crud_route VARCHAR 100,
-  crud_json VARCHAR(MAX)
+  crud_json VARCHAR(MAX),
+  crud_auth INT,
+  crud_password VARCHAR(200)
 );
 END

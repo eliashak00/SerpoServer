@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using Nancy;
 using Nancy.Responses;
 using PetaPoco;
@@ -12,54 +13,54 @@ namespace SerpoServer.Routes
     {
         public DynamicModule(PageManager pm)
         {
-            
-            Get("/", x =>
+
+            Get("/", x => 
             {
                 var dom = Request.Url.HostName;
                 var path = (string) x.path;
-                return pm.GenereateResponse(dom, RequestMethods.Get, path);
+                return pm.GenereateResponse(Context, dom, RequestMethods.Get, path);
             });
             Post("/", x =>
             {
                 var dom = Request.Url.HostName;
                 var path = (string) x.path;
-                return pm.GenereateResponse(dom , RequestMethods.Post, path);
+                return pm.GenereateResponse(Context, dom, RequestMethods.Get, path);
             });
             Put("/", x =>
             {
                 var dom = Request.Url.HostName;
                 var path = (string) x.path;
-                return pm.GenereateResponse(dom , RequestMethods.Put, path);
+                return pm.GenereateResponse(Context, dom, RequestMethods.Get, path);
             });
             Delete("/", x =>
             {
                 var dom = Request.Url.HostName;
                 var path = (string) x.path;
-                return pm.GenereateResponse(dom , RequestMethods.Delete, path);
+                return pm.GenereateResponse(Context, dom, RequestMethods.Get, path);
             });
             Get("/{path}", x =>
             {
                 var dom = Request.Url.HostName;
-                var path = (string) x.path;
-                return pm.GenereateResponse(dom, RequestMethods.Get, path);
+                var path = (string)x.path;
+                return pm.GenereateResponse(Context, dom, RequestMethods.Get, path);
             });
             Post("/{path}", x =>
             {
                 var dom = Request.Url.HostName;
                 var path = (string) x.path;
-                return pm.GenereateResponse(dom , RequestMethods.Post, path);
+                return pm.GenereateResponse(Context, dom, RequestMethods.Get, path);
             });
             Put("/{path}", x =>
             {
                 var dom = Request.Url.HostName;
                 var path = (string) x.path;
-                return pm.GenereateResponse(dom , RequestMethods.Put, path);
+                return pm.GenereateResponse(Context, dom, RequestMethods.Get, path);
             });
             Delete("/{path}", x =>
             {
                 var dom = Request.Url.HostName;
                 var path = (string) x.path;
-                return pm.GenereateResponse(dom , RequestMethods.Delete, path);
+                return pm.GenereateResponse(Context, dom, RequestMethods.Get, path);
             });
             Get("/static/{file}", x =>
             {

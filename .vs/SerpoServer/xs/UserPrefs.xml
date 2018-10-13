@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{9CC8CB70-FA6C-4FA8-AF6F-538E2952AF87}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SerpoServer/Api/CrudManager.cs">
+    <Files>
+      <File FileName="SerpoServer/Api/PageManager.cs" Line="101" Column="1" />
+      <File FileName="SerpoServer/Api/CrudManager.cs" Line="87" Column="14" />
+      <File FileName="SerpoServer/Data/Models/spo_page.cs" Line="27" Column="57" />
+      <File FileName="SerpoServer/Data/Models/spo_crud.cs" Line="14" Column="16" />
+      <File FileName="SerpoServer/Data/serposerver.sql" Line="62" Column="30" />
+      <File FileName="SerpoServer/Data/serposervermssql.sql" Line="110" Column="29" />
+      <File FileName="SerpoServer/Routes/Admin/PageModule.cs" Line="65" Column="1" />
+      <File FileName="SerpoServer/Routes/DynamicModule.cs" Line="13" Column="6" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Catchpoint exceptionName="System.Exception" includeSubclasses="True" />
+      <Breakpoint file="/Users/eliashakansson/Documents/SerpoServer/SerpoServer/AdminViews/Static/js/cruds.js" relfile="SerpoServer/AdminViews/Static/js/cruds.js" line="6" column="1" />
+      <Breakpoint file="/Users/eliashakansson/Documents/SerpoServer/SerpoServer/Security/Identity.cs" relfile="SerpoServer/Security/Identity.cs" line="110" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.SerpoServer PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -11,11 +11,14 @@ namespace SerpoServer.Data.Models
         public int crud_id { get; set; }
         [Column("crud_table")]
         public string crud_table { get; set; }
-        [Column("crud_route")]
+        [Ignore]
         public string crud_route { get; set; }
         [Column("crud_struct")]
         public string crud_struct { get; set; }
-
+        [Column("crud_auth")]
+        public bool crud_auth { get; set; }
+        [Column("crud_password")]
+        public string crud_password { get; set; }
         [Column("crud_data")] 
         [Ignore]
         public bool crud_data { get; set; }

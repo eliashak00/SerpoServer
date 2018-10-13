@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 using Community.CsharpSqlite;
@@ -25,7 +25,7 @@ namespace SerpoServer
             {
                 return (spo_site) site;
             }
-
+            
             return null;
         }
 

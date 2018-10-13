@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text.Encodings.Web;
 using Nancy;
+using Nancy.Extensions;
 using Nancy.Json.Simple;
 using Nancy.Responses;
 using Nancy.TinyIoc;
@@ -24,13 +26,14 @@ namespace SerpoServer.Api
     {
         private IDatabase db;
         private PyRuntime python;
+        private CrudManager crud;
         private static IList<Tuple<string, RequestMethods, spo_page>> PageCache = new List<Tuple<string, RequestMethods, spo_page>>();
         
-        public PageManager(PyRuntime python, Connection db)
+        public PageManager(PyRuntime python, Connection db, CrudManager crud)
         {
             this.python = python;
             this.db = db;
-
+            this.crud = crud;
 
         }
         public IEnumerable<spo_page> GetPages(string domain) =>
@@ -69,11 +72,10 @@ namespace SerpoServer.Api
             return HttpStatusCode.OK;
         }
 
-        public Response GenereateResponse(string domain, RequestMethods method, string path)
+        public Response GenereateResponse(NancyContext ctx, string domain, RequestMethods method, string path)
         {
             var result = new Response();
    
-        
             var page = string.IsNullOrWhiteSpace(path)? GetPage(domain, method) : GetPage(domain,method, "/" + path);
             
             if(page == null)
@@ -88,7 +90,32 @@ namespace SerpoServer.Api
                 result.StatusCode = HttpStatusCode.NotFound;
                 goto ReturnPoint;
             }
-  
+            if(page.page_response == ResponseMethods.Crud){
+                var crud = db.FirstOrDefault<spo_crud>("SELECT crud_auth, crud_password, crud_table, crud_json, crud_struct FROM spo_cruds WHERE crud_id = @0", page.page_crud);
+                if (crud == null) goto ReturnPoint;
+                if(crud.crud_auth){
+                    if (crud.crud_password != ctx.Request.Headers.Authorization){
+                        result.StatusCode = HttpStatusCode.Unauthorized;
+                        goto ReturnPoint;
+                    }
+                }
+                var data = ctx.Request.Body.AsString();
+                var urlId = ctx.Request.Query.id;
+                switch(page.page_methods){
+                    case RequestMethods.Post:
+                        this.crud.Insert(crud, data);
+                    break;
+                    case RequestMethods.Get:
+                        this.crud.Get(crud, urlId);
+                    break;
+                    case RequestMethods.Put:
+                    break;
+                    case RequestMethods.Delete:
+                        this.crud.Delete(crud, urlId);
+                    break;
+                }
+
+            }
 
      
 

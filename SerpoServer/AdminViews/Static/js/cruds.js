@@ -1,8 +1,10 @@
 let cruds = {
-    'createoredit': function (id, route, name, struct) {
+    'createoredit': function (id, route,auth,password, name, struct) {
         let crud = {
             crud_id: id,
             crud_route: route,
+            crud_auth: String(auth).includes("on"),
+            crud_password: password,
             crud_table: name,
             crud_struct: String(struct)
         };

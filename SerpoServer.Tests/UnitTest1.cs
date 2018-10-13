@@ -1,6 +1,8 @@
 using System;
 using System.Globalization;
+using System.Linq;
 using Nancy.Json.Simple;
+using Newtonsoft.Json.Linq;
 using SerpoServer.Data.Models;
 using SerpoServer.Data.Models.Enums;
 using Xunit;
@@ -44,6 +46,42 @@ namespace SerpoServer.Tests
                     Assert.NotNull(val);
                 }
             }
+        }
+        [Fact]
+        public void jsonUpdate(){
+            var crud = new spo_crud();
+            crud.crud_struct = "[{\"Name\":\"id\",\"Type\":\"id\"},{\"Name\":\"name\",\"Type\":\"string\"}]";
+            crud.crud_json = "[{\"id\": 1, \"name\": \"hello\"}, {\"id\": 1, \"name\": \"hello\"}, {\"id\": 3, \"name\": \"hello\"}]";
+            var json = JArray.Parse(crud.crud_json);
+            var jnew = JToken.Parse("{\"id\": 0, \"name\": \"he33llo\"}");
+            var struc = JArray.Parse(crud.crud_struct);
+            var item = struc.FirstOrDefault(f => f.Value<string>("Type") == "id");   
+            var keyName = item.Value<string>("Name");
+            var newKeyVal = jnew.Value<string>(keyName);
+            var jval = json.FirstOrDefault(t => t.Value<string>(keyName) == newKeyVal);
+            if(jval == null){
+                json.Add(jnew);
+            }
+            else{
+                json[jval] = jnew;
+            }
+                
+            Assert.NotEmpty(json);
+        }
+        public void jsonDelete(){
+                        var crud = new spo_crud();
+            crud.crud_struct = "[{\"Name\":\"id\",\"Type\":\"id\"},{\"Name\":\"name\",\"Type\":\"string\"}]";
+            crud.crud_json = "[{\"id\": 1, \"name\": \"hello\"}, {\"id\": 1, \"name\": \"hello\"}, {\"id\": 3, \"name\": \"hello\"}]";
+            var json = JArray.Parse(crud.crud_json);
+            var primaryKey = 1;
+            var struc = JArray.Parse(crud.crud_struct);
+            var item = struc.FirstOrDefault(f => f.Value<string>("Type") == "id");   
+            var keyName = item.Value<string>("Name");
+            var jval = json.FirstOrDefault(t => t.Value<dynamic>(keyName) == primaryKey);
+            if(jval != null){
+                json[jval] = null;
+            }
+  Assert.NotEmpty(json);
         }
         
         public class SettingsViewModel
