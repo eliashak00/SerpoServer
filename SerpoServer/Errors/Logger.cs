@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Net;
 using System.Net.Http;
 using Nancy;
 using Nancy.Json.Simple;
@@ -10,6 +9,7 @@ namespace SerpoServer.Errors
     public static class Logger
     {
         private static readonly IRootPathProvider RootPath = new DefaultRootPathProvider();
+
         public static void Write(Exception e)
         {
             var path = Path.Combine(RootPath.GetRootPath(),
@@ -32,7 +32,6 @@ namespace SerpoServer.Errors
             {
                 var json = SimpleJson.SerializeObject(e);
                 http.PostAsync("http://serpocms.net/api/telemetry", new StringContent(json));
-                
             }
         }
     }

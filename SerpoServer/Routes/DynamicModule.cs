@@ -1,71 +1,56 @@
-﻿using System;
-using System.Reflection;
+﻿using System.Reflection;
 using Nancy;
-using Nancy.Responses;
-using PetaPoco;
 using SerpoServer.Api;
 using SerpoServer.Data.Models.Enums;
-using SerpoServer.Intepreter;
 
 namespace SerpoServer.Routes
 {
     public class DynamicModule : NancyModule
     {
-        public DynamicModule(PageManager pm)
-        {
+        private Assembly asm = typeof(DynamicModule).Assembly;
 
-            Get("/", x => 
+        public DynamicModule(RequestManager rm)
+        {
+            Get("/", x =>
             {
-                var dom = Request.Url.HostName;
                 var path = (string) x.path;
-                return pm.GenereateResponse(Context, dom, RequestMethods.Get, path);
+
+                return rm.GenerateResponse(Context, RequestMethods.Get);
             });
             Post("/", x =>
             {
-                var dom = Request.Url.HostName;
                 var path = (string) x.path;
-                return pm.GenereateResponse(Context, dom, RequestMethods.Get, path);
+                return rm.GenerateResponse(Context, RequestMethods.Post);
             });
             Put("/", x =>
             {
-                var dom = Request.Url.HostName;
                 var path = (string) x.path;
-                return pm.GenereateResponse(Context, dom, RequestMethods.Get, path);
+                return rm.GenerateResponse(Context, RequestMethods.Put);
             });
             Delete("/", x =>
             {
-                var dom = Request.Url.HostName;
                 var path = (string) x.path;
-                return pm.GenereateResponse(Context, dom, RequestMethods.Get, path);
+                return rm.GenerateResponse(Context, RequestMethods.Delete);
             });
-            Get("/{path}", x =>
+            Get("/*", x =>
             {
-                var dom = Request.Url.HostName;
-                var path = (string)x.path;
-                return pm.GenereateResponse(Context, dom, RequestMethods.Get, path);
-            });
-            Post("/{path}", x =>
-            {
-                var dom = Request.Url.HostName;
                 var path = (string) x.path;
-                return pm.GenereateResponse(Context, dom, RequestMethods.Get, path);
+                return rm.GenerateResponse(Context, RequestMethods.Get);
             });
-            Put("/{path}", x =>
+            Post("/*", x =>
             {
-                var dom = Request.Url.HostName;
                 var path = (string) x.path;
-                return pm.GenereateResponse(Context, dom, RequestMethods.Get, path);
+                return rm.GenerateResponse(Context, RequestMethods.Post);
             });
-            Delete("/{path}", x =>
+            Put("/*", x =>
             {
-                var dom = Request.Url.HostName;
                 var path = (string) x.path;
-                return pm.GenereateResponse(Context, dom, RequestMethods.Get, path);
+                return rm.GenerateResponse(Context, RequestMethods.Put);
             });
-            Get("/static/{file}", x =>
+            Delete("/*", x =>
             {
-                return new EmbeddedFileResponse(Assembly.GetExecutingAssembly(), "SerpoServer.EmbeddedStatic",
-                        (string) x.file);
+                var path = (string) x.path;
+                return rm.GenerateResponse(Context, RequestMethods.Delete);
             });
         }
     }

@@ -1,22 +1,23 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/eliashakansson/RiderProjects/SerpoServer/SerpoServer.Tests/SerpoServer.Tests.csproj",
+    "projectUniqueName": "/Volumes/elias/Programmering/SerpoServer/SerpoServer.Tests/SerpoServer.Tests.csproj",
     "projectName": "SerpoServer.Tests",
-    "projectPath": "/Users/eliashakansson/RiderProjects/SerpoServer/SerpoServer.Tests/SerpoServer.Tests.csproj",
-    "outputPath": "/Users/eliashakansson/RiderProjects/SerpoServer/SerpoServer.Tests/obj/",
+    "projectPath": "/Volumes/elias/Programmering/SerpoServer/SerpoServer.Tests/SerpoServer.Tests.csproj",
+    "outputPath": "/Volumes/elias/Programmering/SerpoServer/SerpoServer.Tests/obj/",
     "projectStyle": "PackageReference",
-    "fallbackFolders": [
-      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-    ],
     "originalTargetFrameworks": [
-      "netcoreapp2.0"
+      "netcoreapp2.1"
     ],
+    "sources": {
+      "https://api.nuget.org/v3/index.json": {},
+      "https://www.myget.org/F/nancyfx/api/v3/index.json": {}
+    },
     "frameworks": {
-      "netcoreapp2.0": {
+      "netcoreapp2.1": {
         "projectReferences": {
-          "/Users/eliashakansson/RiderProjects/SerpoServer/SerpoServer/SerpoServer.csproj": {
-            "projectPath": "/Users/eliashakansson/RiderProjects/SerpoServer/SerpoServer/SerpoServer.csproj"
+          "/Volumes/elias/Programmering/SerpoServer/SerpoServer/SerpoServer.csproj": {
+            "projectPath": "/Volumes/elias/Programmering/SerpoServer/SerpoServer/SerpoServer.csproj"
           }
         }
       }
@@ -28,33 +29,38 @@
     }
   },
   "frameworks": {
-    "netcoreapp2.0": {
+    "netcoreapp2.1": {
       "dependencies": {
-        "Microsoft.NET.Test.Sdk": {
+        "Dapper": {
           "target": "Package",
-          "version": "[15.7.0, )"
+          "version": "[2.0.4, )"
         },
         "Microsoft.NETCore.App": {
           "suppressParent": "All",
           "target": "Package",
-          "version": "[2.0.0, )",
+          "version": "[2.1.0, )",
           "autoReferenced": true
         },
         "Nancy": {
           "target": "Package",
-          "version": "[2.0.0-pre1911, )"
+          "version": "[2.0.0, )"
         },
         "xunit": {
           "target": "Package",
-          "version": "[2.3.1, )"
+          "version": "[2.4.1, )"
         },
         "xunit.runner.visualstudio": {
           "target": "Package",
-          "version": "[2.3.1, )"
+          "version": "[2.4.1, )"
         }
       },
       "imports": [
-        "net461"
+        "net461",
+        "net462",
+        "net47",
+        "net471",
+        "net472",
+        "net48"
       ],
       "assetTargetFallback": true,
       "warn": true

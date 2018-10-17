@@ -7,7 +7,7 @@
 
 namespace SerpoCMS.Core.Security
 {
-    public class JwtToken
+    public struct JwtToken
     {
         public string Email;
         public string Exp;

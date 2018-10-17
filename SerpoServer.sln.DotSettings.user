@@ -28,4 +28,10 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=9CC8CB70_002DFA6C_002D4FA8_002DAF6F_002D538E2952AF87_002Fd_003ASecurity_002Ff_003AIdentity_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=9CC8CB70_002DFA6C_002D4FA8_002DAF6F_002D538E2952AF87_002Ff_003ABootstrap_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=9CC8CB70_002DFA6C_002D4FA8_002DAF6F_002D538E2952AF87_002Ff_003AConfigurationProvider_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
-	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=9CC8CB70_002DFA6C_002D4FA8_002DAF6F_002D538E2952AF87_002Ff_003AProgram_002Ecs/@EntryIndexedValue">ForceIncluded</s:String></wpf:ResourceDictionary>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=9CC8CB70_002DFA6C_002D4FA8_002DAF6F_002D538E2952AF87_002Ff_003AProgram_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	
+	
+	
+	
+	
+	</wpf:ResourceDictionary>

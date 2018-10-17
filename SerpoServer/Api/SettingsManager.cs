@@ -1,27 +1,18 @@
-﻿using System;
-using System.IO;
-using Nancy;
-using Nancy.Json.Simple;
-using Nancy.TinyIoc;
-using Newtonsoft.Json;
+﻿using Nancy;
 using PetaPoco;
-using SerpoServer.Data;
 using SerpoServer.Data.Models;
 using SerpoServer.Data.Models.View;
+using SerpoServer.Database;
+using SerpoServer.Database.Models;
 
 namespace SerpoServer.Api
 {
     public class SettingsManager
     {
-        private IDatabase db;
+        private readonly IDatabase db = CallDb.GetDb();
 
-        public SettingsManager(Connection db)
-        {
-            this.db = db;
-        }
         public HttpStatusCode SaveChanges(SettingsViewModel data)
         {
-
             if (data.settings_connstring == null)
                 return HttpStatusCode.BadRequest;
             var site = new spo_site
@@ -44,7 +35,5 @@ namespace SerpoServer.Api
             ConfigurationProvider.UpdateFile(settings);
             return HttpStatusCode.OK;
         }
-
-
     }
 }

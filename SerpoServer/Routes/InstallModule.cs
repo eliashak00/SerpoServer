@@ -1,17 +1,11 @@
-﻿using System;
-using System.Data.Common;
+﻿using System.Data.Common;
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
 using Nancy;
-using Nancy.Bootstrapper;
 using Nancy.Extensions;
 using Nancy.Json.Simple;
-using Nancy.ModelBinding;
-using Nancy.TinyIoc;
 using Newtonsoft.Json;
-using SerpoServer.Data;
 using SerpoServer.Data.Models;
-using SerpoServer.Intepreter;
 using SerpoServer.Security;
 
 namespace SerpoServer.Routes
@@ -20,12 +14,10 @@ namespace SerpoServer.Routes
     {
         public InstallModule() : base("/install")
         {
-
-            
             Post("/step1", x =>
             {
-                var db = SimpleJson.DeserializeObject<dbRequest>(Request.Body.AsString());
-                if (db == null) return HttpStatusCode.BadRequest;
+                var db = SimpleJson.DeserializeObject<DbRequest>(Request.Body.AsString());
+                if (db.Equals(default(DbRequest))) return HttpStatusCode.BadRequest;
                 string connectionString;
                 switch (db.dbtype)
                 {
@@ -59,17 +51,16 @@ namespace SerpoServer.Routes
                 conf.connstring = connectionString;
                 conf.dbtype = db.dbtype;
                 ConfigurationProvider.UpdateFile(conf);
-    
+
                 Bootstrap.DisableBlock();
                 return HttpStatusCode.OK;
-                
             });
             Post("/step2", x =>
             {
-                var usr = JsonConvert.DeserializeObject<usrRequest>(Request.Body.AsString());
-                if (usr == null) return HttpStatusCode.BadRequest;
+                var usr = JsonConvert.DeserializeObject<UsrRequest>(Request.Body.AsString());
+                if (usr.Equals(default(UsrRequest))) return HttpStatusCode.BadRequest;
                 if (usr.psw != usr.confpsw) return HttpStatusCode.BadRequest;
-                
+
                 var usrObj = new spo_user
                 {
                     user_email = usr.email,
@@ -77,42 +68,19 @@ namespace SerpoServer.Routes
                     user_password = usr.psw,
                     user_registerd = System.DateTime.Now
                 };
-                
+
                 Identity.CreateOrEdit(usrObj);
-            
+
                 return HttpStatusCode.OK;
             });
         }
 
-        class dbRequest
-        {
-            public string dbtype;
-            public string dbhost;
-            public string dbname;
-            public string dbpsw;
-            public string dbport;
-            public string dbuser;
-        }
-
-        class usrRequest
-        {
-            public string email;
-            public string psw;
-            public string confpsw;
-        }
         private bool DbExists(string connStr, string type)
         {
             DbConnection conn = null;
-            switch (type)
-            {
-                case "mssql":
-                    conn = new SqlConnection(connStr);
-
-                    break;
-                case "mysql":
-                    conn = new MySqlConnection(connStr);
-                    break;
-            }
+            if (type == "mssql")
+                conn = new SqlConnection(connStr);
+            else if (type == "mysql") conn = new MySqlConnection(connStr);
 
             if (conn == null) return false;
             try
@@ -130,6 +98,22 @@ namespace SerpoServer.Routes
                 conn.Dispose();
             }
         }
+
+        private class DbRequest
+        {
+            public string dbhost;
+            public string dbname;
+            public string dbport;
+            public string dbpsw;
+            public string dbtype;
+            public string dbuser;
+        }
+
+        private class UsrRequest
+        {
+            public string confpsw;
+            public string email;
+            public string psw;
+        }
     }
-    
 }

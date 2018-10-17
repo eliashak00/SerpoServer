@@ -1,8 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerpoServer", "SerpoServer\SerpoServer.csproj", "{9CC8CB70-FA6C-4FA8-AF6F-538E2952AF87}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29318.209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerpoServer", "SerpoServer\SerpoServer.csproj", "{9CC8CB70-FA6C-4FA8-AF6F-538E2952AF87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerpoServer.Tests", "SerpoServer.Tests\SerpoServer.Tests.csproj", "{33B3A437-BF62-4323-9861-A2575711214E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerpoServer.NetCore", "SerpoServer.NetCore\SerpoServer.NetCore.csproj", "{18E20420-C7DD-4F2D-8357-8CBB1CC0500D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,9 +17,15 @@ Global
 		{9CC8CB70-FA6C-4FA8-AF6F-538E2952AF87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CC8CB70-FA6C-4FA8-AF6F-538E2952AF87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CC8CB70-FA6C-4FA8-AF6F-538E2952AF87}.Release|Any CPU.Build.0 = Release|Any CPU
-		{33B3A437-BF62-4323-9861-A2575711214E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{33B3A437-BF62-4323-9861-A2575711214E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{33B3A437-BF62-4323-9861-A2575711214E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{33B3A437-BF62-4323-9861-A2575711214E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18E20420-C7DD-4F2D-8357-8CBB1CC0500D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18E20420-C7DD-4F2D-8357-8CBB1CC0500D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18E20420-C7DD-4F2D-8357-8CBB1CC0500D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18E20420-C7DD-4F2D-8357-8CBB1CC0500D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4EBA167D-4A1A-4703-81AA-B8C881ED84EA}
 	EndGlobalSection
 EndGlobal

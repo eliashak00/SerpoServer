@@ -6,51 +6,50 @@
 // ################################################
 
 using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
-using System.Security.Principal;
-using IronPython.SQLite;
 using Jose;
-using Nancy;
 using Nancy.Authentication.Stateless;
 using Nancy.Bootstrapper;
 using Nancy.Extensions;
-using Nancy.Responses;
-using Nancy.TinyIoc;
 using PetaPoco;
 using SerpoCMS.Core.Security;
-using SerpoServer.Api;
-using SerpoServer.Data;
-using SerpoServer.Data.Cache;
 using SerpoServer.Data.Models;
+using SerpoServer.Database;
 
 namespace SerpoServer.Security
 {
     public static class Identity
     {
-        private const int logoutTimeLimit = 2;
-        private static IDatabase db => TinyIoCContainer.Current.Resolve<Connection>();
+        private const string MEMDB_NAME = "userCache";
+
         private static readonly IList<Tuple<string, string, byte[]>> CurrentUsers =
             new List<Tuple<string, string, byte[]>>();
-        
-        
-        private static readonly IDictionary<string, spo_user> UserCache = new ConcurrentDictionary<string, spo_user>();
+
+        private static readonly MemoryDatabase MemoryDatabase = new MemoryDatabase();
+        private static IDatabase Db => CallDb.GetDb();
+
+
+        public static IEnumerable<spo_user> GetAll
+        {
+            get
+            {
+                var data = Db.Query<spo_user>("SELECT * FROM spo_users").ToList();
+                data.ForEach(u => u.user_password = null);
+                data.ForEach(u => u.user_salt = null);
+                return data;
+            }
+        }
 
         public static void Initialize(IPipelines pipelines)
         {
-            
             try
             {
-                if (db.FirstOrDefault<spo_user>("SELECT * FROM spo_users") != null)
-                {
-                    foreach (var usr in db.Query<spo_user>("SELECT * FROM spo_users"))
-                    {
-                        UserCache.Add(usr.user_email, usr);
-                    }
-                  
-                }
+                var memDb = MemoryDatabase.Current.GetCollection<spo_user>(MEMDB_NAME);
+                if (Db.FirstOrDefault<spo_user>("SELECT * FROM spo_users") != null)
+                    foreach (var usr in Db.Query<spo_user>("SELECT * FROM spo_users"))
+                        memDb.Insert(usr.user_email, usr);
             }
             catch
             {
@@ -60,15 +59,16 @@ namespace SerpoServer.Security
             {
                 var token = "";
                 if (x.Request.IsAjaxRequest())
-                   token = x.Request.Headers.Authorization;
-                else if (x.Request.Cookies.TryGetValue("auth", out var cookie))
-                    token = cookie;
-        
-                
-                if (string.IsNullOrWhiteSpace(token))
                 {
-                    return null;
+                    token = x.Request.Headers.Authorization;
                 }
+                else
+                {
+                    if (x.Request.Cookies.TryGetValue("auth", out var cookie))
+                        token = cookie;
+                }
+
+                if (string.IsNullOrWhiteSpace(token)) return null;
 
                 string key;
                 if (token.Contains('/'))
@@ -79,37 +79,24 @@ namespace SerpoServer.Security
                 else
                 {
                     key = token;
-                    
                 }
 
-        
+
                 return GetUserClaim(key);
             });
             StatelessAuthentication.Enable(pipelines, config);
-        }
-        
-
-        public static IEnumerable<spo_user> GetAll
-        {
-            get
-            {
-                var data = db.Query<spo_user>("SELECT * FROM spo_users").ToList();
-                data.ForEach(u => u.user_password = null);
-                data.ForEach(u => u.user_salt = null);
-                return data;
-            }
         }
 
 
         public static string Login(string email, string password)
         {
-            var user = MemoryDatabase.Current.GetCollection<spo_user>("userCache").FindOne(u => u.user_email == email) ??
-                       db.FirstOrDefault<spo_user>("SELECT * FROM spo_users WHERE user_email = @0", email);
+            var user = MemoryDatabase.Current.GetCollection<spo_user>(MEMDB_NAME).FindById(email) ??
+                       Db.FirstOrDefault<spo_user>("SELECT * FROM spo_users WHERE user_email = @0", email);
             if (user == null) return null;
             var hashedPassword = Hashing.SHA512(password, user.user_salt);
             if (user.user_password != hashedPassword) return null;
             var key = Guid.NewGuid().ToString();
-            var exp = System.DateTime.Now.AddHours(logoutTimeLimit);
+            var exp = System.DateTime.Now.AddHours(ConfigurationProvider.ConfigurationFile.logoutHours);
             var objPayload = new Dictionary<string, object>
             {
                 {"Email", user.user_email},
@@ -129,13 +116,12 @@ namespace SerpoServer.Security
                 {
                     var token = JWT.Decode<JwtToken>(key, user.Item3, JweAlgorithm.DIR, JweEncryption.A128CBC_HS256);
                     if (System.DateTime.Parse(token.Exp).CompareTo(System.DateTime.Now) >
-                        logoutTimeLimit) continue;
+                        ConfigurationProvider.ConfigurationFile.logoutHours) continue;
 
-                    return UserCache.FirstOrDefault(x => x.Key == token.Email).Value;
+                    return MemoryDatabase.Current.GetCollection<spo_user>("userCache").FindById(token.Email);
                 }
                 catch
                 {
-                    continue;
                 }
 
             return null;
@@ -164,40 +150,42 @@ namespace SerpoServer.Security
         public static void CreateOrEdit(spo_user info)
         {
             var storedUser = info.user_id > 0
-                ? MemoryDatabase.Current.GetCollection<spo_user>("userCache").FindOne(u => u.user_email == info.user_email)
+                ? MemoryDatabase.Current.GetCollection<spo_user>(MEMDB_NAME).FindById(info.user_email)
                 : info;
             if (info.user_password != null)
             {
-                storedUser.user_password = Hashing.SHA512(info.user_password);
-                storedUser.user_salt = Convert.ToBase64String(Hashing.RandomBytes());
+                var salt = Convert.ToBase64String(Hashing.RandomBytes());
+                storedUser.user_password = Hashing.SHA512(info.user_password, salt);
+                storedUser.user_salt = salt;
             }
+
             storedUser.user_avatar = info.user_avatar ?? "stockavatar.jpg";
             if (info.user_nick != null)
                 storedUser.user_nick = info.user_nick;
 
             if (info.user_email != null)
                 storedUser.user_email = info.user_email;
-                
+
             if (info.user_id > 0)
             {
-                db.Update(storedUser);
+                Db.Update(storedUser);
             }
             else
             {
                 storedUser.user_registerd = System.DateTime.Now;
-                db.Insert("spo_users", storedUser);
+                Db.Insert("spo_users", storedUser);
             }
         }
 
         public static void Delete(int id)
         {
-            db.Delete<spo_user>("DELETE FROM spo_users WHERE user_id = @0", id);
+            Db.Delete<spo_user>("DELETE FROM spo_users WHERE user_id = @0", id);
         }
 
 
         public static spo_user GetUserById(int id)
         {
-            return db.Single<spo_user>("SELECT * FROM spo_users WHERE user_id = @0",
+            return Db.Single<spo_user>("SELECT * FROM spo_users WHERE user_id = @0",
                 id);
         }
     }

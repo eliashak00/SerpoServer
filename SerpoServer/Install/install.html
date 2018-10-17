@@ -3,94 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <title>Install</title>
-    <link rel="stylesheet" href="/static/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/common.css">
-    <script src="/static/jquery.min.js"></script>
-    <script src="/static/common.js"></script>
-    <script src="/static/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/fontawesome.css">
+    <script src="/static/js/jq.js"></script>
+    <script src="/static/js/http.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
     <style>
-        body{
-            background: url('/static/installerbac.png');
-            background-repeat: no-repeat;
-            background-position: center;
+        body {
+            background: url('/static/img/installerbac.png');
             background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
             background-size: cover;
         }
     </style>
 </head>
 <body>
 <script>
-    $(document).ready(function (){
+    $(document).ready(function() {
         $("#step2").hide();
-        $('#step1 button').on('click',function (e) {
-            e.preventDefault();
-            generateLoader("step1 button");
-            $.post("/install/step1", JSON.stringify({
-                dbtype: $("#dbtype").val(),
-                dbhost: $("#dbhost").val(),
-                dbuser: $("#dbuser").val(),
-                dbpsw: $("#dbpsw").val(),
-                dbname: $("#dbname").val(),
-                dbport: $("#dbport").val(),
-            }), function (data, status) {
-                    if (status === "success") {
+        $('#step1Btn').on('click',
+            function(e) {
+                e.preventDefault();
+                $('#step1Btn').text('Please wait!');
+                http.post("/install/step1",
+                    {
+                        dbtype: $("#dbtype").val(),
+                        dbhost: $("#dbhost").val(),
+                        dbuser: $("#dbuser").val(),
+                        dbpsw: $("#dbpsw").val(),
+                        dbname: $("#dbname").val(),
+                        dbport: $("#dbport").val(),
+                    },
+                    function(result, status) {
                         $("#step1").hide();
                         $("#step2").show();
-                    }
-                    else{
-                        removeLoader("step1 button");
+                    },
+                    function(result, status) {
+                        $('#step1Btn').text('Continue');
                         $("#errMsg").text("Failed to connect to DB, Make sure that all parameters are correct!");
-                    }
-                }
-            );
-        });
-        $('#step2 button').click(function (e) {
+                    });
+
+            });
+        $('#step2 button').click(function(e) {
             e.preventDefault();
-            generateLoader("step2 button");
-            $.post("/install/step2", JSON.stringify(
+            $('#step2Btn').text('Please wait!');
+            http.post("/install/step2",
                 {
                     email: $("#email").val(),
-                    psw:$("#psw").val(),
+                    psw: $("#psw").val(),
                     confpsw: $("#confpsw").val(),
-                }
-                ), function (data, status) {
-                if (status === "success"){
+                },
+                function(result, status) {
                     window.location = "/";
-                }else{
-                    removeLoader("step2 button");
-                    $("#errMsg").text("Failed to proceed! Make sure that the passwords are equal and the email is valid!");
-                }
-                }
-            );
-   
+                },
+                function(result, status) {
+                    $('#step2Btn').text('Continue');
+                    $("#errMsg")
+                        .text("Failed to proceed! Make sure that the passwords are equal and the email is valid!");
+                });
+
+
         });
     });
+
 </script>
 
-<main class="container p-2 bg-light">
+<main class="container p-2 bg-white">
     <div class="mx-auto">
-    <div class="form-group">
-        <p class="text-danger" id="errMsg"></p>
-        <form id="step1">
-            <select class="form-control mb-2" id="dbtype">
-                <option value="mysql">My SQL</option>
-                <option value="mssql">MS SQL(SQL Server)</option>
-            </select>
-            <input required type="text" class="form-control mb-2" placeholder="Database host..." id="dbhost">
-            <input required type="number" class="form-control mb-2" placeholder="Database port..." id="dbport">
-            <input required type="text" class="form-control mb-2" placeholder="Database name..." id="dbname">
-            <input required type="text" class="form-control mb-2" placeholder="Database user..." id="dbuser">
-            <input required type="text" class="form-control mb-2" placeholder="Database password..." id="dbpsw">
+        <div class="form-group">
+            <p class="text-danger text-center" id="errMsg"></p>
+            <section id="step1">
+                <select class="form-control mb-2" id="dbtype">
+                    <option value="mysql">My SQL</option>
+                    <option value="mssql">MS SQL(SQL Server)</option>
+                </select>
+                <input required type="text" class="form-control mb-2" placeholder="Database host..." id="dbhost">
+                <input required type="number" class="form-control mb-2" placeholder="Database port..." id="dbport">
+                <input required type="text" class="form-control mb-2" placeholder="Database name..." id="dbname">
+                <input required type="text" class="form-control mb-2" placeholder="Database user..." id="dbuser">
+                <input required type="text" class="form-control mb-2" placeholder="Database password..." id="dbpsw">
 
-            <button type="button" class="btn btn-primary">Continue</button>
-        </form>
-        <form id="step2">
-            <input required type="email" placeholder="User email..." class="form-control mb-2" id="email">
-            <input required type="password" placeholder="User password..." class="form-control mb-2" id="psw">
-            <input required type="password" placeholder="User confirm password..." class="form-control mb-2" id="confpsw">
-            <button type="button" class="btn btn-primary">Continue</button>
-        </form>
-    </div>
+                <button type="button" id="step1Btn" class="btn btn-primary">Continue</button>
+            </section>
+            <section id="step2">
+                <input required type="email" placeholder="User email..." class="form-control mb-2" id="email">
+                <input required type="password" placeholder="User password..." class="form-control mb-2" id="psw">
+                <input required type="password" placeholder="User confirm password..." class="form-control mb-2" id="confpsw">
+                <button type="button" class="btn btn-primary">Continue</button>
+            </section>
+        </div>
     </div>
 </main>
 </body>

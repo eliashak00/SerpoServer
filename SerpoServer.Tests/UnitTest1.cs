@@ -1,12 +1,3 @@
-using System;
-using System.Globalization;
-using System.Linq;
-using Nancy.Json.Simple;
-using Newtonsoft.Json.Linq;
-using SerpoServer.Data.Models;
-using SerpoServer.Data.Models.Enums;
-using Xunit;
-
 namespace SerpoServer.Tests
 {
     public class UnitTest1
@@ -38,64 +29,96 @@ namespace SerpoServer.Tests
             var svm = new SettingsViewModel();
             svm.settings_connstring = "test";
             foreach (var field in svm.GetType().GetFields())
-            {
                 if (field.Name.Contains("settings"))
                 {
                     object val = null;
-                   set.GetType().GetField(field.Name).SetValue(val, field.GetValue(null));
+                    set.GetType().GetField(field.Name).SetValue(val, field.GetValue(null));
                     Assert.NotNull(val);
                 }
-            }
         }
+
         [Fact]
-        public void jsonUpdate(){
+        public void jsonUpdate()
+        {
             var crud = new spo_crud();
             crud.crud_struct = "[{\"Name\":\"id\",\"Type\":\"id\"},{\"Name\":\"name\",\"Type\":\"string\"}]";
-            crud.crud_json = "[{\"id\": 1, \"name\": \"hello\"}, {\"id\": 1, \"name\": \"hello\"}, {\"id\": 3, \"name\": \"hello\"}]";
+            crud.crud_json =
+                "[{\"id\": 1, \"name\": \"hello\"}, {\"id\": 1, \"name\": \"hello\"}, {\"id\": 3, \"name\": \"hello\"}]";
             var json = JArray.Parse(crud.crud_json);
             var jnew = JToken.Parse("{\"id\": 0, \"name\": \"he33llo\"}");
             var struc = JArray.Parse(crud.crud_struct);
-            var item = struc.FirstOrDefault(f => f.Value<string>("Type") == "id");   
+            var item = struc.FirstOrDefault(f => f.Value<string>("Type") == "id");
             var keyName = item.Value<string>("Name");
             var newKeyVal = jnew.Value<string>(keyName);
             var jval = json.FirstOrDefault(t => t.Value<string>(keyName) == newKeyVal);
-            if(jval == null){
+            if (jval == null)
                 json.Add(jnew);
-            }
-            else{
+            else
                 json[jval] = jnew;
-            }
-                
+
             Assert.NotEmpty(json);
         }
-        public void jsonDelete(){
-                        var crud = new spo_crud();
+
+        public void jsonDelete()
+        {
+            var crud = new spo_crud();
             crud.crud_struct = "[{\"Name\":\"id\",\"Type\":\"id\"},{\"Name\":\"name\",\"Type\":\"string\"}]";
-            crud.crud_json = "[{\"id\": 1, \"name\": \"hello\"}, {\"id\": 1, \"name\": \"hello\"}, {\"id\": 3, \"name\": \"hello\"}]";
+            crud.crud_json =
+                "[{\"id\": 1, \"name\": \"hello\"}, {\"id\": 1, \"name\": \"hello\"}, {\"id\": 3, \"name\": \"hello\"}]";
             var json = JArray.Parse(crud.crud_json);
             var primaryKey = 1;
             var struc = JArray.Parse(crud.crud_struct);
-            var item = struc.FirstOrDefault(f => f.Value<string>("Type") == "id");   
+            var item = struc.FirstOrDefault(f => f.Value<string>("Type") == "id");
             var keyName = item.Value<string>("Name");
             var jval = json.FirstOrDefault(t => t.Value<dynamic>(keyName) == primaryKey);
-            if(jval != null){
-                json[jval] = null;
-            }
-  Assert.NotEmpty(json);
+            if (jval != null) json[jval] = null;
+            Assert.NotEmpty(json);
         }
-        
+
+
+        [Fact]
+        public void fileCheck()
+        {
+            var filePath = Path.Combine(new RootPathProvider().GetRootPath(), "test.jpg");
+            var fileContent = File.ReadAllBytes(filePath);
+            var compFile = CompressImage("test.jpg", fileContent).GetBuffer();
+            var sFile = File.Create(filePath.Replace("test", "test2"));
+            sFile.Write(compFile, 0, compFile.Length);
+            sFile.Close();
+            Assert.True(File.Exists(filePath.Replace("test", "test2")));
+        }
+
+        public MemoryStream CompressImage(string file, byte[] fileContent)
+        {
+            IImageEncoder format;
+            if (Path.GetExtension(file) == ".jpg" || Path.GetExtension(file) == ".jpeg")
+                format = new JpegEncoder();
+            else if (Path.GetExtension(file) == ".png")
+                format = new PngEncoder();
+            else if (Path.GetExtension(file) == ".gif")
+                format = new GifEncoder();
+            else return null;
+            using (var image = SixLabors.ImageSharp.Image.Load(fileContent))
+            using (var outStream = new MemoryStream())
+            {
+                image.Mutate(c => c.Resize(200, 200));
+
+                image.Save(outStream, format);
+                return outStream;
+            }
+        }
+
         public class SettingsViewModel
         {
+            public string settings_connstring;
+            public string settings_dbtype;
+            public string settings_emailport;
+            public string settings_emailpsw;
+            public string settings_emailserver;
+            public string settings_emailuser;
             public string site_domain;
             public string site_name;
             public string site_ssl;
-            public string settings_dbtype;
-            public string settings_connstring;
-            public string settings_emailserver;
-            public string settings_emailuser;
-            public string settings_emailpsw;
-            public string settings_emailport;
         }
-        
     }
 }

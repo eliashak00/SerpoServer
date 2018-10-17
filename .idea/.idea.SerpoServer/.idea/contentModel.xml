@@ -1,25 +1,359 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.3.1/build/netcoreapp1.0/xunit.runner.reporters.netcoreapp10.dll" t="Include" />
-    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.3.1/build/netcoreapp1.0/xunit.runner.utility.netcoreapp10.dll" t="Include" />
-    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.3.1/build/netcoreapp1.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
-    <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_SerpoServer.335576159.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_SerpoServer.275484236.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="SerpoServer" t="IncludeRecursive">
-        <e p="AdminViews" t="Include">
+        <e p="._.DS_Store" t="Include" />
+        <e p="Admin" t="Include">
+          <e p="._.DS_Store" t="Include" />
+          <e p="AccountModule.cs" t="Include" />
+          <e p="MainModule.cs" t="Include" />
+          <e p="ModulesModule.cs" t="Include" />
+          <e p="PageModule.cs" t="Include" />
+          <e p="ServiceModule.cs" t="Include" />
+          <e p="SettingsModule.cs" t="Include" />
+          <e p="SiteModule.cs" t="Include" />
+          <e p="StatModule.cs" t="Include" />
+          <e p="ToolsModule.cs" t="Include" />
+        </e>
+        <e p="Api" t="Include">
+          <e p="CrudManager.cs" t="Include" />
+          <e p="ModuleManager.cs" t="Include" />
+          <e p="PageManager.cs" t="Include" />
+          <e p="RequestManager.cs" t="Include" />
+          <e p="ServiceManager.cs" t="Include" />
+          <e p="SettingsManager.cs" t="Include" />
+          <e p="SiteManager.cs" t="Include" />
+          <e p="StatManager.cs" t="Include" />
+          <e p="UserManager.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Bootstrap.cs" t="Include" />
+        <e p="ConfigurationProvider.cs" t="Include" />
+        <e p="Conventions" t="Include" />
+        <e p="Database" t="Include">
+          <e p="._.DS_Store" t="Include" />
+          <e p="CallDb.cs" t="Include" />
+          <e p="Connection.cs" t="Include" />
+          <e p="MemoryDatabase.cs" t="Include" />
+          <e p="Models" t="Include">
+            <e p="Enums" t="Include">
+              <e p="RequestMethods.cs" t="Include" />
+              <e p="RequestMethods.cs~" t="Include" />
+              <e p="ResponseMethods.cs" t="Include" />
+              <e p="ResponseMethods.cs~" t="Include" />
+              <e p="UserRoles.cs" t="Include" />
+            </e>
+            <e p="spo_crud.cs" t="Include" />
+            <e p="spo_days.cs" t="Include" />
+            <e p="spo_modules.cs" t="Include" />
+            <e p="spo_page.cs" t="Include" />
+            <e p="spo_services.cs" t="Include" />
+            <e p="spo_settings.cs" t="Include" />
+            <e p="spo_site.cs" t="Include" />
+            <e p="spo_stats.cs" t="Include" />
+            <e p="spo_user.cs" t="Include" />
+            <e p="View" t="Include">
+              <e p="Login.cs" t="Include" />
+              <e p="SettingsViewModel.cs" t="Include" />
+            </e>
+          </e>
+          <e p="NullDatabase.cs" t="Include" />
+          <e p="serposerver.sql" t="Include" />
+          <e p="serposervermssql.sql" t="Include" />
+        </e>
+        <e p="Errors" t="Include">
+          <e p="401.html" t="Include" />
+          <e p="404.html" t="Include" />
+          <e p="500.html" t="Include" />
+          <e p="Logger.cs" t="Include" />
+          <e p="StatusCodes.cs" t="Include" />
+        </e>
+        <e p="Http" t="Include">
+          <e p="Http.cs" t="Include" />
+          <e p="HttpPrivate.cs" t="Include" />
+          <e p="IHttp.cs" t="Include" />
+        </e>
+        <e p="Install" t="Include">
+          <e p="install.html" t="Include" />
+        </e>
+        <e p="Intepreter" t="Include">
+          <e p="IIntepreter.cs" t="Include" />
+          <e p="Python.cs" t="Include" />
+          <e p="SerpoLib.cs" t="Include" />
+        </e>
+        <e p="lib" t="Include">
+          <e p="ByteConversion.cs" t="Include" />
+          <e p="DateTime.cs" t="Include" />
+          <e p="SiteSelector.cs" t="Include" />
+          <e p="StringViewEngineHost.cs" t="Include" />
+          <e p="ViewEngineConverter.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="SerpoServer.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="OwinStart.cs" t="Include" />
+        <e p="RootPathProvider.cs" t="Include" />
+        <e p="Routes" t="Include">
+          <e p="._.DS_Store" t="Include" />
+          <e p="DynamicModule.cs" t="Include" />
+          <e p="InstallModule.cs" t="Include" />
+        </e>
+        <e p="Scheduling" t="Include">
+          <e p="Jobs" t="Include">
+            <e p="CacheJob.cs" t="Include" />
+          </e>
+          <e p="ShedulerBase.cs" t="Include" />
+        </e>
+        <e p="Security" t="Include">
+          <e p="._.DS_Store" t="Include" />
+          <e p="Hashing.cs" t="Include" />
+          <e p="Identity.cs" t="Include" />
+          <e p="JwtToken.cs" t="Include" />
+        </e>
+        <e p="SerpoServer.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="SerpoServer.NetCore" t="IncludeRecursive">
+        <e p="._.DS_Store" t="Include" />
+        <e p="AdminContent" t="Include">
           <e p="Static" t="Include">
+            <e p="._.DS_Store" t="Include" />
+            <e p="._webfonts" t="Include" />
             <e p="css" t="Include">
+              <e p="._.DS_Store" t="Include" />
               <e p="base.css" t="Include" />
               <e p="base.css.map" t="Include" />
               <e p="base.sass" t="Include" />
-              <e p="bootstrap.min.css" t="Include" />
-              <e p="fontawesome.css" t="Include" />
               <e p="sidebar.css" t="Include" />
             </e>
             <e p="js" t="Include">
+              <e p="._.DS_Store" t="Include" />
+              <e p="._ace" t="Include" />
               <e p="ace" t="Include">
+                <e p="._ace.js" t="Include" />
+                <e p="._ext-beautify.js" t="Include" />
+                <e p="._ext-elastic_tabstops_lite.js" t="Include" />
+                <e p="._ext-emmet.js" t="Include" />
+                <e p="._ext-error_marker.js" t="Include" />
+                <e p="._ext-keybinding_menu.js" t="Include" />
+                <e p="._ext-linking.js" t="Include" />
+                <e p="._ext-modelist.js" t="Include" />
+                <e p="._ext-options.js" t="Include" />
+                <e p="._ext-searchbox.js" t="Include" />
+                <e p="._ext-settings_menu.js" t="Include" />
+                <e p="._ext-spellcheck.js" t="Include" />
+                <e p="._ext-split.js" t="Include" />
+                <e p="._ext-static_highlight.js" t="Include" />
+                <e p="._ext-statusbar.js" t="Include" />
+                <e p="._ext-textarea.js" t="Include" />
+                <e p="._ext-themelist.js" t="Include" />
+                <e p="._ext-whitespace.js" t="Include" />
+                <e p="._mode-abap.js" t="Include" />
+                <e p="._mode-abc.js" t="Include" />
+                <e p="._mode-actionscript.js" t="Include" />
+                <e p="._mode-ada.js" t="Include" />
+                <e p="._mode-apache_conf.js" t="Include" />
+                <e p="._mode-applescript.js" t="Include" />
+                <e p="._mode-asciidoc.js" t="Include" />
+                <e p="._mode-asl.js" t="Include" />
+                <e p="._mode-assembly_x86.js" t="Include" />
+                <e p="._mode-autohotkey.js" t="Include" />
+                <e p="._mode-batchfile.js" t="Include" />
+                <e p="._mode-bro.js" t="Include" />
+                <e p="._mode-c9search.js" t="Include" />
+                <e p="._mode-c_cpp.js" t="Include" />
+                <e p="._mode-cirru.js" t="Include" />
+                <e p="._mode-clojure.js" t="Include" />
+                <e p="._mode-cobol.js" t="Include" />
+                <e p="._mode-coffee.js" t="Include" />
+                <e p="._mode-coldfusion.js" t="Include" />
+                <e p="._mode-csharp.js" t="Include" />
+                <e p="._mode-csound_document.js" t="Include" />
+                <e p="._mode-csound_orchestra.js" t="Include" />
+                <e p="._mode-csound_score.js" t="Include" />
+                <e p="._mode-csp.js" t="Include" />
+                <e p="._mode-css.js" t="Include" />
+                <e p="._mode-curly.js" t="Include" />
+                <e p="._mode-d.js" t="Include" />
+                <e p="._mode-dart.js" t="Include" />
+                <e p="._mode-diff.js" t="Include" />
+                <e p="._mode-django.js" t="Include" />
+                <e p="._mode-dockerfile.js" t="Include" />
+                <e p="._mode-dot.js" t="Include" />
+                <e p="._mode-drools.js" t="Include" />
+                <e p="._mode-edifact.js" t="Include" />
+                <e p="._mode-eiffel.js" t="Include" />
+                <e p="._mode-ejs.js" t="Include" />
+                <e p="._mode-elixir.js" t="Include" />
+                <e p="._mode-elm.js" t="Include" />
+                <e p="._mode-erlang.js" t="Include" />
+                <e p="._mode-forth.js" t="Include" />
+                <e p="._mode-fortran.js" t="Include" />
+                <e p="._mode-ftl.js" t="Include" />
+                <e p="._mode-gcode.js" t="Include" />
+                <e p="._mode-gherkin.js" t="Include" />
+                <e p="._mode-gitignore.js" t="Include" />
+                <e p="._mode-glsl.js" t="Include" />
+                <e p="._mode-gobstones.js" t="Include" />
+                <e p="._mode-golang.js" t="Include" />
+                <e p="._mode-graphqlschema.js" t="Include" />
+                <e p="._mode-groovy.js" t="Include" />
+                <e p="._mode-haml.js" t="Include" />
+                <e p="._mode-handlebars.js" t="Include" />
+                <e p="._mode-haskell.js" t="Include" />
+                <e p="._mode-haskell_cabal.js" t="Include" />
+                <e p="._mode-haxe.js" t="Include" />
+                <e p="._mode-hjson.js" t="Include" />
+                <e p="._mode-html.js" t="Include" />
+                <e p="._mode-html_elixir.js" t="Include" />
+                <e p="._mode-html_ruby.js" t="Include" />
+                <e p="._mode-ini.js" t="Include" />
+                <e p="._mode-io.js" t="Include" />
+                <e p="._mode-jack.js" t="Include" />
+                <e p="._mode-jade.js" t="Include" />
+                <e p="._mode-java.js" t="Include" />
+                <e p="._mode-javascript.js" t="Include" />
+                <e p="._mode-json.js" t="Include" />
+                <e p="._mode-jsoniq.js" t="Include" />
+                <e p="._mode-jsp.js" t="Include" />
+                <e p="._mode-jssm.js" t="Include" />
+                <e p="._mode-jsx.js" t="Include" />
+                <e p="._mode-julia.js" t="Include" />
+                <e p="._mode-kotlin.js" t="Include" />
+                <e p="._mode-latex.js" t="Include" />
+                <e p="._mode-less.js" t="Include" />
+                <e p="._mode-liquid.js" t="Include" />
+                <e p="._mode-lisp.js" t="Include" />
+                <e p="._mode-livescript.js" t="Include" />
+                <e p="._mode-logiql.js" t="Include" />
+                <e p="._mode-lsl.js" t="Include" />
+                <e p="._mode-lua.js" t="Include" />
+                <e p="._mode-luapage.js" t="Include" />
+                <e p="._mode-lucene.js" t="Include" />
+                <e p="._mode-makefile.js" t="Include" />
+                <e p="._mode-markdown.js" t="Include" />
+                <e p="._mode-mask.js" t="Include" />
+                <e p="._mode-matlab.js" t="Include" />
+                <e p="._mode-maze.js" t="Include" />
+                <e p="._mode-mel.js" t="Include" />
+                <e p="._mode-mixal.js" t="Include" />
+                <e p="._mode-mushcode.js" t="Include" />
+                <e p="._mode-mysql.js" t="Include" />
+                <e p="._mode-nix.js" t="Include" />
+                <e p="._mode-nsis.js" t="Include" />
+                <e p="._mode-objectivec.js" t="Include" />
+                <e p="._mode-ocaml.js" t="Include" />
+                <e p="._mode-pascal.js" t="Include" />
+                <e p="._mode-perl.js" t="Include" />
+                <e p="._mode-pgsql.js" t="Include" />
+                <e p="._mode-php.js" t="Include" />
+                <e p="._mode-pig.js" t="Include" />
+                <e p="._mode-plain_text.js" t="Include" />
+                <e p="._mode-powershell.js" t="Include" />
+                <e p="._mode-praat.js" t="Include" />
+                <e p="._mode-prolog.js" t="Include" />
+                <e p="._mode-properties.js" t="Include" />
+                <e p="._mode-protobuf.js" t="Include" />
+                <e p="._mode-python.js" t="Include" />
+                <e p="._mode-r.js" t="Include" />
+                <e p="._mode-razor.js" t="Include" />
+                <e p="._mode-rdoc.js" t="Include" />
+                <e p="._mode-red.js" t="Include" />
+                <e p="._mode-redshift.js" t="Include" />
+                <e p="._mode-rhtml.js" t="Include" />
+                <e p="._mode-rst.js" t="Include" />
+                <e p="._mode-ruby.js" t="Include" />
+                <e p="._mode-rust.js" t="Include" />
+                <e p="._mode-sass.js" t="Include" />
+                <e p="._mode-scad.js" t="Include" />
+                <e p="._mode-scala.js" t="Include" />
+                <e p="._mode-scheme.js" t="Include" />
+                <e p="._mode-scss.js" t="Include" />
+                <e p="._mode-sh.js" t="Include" />
+                <e p="._mode-sjs.js" t="Include" />
+                <e p="._mode-smarty.js" t="Include" />
+                <e p="._mode-snippets.js" t="Include" />
+                <e p="._mode-soy_template.js" t="Include" />
+                <e p="._mode-space.js" t="Include" />
+                <e p="._mode-sparql.js" t="Include" />
+                <e p="._mode-sql.js" t="Include" />
+                <e p="._mode-stylus.js" t="Include" />
+                <e p="._mode-svg.js" t="Include" />
+                <e p="._mode-swift.js" t="Include" />
+                <e p="._mode-tcl.js" t="Include" />
+                <e p="._mode-tex.js" t="Include" />
+                <e p="._mode-text.js" t="Include" />
+                <e p="._mode-textile.js" t="Include" />
+                <e p="._mode-toml.js" t="Include" />
+                <e p="._mode-tsx.js" t="Include" />
+                <e p="._mode-turtle.js" t="Include" />
+                <e p="._mode-twig.js" t="Include" />
+                <e p="._mode-typescript.js" t="Include" />
+                <e p="._mode-vala.js" t="Include" />
+                <e p="._mode-vbscript.js" t="Include" />
+                <e p="._mode-velocity.js" t="Include" />
+                <e p="._mode-verilog.js" t="Include" />
+                <e p="._mode-vhdl.js" t="Include" />
+                <e p="._mode-wollok.js" t="Include" />
+                <e p="._mode-xml.js" t="Include" />
+                <e p="._mode-xquery.js" t="Include" />
+                <e p="._mode-yaml.js" t="Include" />
+                <e p="._snippets" t="Include" />
+                <e p="._theme-ambiance.js" t="Include" />
+                <e p="._theme-chaos.js" t="Include" />
+                <e p="._theme-chrome.js" t="Include" />
+                <e p="._theme-clouds.js" t="Include" />
+                <e p="._theme-clouds_midnight.js" t="Include" />
+                <e p="._theme-cobalt.js" t="Include" />
+                <e p="._theme-crimson_editor.js" t="Include" />
+                <e p="._theme-dawn.js" t="Include" />
+                <e p="._theme-dracula.js" t="Include" />
+                <e p="._theme-dreamweaver.js" t="Include" />
+                <e p="._theme-eclipse.js" t="Include" />
+                <e p="._theme-github.js" t="Include" />
+                <e p="._theme-gob.js" t="Include" />
+                <e p="._theme-gruvbox.js" t="Include" />
+                <e p="._theme-idle_fingers.js" t="Include" />
+                <e p="._theme-iplastic.js" t="Include" />
+                <e p="._theme-katzenmilch.js" t="Include" />
+                <e p="._theme-kr_theme.js" t="Include" />
+                <e p="._theme-kuroir.js" t="Include" />
+                <e p="._theme-merbivore.js" t="Include" />
+                <e p="._theme-merbivore_soft.js" t="Include" />
+                <e p="._theme-mono_industrial.js" t="Include" />
+                <e p="._theme-monokai.js" t="Include" />
+                <e p="._theme-pastel_on_dark.js" t="Include" />
+                <e p="._theme-solarized_dark.js" t="Include" />
+                <e p="._theme-solarized_light.js" t="Include" />
+                <e p="._theme-sqlserver.js" t="Include" />
+                <e p="._theme-terminal.js" t="Include" />
+                <e p="._theme-textmate.js" t="Include" />
+                <e p="._theme-tomorrow.js" t="Include" />
+                <e p="._theme-tomorrow_night.js" t="Include" />
+                <e p="._theme-tomorrow_night_blue.js" t="Include" />
+                <e p="._theme-tomorrow_night_bright.js" t="Include" />
+                <e p="._theme-tomorrow_night_eighties.js" t="Include" />
+                <e p="._theme-twilight.js" t="Include" />
+                <e p="._theme-vibrant_ink.js" t="Include" />
+                <e p="._theme-xcode.js" t="Include" />
+                <e p="._worker-coffee.js" t="Include" />
+                <e p="._worker-css.js" t="Include" />
+                <e p="._worker-html.js" t="Include" />
+                <e p="._worker-javascript.js" t="Include" />
+                <e p="._worker-json.js" t="Include" />
+                <e p="._worker-lua.js" t="Include" />
+                <e p="._worker-php.js" t="Include" />
+                <e p="._worker-xml.js" t="Include" />
+                <e p="._worker-xquery.js" t="Include" />
                 <e p="ace.js" t="Include" />
                 <e p="ext-beautify.js" t="Include" />
                 <e p="ext-elastic_tabstops_lite.js" t="Include" />
@@ -193,6 +527,157 @@
                 <e p="mode-xquery.js" t="Include" />
                 <e p="mode-yaml.js" t="Include" />
                 <e p="snippets" t="Include">
+                  <e p="._abap.js" t="Include" />
+                  <e p="._abc.js" t="Include" />
+                  <e p="._actionscript.js" t="Include" />
+                  <e p="._ada.js" t="Include" />
+                  <e p="._apache_conf.js" t="Include" />
+                  <e p="._applescript.js" t="Include" />
+                  <e p="._asciidoc.js" t="Include" />
+                  <e p="._asl.js" t="Include" />
+                  <e p="._assembly_x86.js" t="Include" />
+                  <e p="._autohotkey.js" t="Include" />
+                  <e p="._batchfile.js" t="Include" />
+                  <e p="._bro.js" t="Include" />
+                  <e p="._c9search.js" t="Include" />
+                  <e p="._c_cpp.js" t="Include" />
+                  <e p="._cirru.js" t="Include" />
+                  <e p="._clojure.js" t="Include" />
+                  <e p="._cobol.js" t="Include" />
+                  <e p="._coffee.js" t="Include" />
+                  <e p="._coldfusion.js" t="Include" />
+                  <e p="._csharp.js" t="Include" />
+                  <e p="._csound_document.js" t="Include" />
+                  <e p="._csound_orchestra.js" t="Include" />
+                  <e p="._csound_score.js" t="Include" />
+                  <e p="._csp.js" t="Include" />
+                  <e p="._css.js" t="Include" />
+                  <e p="._curly.js" t="Include" />
+                  <e p="._d.js" t="Include" />
+                  <e p="._dart.js" t="Include" />
+                  <e p="._diff.js" t="Include" />
+                  <e p="._django.js" t="Include" />
+                  <e p="._dockerfile.js" t="Include" />
+                  <e p="._dot.js" t="Include" />
+                  <e p="._drools.js" t="Include" />
+                  <e p="._edifact.js" t="Include" />
+                  <e p="._eiffel.js" t="Include" />
+                  <e p="._ejs.js" t="Include" />
+                  <e p="._elixir.js" t="Include" />
+                  <e p="._elm.js" t="Include" />
+                  <e p="._erlang.js" t="Include" />
+                  <e p="._forth.js" t="Include" />
+                  <e p="._fortran.js" t="Include" />
+                  <e p="._ftl.js" t="Include" />
+                  <e p="._gcode.js" t="Include" />
+                  <e p="._gherkin.js" t="Include" />
+                  <e p="._gitignore.js" t="Include" />
+                  <e p="._glsl.js" t="Include" />
+                  <e p="._gobstones.js" t="Include" />
+                  <e p="._golang.js" t="Include" />
+                  <e p="._graphqlschema.js" t="Include" />
+                  <e p="._groovy.js" t="Include" />
+                  <e p="._haml.js" t="Include" />
+                  <e p="._handlebars.js" t="Include" />
+                  <e p="._haskell.js" t="Include" />
+                  <e p="._haskell_cabal.js" t="Include" />
+                  <e p="._haxe.js" t="Include" />
+                  <e p="._hjson.js" t="Include" />
+                  <e p="._html.js" t="Include" />
+                  <e p="._html_elixir.js" t="Include" />
+                  <e p="._html_ruby.js" t="Include" />
+                  <e p="._ini.js" t="Include" />
+                  <e p="._io.js" t="Include" />
+                  <e p="._jack.js" t="Include" />
+                  <e p="._jade.js" t="Include" />
+                  <e p="._java.js" t="Include" />
+                  <e p="._javascript.js" t="Include" />
+                  <e p="._json.js" t="Include" />
+                  <e p="._jsoniq.js" t="Include" />
+                  <e p="._jsp.js" t="Include" />
+                  <e p="._jssm.js" t="Include" />
+                  <e p="._jsx.js" t="Include" />
+                  <e p="._julia.js" t="Include" />
+                  <e p="._kotlin.js" t="Include" />
+                  <e p="._latex.js" t="Include" />
+                  <e p="._less.js" t="Include" />
+                  <e p="._liquid.js" t="Include" />
+                  <e p="._lisp.js" t="Include" />
+                  <e p="._livescript.js" t="Include" />
+                  <e p="._logiql.js" t="Include" />
+                  <e p="._lsl.js" t="Include" />
+                  <e p="._lua.js" t="Include" />
+                  <e p="._luapage.js" t="Include" />
+                  <e p="._lucene.js" t="Include" />
+                  <e p="._makefile.js" t="Include" />
+                  <e p="._markdown.js" t="Include" />
+                  <e p="._mask.js" t="Include" />
+                  <e p="._matlab.js" t="Include" />
+                  <e p="._maze.js" t="Include" />
+                  <e p="._mel.js" t="Include" />
+                  <e p="._mixal.js" t="Include" />
+                  <e p="._mushcode.js" t="Include" />
+                  <e p="._mysql.js" t="Include" />
+                  <e p="._nix.js" t="Include" />
+                  <e p="._nsis.js" t="Include" />
+                  <e p="._objectivec.js" t="Include" />
+                  <e p="._ocaml.js" t="Include" />
+                  <e p="._pascal.js" t="Include" />
+                  <e p="._perl.js" t="Include" />
+                  <e p="._pgsql.js" t="Include" />
+                  <e p="._php.js" t="Include" />
+                  <e p="._pig.js" t="Include" />
+                  <e p="._plain_text.js" t="Include" />
+                  <e p="._powershell.js" t="Include" />
+                  <e p="._praat.js" t="Include" />
+                  <e p="._prolog.js" t="Include" />
+                  <e p="._properties.js" t="Include" />
+                  <e p="._protobuf.js" t="Include" />
+                  <e p="._python.js" t="Include" />
+                  <e p="._r.js" t="Include" />
+                  <e p="._razor.js" t="Include" />
+                  <e p="._rdoc.js" t="Include" />
+                  <e p="._red.js" t="Include" />
+                  <e p="._redshift.js" t="Include" />
+                  <e p="._rhtml.js" t="Include" />
+                  <e p="._rst.js" t="Include" />
+                  <e p="._ruby.js" t="Include" />
+                  <e p="._rust.js" t="Include" />
+                  <e p="._sass.js" t="Include" />
+                  <e p="._scad.js" t="Include" />
+                  <e p="._scala.js" t="Include" />
+                  <e p="._scheme.js" t="Include" />
+                  <e p="._scss.js" t="Include" />
+                  <e p="._sh.js" t="Include" />
+                  <e p="._sjs.js" t="Include" />
+                  <e p="._smarty.js" t="Include" />
+                  <e p="._snippets.js" t="Include" />
+                  <e p="._soy_template.js" t="Include" />
+                  <e p="._space.js" t="Include" />
+                  <e p="._sparql.js" t="Include" />
+                  <e p="._sql.js" t="Include" />
+                  <e p="._sqlserver.js" t="Include" />
+                  <e p="._stylus.js" t="Include" />
+                  <e p="._svg.js" t="Include" />
+                  <e p="._swift.js" t="Include" />
+                  <e p="._tcl.js" t="Include" />
+                  <e p="._tex.js" t="Include" />
+                  <e p="._text.js" t="Include" />
+                  <e p="._textile.js" t="Include" />
+                  <e p="._toml.js" t="Include" />
+                  <e p="._tsx.js" t="Include" />
+                  <e p="._turtle.js" t="Include" />
+                  <e p="._twig.js" t="Include" />
+                  <e p="._typescript.js" t="Include" />
+                  <e p="._vala.js" t="Include" />
+                  <e p="._vbscript.js" t="Include" />
+                  <e p="._velocity.js" t="Include" />
+                  <e p="._verilog.js" t="Include" />
+                  <e p="._vhdl.js" t="Include" />
+                  <e p="._wollok.js" t="Include" />
+                  <e p="._xml.js" t="Include" />
+                  <e p="._xquery.js" t="Include" />
+                  <e p="._yaml.js" t="Include" />
                   <e p="abap.js" t="Include" />
                   <e p="abc.js" t="Include" />
                   <e p="actionscript.js" t="Include" />
@@ -392,14 +877,11 @@
                 <e p="worker-xml.js" t="Include" />
                 <e p="worker-xquery.js" t="Include" />
               </e>
-              <e p="bootstrap.min.js" t="Include" />
               <e p="bootstrapmen.js" t="Include" />
               <e p="charts.js" t="Include" />
-              <e p="cookie.js" t="Include" />
               <e p="cruds.js" t="Include" />
               <e p="dom.js" t="Include" />
               <e p="http.js" t="Include" />
-              <e p="jq.js" t="Include" />
               <e p="modules" t="Include">
                 <e p="chart.js" t="Include" />
                 <e p="clock.js" t="Include" />
@@ -411,6 +893,21 @@
               <e p="users.js" t="Include" />
             </e>
             <e p="webfonts" t="Include">
+              <e p="._fa-brands-400.eot" t="Include" />
+              <e p="._fa-brands-400.svg" t="Include" />
+              <e p="._fa-brands-400.ttf" t="Include" />
+              <e p="._fa-brands-400.woff" t="Include" />
+              <e p="._fa-brands-400.woff2" t="Include" />
+              <e p="._fa-regular-400.eot" t="Include" />
+              <e p="._fa-regular-400.svg" t="Include" />
+              <e p="._fa-regular-400.ttf" t="Include" />
+              <e p="._fa-regular-400.woff" t="Include" />
+              <e p="._fa-regular-400.woff2" t="Include" />
+              <e p="._fa-solid-900.eot" t="Include" />
+              <e p="._fa-solid-900.svg" t="Include" />
+              <e p="._fa-solid-900.ttf" t="Include" />
+              <e p="._fa-solid-900.woff" t="Include" />
+              <e p="._fa-solid-900.woff2" t="Include" />
               <e p="fa-brands-400.eot" t="Include" />
               <e p="fa-brands-400.svg" t="Include" />
               <e p="fa-brands-400.ttf" t="Include" />
@@ -433,6 +930,7 @@
             <e p="account.html" t="Include" />
             <e p="crud-data.html" t="Include" />
             <e p="main.html" t="Include" />
+            <e p="module-editor.html" t="Include" />
             <e p="modules.html" t="Include" />
             <e p="page-crud.html" t="Include" />
             <e p="page-editor.html" t="Include" />
@@ -446,119 +944,37 @@
             <e p="site.html" t="Include" />
           </e>
         </e>
-        <e p="Api" t="Include">
-          <e p="CrudManager.cs" t="Include" />
-          <e p="ModuleManager.cs" t="Include" />
-          <e p="PageManager.cs" t="Include" />
-          <e p="ServiceManager.cs" t="Include" />
-          <e p="SettingsManager.cs" t="Include" />
-          <e p="SiteManager.cs" t="Include" />
-          <e p="StatManager.cs" t="Include" />
-          <e p="UserManager.cs" t="Include" />
-        </e>
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Bootstrap.cs" t="Include" />
         <e p="config.json" t="Include" />
-        <e p="ConfigurationProvider.cs" t="Include" />
-        <e p="Data" t="Include">
-          <e p="Cache" t="Include">
-            <e p="MemoryDatabase.cs" t="Include" />
-          </e>
-          <e p="Connection.cs" t="Include" />
-          <e p="Crud.cs" t="Include" />
-          <e p="Models" t="Include">
-            <e p="Enums" t="Include">
-              <e p="RequestMethods.cs" t="Include" />
-              <e p="ResponseMethods.cs" t="Include" />
-              <e p="UserRoles.cs" t="Include" />
-            </e>
-            <e p="spo_crud.cs" t="Include" />
-            <e p="spo_days.cs" t="Include" />
-            <e p="spo_modules.cs" t="Include" />
-            <e p="spo_page.cs" t="Include" />
-            <e p="spo_services.cs" t="Include" />
-            <e p="spo_settings.cs" t="Include" />
-            <e p="spo_site.cs" t="Include" />
-            <e p="spo_stats.cs" t="Include" />
-            <e p="spo_user.cs" t="Include" />
-            <e p="View" t="Include">
-              <e p="Login.cs" t="Include" />
-              <e p="SettingsViewModel.cs" t="Include" />
-            </e>
-          </e>
-          <e p="NullDatabase.cs" t="Include" />
-          <e p="serposerver.sql" t="Include" />
-          <e p="serposervermssql.sql" t="Include" />
-        </e>
-        <e p="DateTime.cs" t="Include" />
-        <e p="EmbeddedStatic" t="Include">
-          <e p="bootstrap.min.css" t="Include" />
-          <e p="bootstrap.min.js" t="Include" />
-          <e p="common.css" t="Include" />
-          <e p="common.js" t="Include" />
-          <e p="installerbac.png" t="Include" />
-          <e p="jquery.min.js" t="Include" />
-        </e>
         <e p="error.log" t="Include" />
-        <e p="Errors" t="Include">
-          <e p="401.html" t="Include" />
-          <e p="404.html" t="Include" />
-          <e p="500.html" t="Include" />
-          <e p="Logger.cs" t="Include" />
-          <e p="StatusCodes.cs" t="Include" />
-        </e>
-        <e p="Install" t="Include">
-          <e p="install.html" t="Include" />
-        </e>
-        <e p="Intepreter" t="Include">
-          <e p="PyRuntime.cs" t="Include" />
-        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp2.0" t="Include">
-              <e p="SerpoServer.AssemblyInfo.cs" t="Include" />
+            <e p="netcoreapp3.0" t="Include">
+              <e p="SerpoServer.NetCore.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
         <e p="Program.cs" t="Include" />
-        <e p="RootPathProvider.cs" t="Include" />
-        <e p="Routes" t="Include">
-          <e p="Admin" t="Include">
-            <e p="AccountModule.cs" t="Include" />
-            <e p="MainModule.cs" t="Include" />
-            <e p="ModulesModule.cs" t="Include" />
-            <e p="PageModule.cs" t="Include" />
-            <e p="ServiceModule.cs" t="Include" />
-            <e p="SettingsModule.cs" t="Include" />
-            <e p="SiteModule.cs" t="Include" />
-            <e p="StatModule.cs" t="Include" />
-            <e p="ToolsModule.cs" t="Include" />
+        <e p="SerpoServer.NetCore.csproj" t="IncludeRecursive" />
+        <e p="Static" t="Include">
+          <e p="css" t="Include">
+            <e p="._fontawesome.css" t="Include" />
+            <e p="bootstrap.min.css" t="Include" />
+            <e p="fontawesome.css" t="Include" />
           </e>
-          <e p="DynamicModule.cs" t="Include" />
-          <e p="InstallModule.cs" t="Include" />
+          <e p="img" t="Include">
+            <e p="._installerbac.png" t="Include" />
+            <e p="installerbac.png" t="Include" />
+          </e>
+          <e p="js" t="Include">
+            <e p="bootstrap.min.js" t="Include" />
+            <e p="cookie.js" t="Include" />
+            <e p="http.js" t="Include" />
+            <e p="jq.js" t="Include" />
+          </e>
         </e>
-        <e p="Security" t="Include">
-          <e p="Hashing.cs" t="Include" />
-          <e p="Identity.cs" t="Include" />
-          <e p="JwtToken.cs" t="Include" />
-        </e>
-        <e p="SerpoServer.csproj" t="IncludeRecursive" />
-        <e p="SiteSelector.cs" t="Include" />
       </e>
       <e p="SerpoServer.sln" t="IncludeFlat" />
-      <e p="SerpoServer.Tests" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.0" t="Include">
-              <e p="SerpoServer.Tests.AssemblyInfo.cs" t="Include" />
-              <e p="SerpoServer.Tests.Program.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="SerpoServer.Tests.csproj" t="IncludeRecursive" />
-        <e p="UnitTest1.cs" t="Include" />
-      </e>
     </e>
   </component>
 </project>

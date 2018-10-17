@@ -34,5 +34,10 @@ namespace SerpoServer.Security
                 return hashedInputStringBuilder.ToString();
             }
         }
+
+        public static string SHA512(byte[] input)
+        {
+            return SHA512(input);
+        }
     }
 }

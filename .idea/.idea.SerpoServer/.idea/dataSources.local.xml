@@ -2,14 +2,18 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="@localhost" uuid="c759f74e-e2e0-4b10-8879-11464392bcf9">
-      <database-info product="MySQL" version="8.0.11" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )">
+      <database-info product="MySQL" version="8.0.11" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )" dbms="MYSQL" exact-version="8.0.11">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <introspection-schemas>*:spoTest</introspection-schemas>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="spoTest" />
+        </introspection-scope>
+      </schema-mapping>
     </data-source>
   </component>
 </project>

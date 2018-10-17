@@ -1,4 +1,5 @@
-﻿using Nancy;
+using Microsoft.Extensions.PlatformAbstractions;
+using Nancy;
 
 namespace SerpoServer
 {
@@ -6,7 +7,9 @@ namespace SerpoServer
     {
         public string GetRootPath()
         {
-            return new DefaultRootPathProvider().GetRootPath().Replace("/bin/Debug/netcoreapp2.0", "");
+            var p = "bin/Debug/netcoreapp2.1/";
+            var r = PlatformServices.Default.Application.ApplicationBasePath.Replace(p, string.Empty);
+            return r;
         }
     }
 }

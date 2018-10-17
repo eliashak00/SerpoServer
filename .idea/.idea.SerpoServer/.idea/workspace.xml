@@ -1,30 +1,597 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="4" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="bb5cba17-2dee-4450-a2e6-88dc92e887d0" name="Default" comment="JS Changes">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.._SerpoServer/riderModule.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SerpoServer.NetCore/Static/img/installerbac.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SerpoServer.NetCore/Static/js/http.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SerpoServer.Tests/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SerpoServer/Api/RequestManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SerpoServer/Database/CallDb.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SerpoServer/Database/MemoryDatabase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SerpoServer/Http/Http.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SerpoServer/Http/HttpPrivate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SerpoServer/Http/IHttp.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SerpoServer/Intepreter/IIntepreter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SerpoServer/Intepreter/Python.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SerpoServer/Intepreter/SerpoLib.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SerpoServer/Lib/StringViewEngineHost.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SerpoServer/Lib/ViewEngineConverter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SerpoServer/OwinStart.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SerpoServer/Resources.resx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/jq.js" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/jq.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/modules/clock.js" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/modules/clock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/views/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/AdminViews/views/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/views/pages.html" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/AdminViews/views/pages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/dataSources/c759f74e-e2e0-4b10-8879-11464392bcf9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/dataSources/c759f74e-e2e0-4b10-8879-11464392bcf9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/watcherTasks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SerpoServer/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SerpoServer/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/SerpoServer/xs/UserPrefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/SerpoServer/xs/UserPrefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/SerpoServer/xs/sqlite3/db.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/SerpoServer/xs/sqlite3/db.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/SerpoServer/xs/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/SerpoServer/xs/sqlite3/storage.ide" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/SerpoServer/xs/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/SerpoServer/xs/sqlite3/storage.ide-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/SerpoServer/xs/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/SerpoServer/xs/sqlite3/storage.ide-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/tasks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/DapperTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.Tests/DapperTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/SerpoServer.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.Tests/SerpoServer.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/StructVsClass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.Tests/StructVsClass.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.Tests/UnitTest1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/bin/Debug/netcoreapp2.0/SerpoServer.Tests.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/bin/Debug/netcoreapp2.0/SerpoServer.Tests.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/bin/Debug/netcoreapp2.0/SerpoServer.Tests.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/bin/Debug/netcoreapp2.0/SerpoServer.Tests.runtimeconfig.dev.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/bin/Debug/netcoreapp2.0/SerpoServer.Tests.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/bin/Debug/netcoreapp2.0/SerpoServer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/bin/Debug/netcoreapp2.0/SerpoServer.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/bin/Debug/netcoreapp2.0/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/bin/Debug/netcoreapp2.0/xunit.runner.reporters.netcoreapp10.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/bin/Debug/netcoreapp2.0/xunit.runner.utility.netcoreapp10.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/bin/Debug/netcoreapp2.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.Tests/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/obj/Debug/netcoreapp2.0/SerpoServer.Tests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.Tests/obj/Debug/netcoreapp2.0/SerpoServer.Tests.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/obj/Debug/netcoreapp2.0/SerpoServer.Tests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.Tests/obj/Debug/netcoreapp2.0/SerpoServer.Tests.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/obj/Debug/netcoreapp2.0/SerpoServer.Tests.Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.Tests/obj/Debug/netcoreapp2.0/SerpoServer.Tests.Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/obj/Debug/netcoreapp2.0/SerpoServer.Tests.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.Tests/obj/Debug/netcoreapp2.0/SerpoServer.Tests.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/obj/Debug/netcoreapp2.0/SerpoServer.Tests.csproj.CopyComplete" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/obj/Debug/netcoreapp2.0/SerpoServer.Tests.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/obj/Debug/netcoreapp2.0/SerpoServer.Tests.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.Tests/obj/Debug/netcoreapp2.0/SerpoServer.Tests.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/obj/Debug/netcoreapp2.0/SerpoServer.Tests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.Tests/obj/Debug/netcoreapp2.0/SerpoServer.Tests.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/obj/Debug/netcoreapp2.0/SerpoServer.Tests.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/obj/Debug/netcoreapp2.0/SerpoServer.Tests.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/obj/SerpoServer.Tests.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.Tests/obj/SerpoServer.Tests.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/obj/SerpoServer.Tests.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.Tests/obj/SerpoServer.Tests.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/obj/SerpoServer.Tests.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.Tests/obj/SerpoServer.Tests.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.Tests/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.Tests/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.Tests/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/css/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/css/base.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/css/base.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.NetCore/Static/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/css/fontawesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.NetCore/Static/css/fontawesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/css/sidebar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/ace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/ext-beautify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/ext-elastic_tabstops_lite.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/ext-emmet.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/ext-error_marker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/ext-keybinding_menu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/ext-language_tools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/ext-linking.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/ext-modelist.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/ext-options.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/ext-searchbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/ext-settings_menu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/ext-spellcheck.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/ext-split.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/ext-static_highlight.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/ext-statusbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/ext-textarea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/ext-themelist.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/ext-whitespace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/keybinding-emacs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/keybinding-vim.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-abap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-abc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-actionscript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-ada.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-apache_conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-applescript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-asciidoc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-asl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-assembly_x86.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-autohotkey.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-batchfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-bro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-c9search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-c_cpp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-cirru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-clojure.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-cobol.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-coffee.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-coldfusion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-csharp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-csound_document.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-csound_orchestra.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-csound_score.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-csp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-css.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-curly.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-dart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-diff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-django.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-dockerfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-dot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-drools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-edifact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-eiffel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-ejs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-elixir.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-elm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-erlang.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-forth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-fortran.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-ftl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-gcode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-gherkin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-gitignore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-glsl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-gobstones.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-golang.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-graphqlschema.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-groovy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-haml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-handlebars.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-haskell.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-haskell_cabal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-haxe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-hjson.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-html.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-html_elixir.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-html_ruby.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-ini.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-io.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-jack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-jade.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-java.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-javascript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-json.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-jsoniq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-jsp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-jssm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-jsx.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-julia.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-kotlin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-latex.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-less.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-liquid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-lisp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-livescript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-logiql.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-lsl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-lua.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-luapage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-lucene.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-makefile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-markdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-mask.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-matlab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-maze.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-mel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-mixal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-mushcode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-mysql.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-nix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-nsis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-objectivec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-ocaml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-pascal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-perl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-pgsql.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-php.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-pig.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-plain_text.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-powershell.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-praat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-prolog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-properties.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-protobuf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-python.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-r.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-razor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-rdoc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-red.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-redshift.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-rhtml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-rst.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-ruby.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-rust.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-sass.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-scad.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-scala.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-scheme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-scss.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-sh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-sjs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-smarty.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-snippets.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-soy_template.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-space.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-sparql.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-sql.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-sqlserver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-stylus.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-svg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-swift.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-tcl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-tex.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-text.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-textile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-toml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-tsx.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-turtle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-twig.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-typescript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-vala.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-vbscript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-velocity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-verilog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-vhdl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-wollok.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-xml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-xquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/mode-yaml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/abap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/abc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/actionscript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/ada.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/apache_conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/applescript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/asciidoc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/asl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/assembly_x86.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/autohotkey.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/batchfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/bro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/c9search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/c_cpp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/cirru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/clojure.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/cobol.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/coffee.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/coldfusion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/csharp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/csound_document.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/csound_orchestra.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/csound_score.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/csp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/css.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/curly.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/dart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/diff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/django.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/dockerfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/dot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/drools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/edifact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/eiffel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/ejs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/elixir.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/elm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/erlang.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/forth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/fortran.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/ftl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/gcode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/gherkin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/gitignore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/glsl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/gobstones.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/golang.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/graphqlschema.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/groovy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/haml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/handlebars.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/haskell.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/haskell_cabal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/haxe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/hjson.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/html.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/html_elixir.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/html_ruby.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/ini.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/io.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/jack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/jade.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/java.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/javascript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/json.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/jsoniq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/jsp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/jssm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/jsx.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/julia.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/kotlin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/latex.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/less.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/liquid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/lisp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/livescript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/logiql.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/lsl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/lua.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/luapage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/lucene.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/makefile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/markdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/mask.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/matlab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/maze.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/mel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/mixal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/mushcode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/mysql.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/nix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/nsis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/objectivec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/ocaml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/pascal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/perl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/pgsql.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/php.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/pig.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/plain_text.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/powershell.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/praat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/prolog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/properties.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/protobuf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/python.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/r.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/razor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/rdoc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/red.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/redshift.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/rhtml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/rst.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/ruby.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/rust.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/sass.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/scad.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/scala.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/scheme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/scss.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/sh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/sjs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/smarty.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/snippets.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/soy_template.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/space.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/sparql.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/sql.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/sqlserver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/stylus.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/svg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/swift.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/tcl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/tex.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/text.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/textile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/toml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/tsx.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/turtle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/twig.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/typescript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/vala.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/vbscript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/velocity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/verilog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/vhdl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/wollok.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/xml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/xquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/snippets/yaml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-ambiance.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-chaos.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-chrome.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-clouds.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-clouds_midnight.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-cobalt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-crimson_editor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-dawn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-dracula.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-dreamweaver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-eclipse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-github.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-gob.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-gruvbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-idle_fingers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-iplastic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-katzenmilch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-kr_theme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-kuroir.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-merbivore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-merbivore_soft.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-mono_industrial.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-monokai.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-pastel_on_dark.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-solarized_dark.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-solarized_light.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-sqlserver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-terminal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-textmate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-tomorrow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-tomorrow_night.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-tomorrow_night_blue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-tomorrow_night_bright.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-tomorrow_night_eighties.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-twilight.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-vibrant_ink.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/theme-xcode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/worker-coffee.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/worker-css.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/worker-html.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/worker-javascript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/worker-json.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/worker-lua.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/worker-php.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/worker-xml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/ace/worker-xquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.NetCore/Static/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/bootstrapmen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/charts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/cookie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/cruds.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/dom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/http.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/jq.js" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.NetCore/Static/js/jq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/modules.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/modules/chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/modules/clock.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/pages.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/popper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/sortable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/Static/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/views/account-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/views/account.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/views/crud-data.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/views/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/views/module-editor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/views/modules.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/views/page-crud.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/views/page-editor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/views/pages.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/views/settings.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/views/shared/layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/views/shared/site.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/views/site-editor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/AdminViews/views/site.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Api/CrudManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Api/CrudManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SerpoServer/Api/ModuleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Api/ModuleManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SerpoServer/Api/PageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Api/PageManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Connection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Data/Connection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Crud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Data/Crud.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Models/spo_crud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Data/Models/spo_crud.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/serposerver.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Data/serposerver.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/serposervermssql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Data/serposervermssql.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SerpoServer/Routes/Admin/MainModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Routes/Admin/MainModule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SerpoServer/Routes/Admin/ModulesModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Routes/Admin/ModulesModule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Api/ServiceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Api/ServiceManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Api/SiteManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Api/SiteManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Api/StatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Api/StatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Api/UserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Api/UserManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Bootstrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Bootstrap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/ConfigurationProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/ConfigurationProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Cache/IMemoryDb.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Cache/MemoryDb.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Connection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Database/Connection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/FileSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Models/Enums/RequestMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Database/Models/Enums/RequestMethods.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Models/Enums/ResponseMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Database/Models/Enums/ResponseMethods.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Models/Enums/UserRoles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Database/Models/Enums/UserRoles.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Models/View/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Database/Models/View/Login.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Models/View/SettingsViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Database/Models/View/SettingsViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Models/spo_crud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Database/Models/spo_crud.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Models/spo_days.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Database/Models/spo_days.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Models/spo_modules.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Database/Models/spo_modules.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Models/spo_page.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Database/Models/spo_page.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Models/spo_services.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Database/Models/spo_services.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Models/spo_settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Database/Models/spo_settings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Models/spo_site.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Database/Models/spo_site.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Models/spo_stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Database/Models/spo_stats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/Models/spo_user.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Database/Models/spo_user.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/NullDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Database/NullDatabase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/serposerver.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Database/serposerver.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Data/serposervermssql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Database/serposervermssql.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/DateTime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Lib/DateTime.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/EmbeddedStatic/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/EmbeddedStatic/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/EmbeddedStatic/common.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/EmbeddedStatic/common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/EmbeddedStatic/installerbac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/EmbeddedStatic/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Errors/401.html" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Errors/401.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Errors/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Errors/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Errors/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Errors/500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Errors/Logger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Errors/Logger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Errors/StatusCodes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Errors/StatusCodes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Install/install.html" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Install/install.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Intepreter/Intepreter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Intepreter/Intepreter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Intepreter/PyRuntime.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Lib/ByteConversion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Lib/ByteConversion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/RootPathProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/RootPathProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Routes/Admin/AccountModule.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Routes/Admin/MainModule.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Routes/Admin/ModulesModule.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Routes/Admin/ServiceModule.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Routes/Admin/SettingsModule.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Routes/Admin/SiteModule.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Routes/Admin/StatModule.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Routes/Admin/ToolsModule.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Routes/DynamicModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Routes/DynamicModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Routes/InstallModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Routes/InstallModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Scheduling/Jobs/CacheJob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Scheduling/Jobs/CacheJob.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Scheduling/ShedulerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Scheduling/ShedulerBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Security/Hashing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Security/Hashing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Security/Identity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Security/Identity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/Security/JwtToken.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Security/JwtToken.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SerpoServer/SerpoServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/SerpoServer.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/SiteSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/Lib/SiteSelector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/AdminViews/Static/css/base.sass" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/AdminViews/Static/css/base.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/AdminViews/views/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/AdminViews/views/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/AdminViews/views/pages.html" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/AdminViews/views/pages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/AdminViews/views/shared/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/AdminViews/views/shared/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/AdminViews/views/shared/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/AdminViews/views/shared/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/AdminViews/views/shared/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/AdminViews/views/shared/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/AdminViews/views/shared/site.html" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/AdminViews/views/shared/site.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/SerpoServer.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/SerpoServer.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/SerpoServer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/SerpoServer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/SerpoServer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/SerpoServer.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/SerpoServer.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/SerpoServer.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/SerpoServer.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/SerpoServer.runtimeconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.NetCore/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer.NetCore/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/obj/Debug/netcoreapp2.0/SerpoServer.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SerpoServer/obj/SerpoServer.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/obj/SerpoServer.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/obj/SerpoServer.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/obj/SerpoServer.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerpoServer/obj/SerpoServer.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/obj/SerpoServer.csproj.nuget.g.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SerpoServer/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SerpoServer/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/SerpoServer/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,189 +618,11 @@
         <item name="@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="spoTest: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="spoTest: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="spo_cruds: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="spoTest: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="spo_modules: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="SerpoServer" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="page-crud.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/page-crud.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DynamicModule.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SerpoServer/Routes/DynamicModule.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
-              <folding>
-                <marker date="1531605264498" expanded="false" signature="6:166" ph="..." />
-                <marker date="1531605264498" expanded="true" signature="243:2393" ph="{...}" />
-                <marker date="1531605264498" expanded="true" signature="294:2387" ph="{...}" />
-                <marker date="1531605264498" expanded="true" signature="343:539" ph="{...}" />
-                <marker date="1531605264498" expanded="true" signature="568:766" ph="{...}" />
-                <marker date="1531605264498" expanded="true" signature="794:991" ph="{...}" />
-                <marker date="1531605264498" expanded="true" signature="1022:1222" ph="{...}" />
-                <marker date="1531605264498" expanded="true" signature="1256:1452" ph="{...}" />
-                <marker date="1531605264498" expanded="true" signature="1487:1685" ph="{...}" />
-                <marker date="1531605264498" expanded="true" signature="1719:1916" ph="{...}" />
-                <marker date="1531605264498" expanded="true" signature="1953:2153" ph="{...}" />
-                <marker date="1531605264498" expanded="true" signature="2194:2375" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PageManager.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SerpoServer/Api/PageManager.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
-              <folding>
-                <marker date="1537722297981" expanded="false" signature="6:485" ph="..." />
-                <marker date="1537722297981" expanded="true" signature="543:4666" ph="{...}" />
-                <marker date="1537722297981" expanded="true" signature="817:899" ph="{...}" />
-                <marker date="1537722297981" expanded="true" signature="1980:2318" ph="{...}" />
-                <marker date="1537722297981" expanded="true" signature="2032:2125" ph="{...}" />
-                <marker date="1537722297981" expanded="true" signature="2364:2618" ph="{...}" />
-                <marker date="1537722297981" expanded="true" signature="2712:4664" ph="{...}" />
-                <marker date="1537722297981" expanded="true" signature="2936:3426" ph="{...}" />
-                <marker date="1537722297981" expanded="true" signature="3545:4218" ph="{...}" />
-                <marker date="1537722297981" expanded="true" signature="3665:3914" ph="{...}" />
-                <marker date="1537722297981" expanded="true" signature="3935:4019" ph="{...}" />
-                <marker date="1537722297981" expanded="true" signature="4235:4598" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="crud-data.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/crud-data.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Program.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SerpoServer/Program.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-              <folding>
-                <marker date="1527930282835" expanded="false" signature="6:231" ph="..." />
-                <marker date="1527930282835" expanded="true" signature="253:728" ph="{...}" />
-                <marker date="1527930282835" expanded="true" signature="273:726" ph="{...}" />
-                <marker date="1527930282835" expanded="true" signature="326:396" ph="{...}" />
-                <marker date="1527930282835" expanded="true" signature="626:720" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SerpoServer/config.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-column="207" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page-editor.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/page-editor.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModuleManager.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SerpoServer/Api/ModuleManager.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-              <folding>
-                <marker date="1537253266759" expanded="false" signature="6:104" ph="..." />
-                <marker date="1537253266759" expanded="true" signature="164:1473" ph="{...}" />
-                <marker date="1537253266759" expanded="true" signature="244:290" ph="{...}" />
-                <marker date="1537253266759" expanded="true" signature="649:777" ph="{...}" />
-                <marker date="1537253266759" expanded="true" signature="821:945" ph="{...}" />
-                <marker date="1537253266759" expanded="true" signature="1012:1315" ph="{...}" />
-                <marker date="1537253266759" expanded="true" signature="1066:1308" ph="{...}" />
-                <marker date="1537253266759" expanded="true" signature="1123:1198" ph="{...}" />
-                <marker date="1537253266759" expanded="true" signature="1219:1294" ph="{...}" />
-                <marker date="1537253266759" expanded="true" signature="1351:1458" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PageModule.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-              <folding>
-                <marker date="1537633869735" expanded="false" signature="6:412" ph="..." />
-                <marker date="1537633869735" expanded="true" signature="492:3238" ph="{...}" />
-                <marker date="1537633869735" expanded="true" signature="580:3232" ph="{...}" />
-                <marker date="1537633869735" expanded="true" signature="692:1318" ph="{...}" />
-                <marker date="1537633869735" expanded="true" signature="797:947" ph="{...}" />
-                <marker date="1537633869735" expanded="true" signature="968:1287" ph="{...}" />
-                <marker date="1537633869735" expanded="true" signature="1355:1502" ph="{...}" />
-                <marker date="1537633869735" expanded="true" signature="1542:2097" ph="{...}" />
-                <marker date="1537633869735" expanded="true" signature="1606:1803" ph="{...}" />
-                <marker date="1537633869735" expanded="true" signature="1824:2072" ph="{...}" />
-                <marker date="1537633869735" expanded="true" signature="2138:2691" ph="{...}" />
-                <marker date="1537633869735" expanded="true" signature="2202:2383" ph="{...}" />
-                <marker date="1537633869735" expanded="true" signature="2404:2677" ph="{...}" />
-                <marker date="1537633869735" expanded="true" signature="2733:2884" ph="{...}" />
-                <marker date="1537633869735" expanded="true" signature="2917:3220" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spo_cruds" pinned="false" current-in-tab="false">
-        <entry file="das://c759f74e-e2e0-4b10-8879-11464392bcf9/schema/spoTest/table/spo_cruds">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -241,8 +630,8 @@
         <option value="Sass File" />
         <option value="SCSS File" />
         <option value="Less File" />
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -261,6 +650,14 @@
       <find>&quot;</find>
       <find>Current</find>
       <find>spo_custom</find>
+      <find>Image</find>
+      <find>container</find>
+      <find>ObjectHandler</find>
+      <find>/AdminViews/Static/</find>
+      <find>/static</find>
+      <find>/AdminViews/Static</find>
+      <find>&lt;None Remove</find>
+      <find>Context</find>
     </findStrings>
     <replaceStrings>
       <replace>return null;</replace>
@@ -270,6 +667,11 @@
       <replace>'</replace>
       <replace>Model</replace>
       <replace>crud</replace>
+      <replace>/admin/static/</replace>
+      <replace>/admin/static</replace>
+      <replace>/static</replace>
+      <replace>&lt;EmbeddedResource Include</replace>
+      <replace>renderHost, Context</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -285,190 +687,175 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/SerpoServer.Tests/UnitTest1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/91/94bc5bec/Route.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0A5C5AC1-2A76-458D-826A-46E21814BA06/02/9d38d301/DatabaseProvider.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/SerpoServer/Security/JwtToken.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/89/aff1c0bb/SimpleJson.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/046EF1B4-A4CF-4079-AA2E-EE83885437EA/e6/2380461b/List`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Connection.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/PageManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Cache/MemoryDatabase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Security/Identity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SerpoServer/Security/Hashing.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E0429D2A-B304-460B-B391-D745D7C972C6/c6/86ce6fae/Assembly.cs" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Intepreter/PyRuntime.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/ae/697ba252/NancyModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Intepreter/SerpoLib.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Intepreter/Python.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Intepreter/IIntepreter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Lib/ViewEngineConverter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Lib/StringViewEngineHost.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Lib/DateTime.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Lib/SiteSelector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Scheduling/ShedulerBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Lib/ByteConversion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Scheduling/Jobs/CacheJob.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer.Tests/UnitTest1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer.Tests/DapperTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer.Tests/StructVsClass.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Resources.resx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SerpoServer/RootPathProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SerpoServer/ConfigurationProvider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_settings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE2EAE56-603E-42A0-B121-7305E004F583/62/52a5ffa3/ViewRenderer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/24/93bdb374/NegotiatorExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/AccountModule.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Errors/StatusCodes.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/83/f161b196/INancyModule.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/InstallModule.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0A5C5AC1-2A76-458D-826A-46E21814BA06/9f/8e16c2e2/MySqlDatabaseProvider.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Resources.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SerpoServer/Bootstrap.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/View/Login.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/af/eb3a3fe9/Response.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/c1/33fea49a/NancyContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE2EAE56-603E-42A0-B121-7305E004F583/d1/37ec9626/NancyModule.cs" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/shared/site.html" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5FADEC3E-08B1-464F-B092-C445D10C2829/e8/7302ce3d/InvokeContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5FADEC3E-08B1-464F-B092-C445D10C2829/41/d7225ed8/InvokeExt.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Errors/Logger.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/CrudManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_services.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/ab/e57d9733/NegotiationContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/ServiceManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/ServiceModule.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/b7/0fd4f72d/Negotiator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_user.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/b6/25773ce2/NegotiatedResponse.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_site.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_page.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/SiteSelector.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/cb/4218a030/DefaultNancyBootstrapper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/Enums/RequestMethods.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/Enums/ResponseMethods.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/bf/0ae07856/SecurityHooks.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/DateTime.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/View/SettingsViewModel.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/a1/cb5c6932/ModuleSecurity.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/ToolsModule.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E0429D2A-B304-460B-B391-D745D7C972C6/e8/798ddfff/Enum.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/DynamicModule.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/StatManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_days.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_stats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/OwinStart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/RequestManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SerpoServer/Api/SiteManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_modules.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/MainModule.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/StatModule.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/SettingsModule.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE2EAE56-603E-42A0-B121-7305E004F583/c7/a61d5ff6/MimeTypes.cs" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/ModuleManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Security/Identity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE2EAE56-603E-42A0-B121-7305E004F583/6d/d0c53345/EmbeddedFileResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Http/HttpPrivate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/ModuleManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Http/IHttp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SerpoServer/Api/UserManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/Enums/UserRoles.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_crud.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/ModulesModule.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/NullDatabase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Data/Crud.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE2EAE56-603E-42A0-B121-7305E004F583/f9/f35e047c/NancyContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/SiteModule.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/17/4914e8e3/GenericFileResponse.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8EB7B087-9E78-4DB9-B9EE-7C20BF7395CE/68/e8e44209/EmbeddedStaticContentConventionBuilder.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Http/Http.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/ServiceManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/StatManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Admin/MainModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/CrudManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Admin/StatModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Api/PageManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Admin/ModulesModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer.NetCore/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Admin/PageModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Admin/ToolsModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Admin/ServiceModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Admin/SiteModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Admin/AccountModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Admin/SettingsModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Errors/Logger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Errors/StatusCodes.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/DynamicModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Routes/InstallModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Database/NullDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Database/CallDb.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Database/Connection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Database/MemoryDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Database/Models/spo_site.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Database/Models/spo_crud.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Database/Models/spo_days.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Database/Models/spo_page.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Database/Models/spo_settings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer.ASPNET/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer.ASPNET/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Database/Models/spo_services.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Database/Models/spo_stats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Database/Models/spo_modules.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Database/Models/spo_user.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Database/Models/View/SettingsViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Database/Models/View/Login.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Database/Models/Enums/RequestMethods.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Database/Models/Enums/UserRoles.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SerpoServer/Database/Models/Enums/ResponseMethods.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SerpoServer/Api/ThemeManager.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs" />
         <option value="$PROJECT_DIR$/SerpoServer/Api/SiteManager.cs" />
-        <option value="$PROJECT_DIR$/SerpoServer/Routes/Admin/SiteModule.cs" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/site.html" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/site-editor.html" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/shared/site.html" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/charts.js" />
-        <option value="$PROJECT_DIR$/SerpoServer/Data/Models/spo_user.cs" />
-        <option value="$PROJECT_DIR$/SerpoServer/Routes/InstallModule.cs" />
-        <option value="$PROJECT_DIR$/SerpoServer/Security/Identity.cs" />
-        <option value="$PROJECT_DIR$/SerpoServer/DateTime.cs" />
-        <option value="$PROJECT_DIR$/SerpoServer/Data/Models/spo_days.cs" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/account.html" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/dom.js" />
-        <option value="$PROJECT_DIR$/SerpoServer/Bootstrap.cs" />
         <option value="$PROJECT_DIR$/SerpoServer/Api/StatManager.cs" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/modules/chart.js" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/modules.html" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/modules.js" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/sortable.js" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/css/base.sass" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/popper.js" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/bootstrapdrop.js" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/bootstrapmen.js" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/shared/layout.html" />
-        <option value="$PROJECT_DIR$/SerpoServer/Api/Crud.cs" />
-        <option value="$PROJECT_DIR$/SerpoServer/Api/ServiceManager.cs" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/http.js" />
-        <option value="$PROJECT_DIR$/SerpoServer/Data/Models/spo_modules.cs" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/modules/clock.js" />
-        <option value="$PROJECT_DIR$/SerpoServer/Routes/Admin/MainModule.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Api/UserManager.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Database/MemoryDatabase.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Security/Identity.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer.NetCore/AdminContent/views/module-editor.html" />
         <option value="$PROJECT_DIR$/SerpoServer/Api/ModuleManager.cs" />
-        <option value="$PROJECT_DIR$/SerpoServer/Data/Connection.cs" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/jq.js" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/main.html" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/page-editor.html" />
-        <option value="$PROJECT_DIR$/SerpoServer/Data/Crud.cs" />
-        <option value="$PROJECT_DIR$/SerpoServer/Routes/Admin/ModulesModule.cs" />
-        <option value="$PROJECT_DIR$/SerpoServer/Data/serposerver.sql" />
-        <option value="$PROJECT_DIR$/SerpoServer/Data/serposervermssql.sql" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/cruds.js" />
-        <option value="$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer.NetCore/AdminContent/Static/js/modules.js" />
+        <option value="$PROJECT_DIR$/SerpoServer/Lib/Lang/ILang.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Lib/Lang/Phrases.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Lib/Lang/Swedish.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer.NetCore/AdminContent/views/main.html" />
+        <option value="$PROJECT_DIR$/SerpoServer.NetCore/AdminContent/views/settings.html" />
+        <option value="$PROJECT_DIR$/SerpoServer/Admin/ModulesModule.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer.NetCore/AdminContent/views/page-editor.html" />
+        <option value="$PROJECT_DIR$/SerpoServer.NetCore/AdminContent/views/page-crud.html" />
+        <option value="$PROJECT_DIR$/SerpoServer.NetCore/AdminContent/views/account-edit.html" />
+        <option value="$PROJECT_DIR$/SerpoServer/Admin/PageModule.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Database/Models/spo_crud.cs" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c759f74e-e2e0-4b10-8879-11464392bcf9/console.sql" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/pages.html" />
+        <option value="$PROJECT_DIR$/SerpoServer/Database/Models/spo_page.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer.NetCore/AdminContent/Static/js/http.js" />
+        <option value="$PROJECT_DIR$/SerpoServer.NetCore/AdminContent/views/pages.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c759f74e-e2e0-4b10-8879-11464392bcf9/console_1.sql" />
+        <option value="$PROJECT_DIR$/SerpoServer/Database/serposerver.sql" />
+        <option value="$PROJECT_DIR$/SerpoServer/Database/serposervermssql.sql" />
         <option value="$PROJECT_DIR$/SerpoServer/Api/CrudManager.cs" />
-        <option value="$PROJECT_DIR$/SerpoServer/Data/Models/spo_crud.cs" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/crud-worker.js" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/crud-data.html" />
+        <option value="$PROJECT_DIR$/SerpoServer/EmbeddedStatic/EmbeddedCache.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Resources.Designer.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/SerpoServer.csproj" />
+        <option value="$PROJECT_DIR$/SerpoServer/Errors/401.html" />
+        <option value="$PROJECT_DIR$/SerpoServer.NetCore/AdminContent/views/shared/layout.html" />
+        <option value="$PROJECT_DIR$/SerpoServer.NetCore/AdminContent/views/shared/site.html" />
+        <option value="$PROJECT_DIR$/SerpoServer/Admin/MainModule.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer.NetCore/AdminContent/views/site.html" />
+        <option value="$PROJECT_DIR$/SerpoServer/Admin/ToolsModule.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer.NetCore/AdminContent/Static/js/pages.js" />
+        <option value="$PROJECT_DIR$/SerpoServer/Lib/ViewLocationFinder.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Lib/StringViewLocationResult.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Lib/StringViewLocationFinder.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Bootstrap.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Routes/DynamicModule.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Lib/ViewInvoke.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Lib/StringViewEngineHost.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Api/RequestManager.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer/Lib/ViewEngineConverter.cs" />
         <option value="$PROJECT_DIR$/SerpoServer/Api/PageManager.cs" />
-        <option value="$PROJECT_DIR$/SerpoServer/config.json" />
-        <option value="$PROJECT_DIR$/SerpoServer/AdminViews/views/page-crud.html" />
+        <option value="$PROJECT_DIR$/SerpoServer/Intepreter/IIntepreter.cs" />
+        <option value="$PROJECT_DIR$/SerpoServer.NetCore/config.json" />
+        <option value="$PROJECT_DIR$/SerpoServer/Intepreter/Python.cs" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea/.idea.SerpoServer/.idea" />
+      </set>
+    </option>
+  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="173" />
-    <option name="y" value="63" />
-    <option name="width" value="1440" />
-    <option name="height" value="838" />
+  <component name="ProjectId" id="1Pbp7Hw3Z3qQOaFN3qvhEcjc5sy" />
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Python</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PyInterpreterInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator currentView="SolutionExplorer" proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="SolutionExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="SerpoServer (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <option name="show-file-system" value="false" />
-        <option name="show-all-items" value="false" />
-      </pane>
-      <pane id="Scratches" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="RiderNuGetCacheManager.AutoClear.global-packages" value="2" />
+    <property name="RiderNuGetCacheManager.AutoClear.http-cache" value="2" />
+    <property name="RiderNuGetCacheManager.AutoClear.packages-cache" value="2" />
+    <property name="RiderNuGetCacheManager.AutoClear.temp" value="1" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/eliashakansson/Library/Preferences/Rider2018.1/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/b7/0fd4f72d/Negotiator.cs" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
@@ -478,7 +865,7 @@
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.selected.package.stylelint" value="" />
-    <property name="settings.editor.selected.configurable" value="RiderNuGetOptionsPageId" />
+    <property name="settings.editor.selected.configurable" value="SolutionBuilderGeneralOptionsPageId" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -492,26 +879,37 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.Default">
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/SerpoServer/bin/Debug/netcoreapp2.0/SerpoServer.dll" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/SerpoServer.NetCore/bin/Debug/netcoreapp2.1/SerpoServer.NetCore.dll" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SerpoServer" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SerpoServer.NetCore" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <envs>
         <env name="ASPNETCORE_ENVIRONMENT" value="Development" />
-        <env name="ASPNETCORE_URLS" value="http://localhost:5050" />
+        <env name="ASPNETCORE_URLS" value="http://localhost:5000" />
       </envs>
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/SerpoServer/SerpoServer.csproj" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/SerpoServer.NetCore/SerpoServer.NetCore.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.0" />
-      <browser url="http://localhost:5000" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.1" />
+      <browser url="http://localhost:5000" with-js-debugger="true" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
     </configuration>
+    <configuration name="Default JavaScript" type="JavascriptDebugType" uri="http://127.0.0.1:5000/">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue=".NET Project.Default" />
+      <item itemvalue="JavaScript Debug.Default JavaScript" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -590,6 +988,51 @@
       <workItem from="1537714615461" duration="1381000" />
       <workItem from="1537897660910" duration="2251000" />
       <workItem from="1538068956492" duration="595000" />
+      <workItem from="1539447181035" duration="12715000" />
+      <workItem from="1539607679710" duration="2565000" />
+      <workItem from="1539664361332" duration="1239000" />
+      <workItem from="1539750883958" duration="8467000" />
+      <workItem from="1539837486994" duration="5680000" />
+      <workItem from="1540220493771" duration="3210000" />
+      <workItem from="1540239281761" duration="1207000" />
+      <workItem from="1540270543225" duration="2024000" />
+      <workItem from="1540356594321" duration="6744000" />
+      <workItem from="1540833637068" duration="19335000" />
+      <workItem from="1541090484025" duration="1608000" />
+      <workItem from="1541096010942" duration="5457000" />
+      <workItem from="1541137782976" duration="5303000" />
+      <workItem from="1541481789695" duration="12144000" />
+      <workItem from="1541573291283" duration="7909000" />
+      <workItem from="1541748967801" duration="2465000" />
+      <workItem from="1541780982122" duration="12586000" />
+      <workItem from="1542177125626" duration="2703000" />
+      <workItem from="1542261367512" duration="660000" />
+      <workItem from="1542263025744" duration="671000" />
+      <workItem from="1542396889334" duration="5597000" />
+      <workItem from="1542461865457" duration="4139000" />
+      <workItem from="1542807072632" duration="3781000" />
+      <workItem from="1542827214426" duration="141000" />
+      <workItem from="1542900689356" duration="1488000" />
+      <workItem from="1542955719834" duration="13268000" />
+      <workItem from="1543157506047" duration="328000" />
+      <workItem from="1543563030986" duration="2211000" />
+      <workItem from="1543699711250" duration="2763000" />
+      <workItem from="1543786703932" duration="166000" />
+      <workItem from="1544032233872" duration="163000" />
+      <workItem from="1544170091903" duration="4436000" />
+      <workItem from="1544507202660" duration="1050000" />
+      <workItem from="1544907163241" duration="182000" />
+      <workItem from="1545154570492" duration="701000" />
+      <workItem from="1545685287667" duration="264000" />
+      <workItem from="1546260770845" duration="268000" />
+      <workItem from="1548223662697" duration="5718000" />
+      <workItem from="1554997811355" duration="561000" />
+      <workItem from="1556212147270" duration="964000" />
+      <workItem from="1557246199150" duration="1736000" />
+      <workItem from="1557998282958" duration="1577000" />
+      <workItem from="1565530175702" duration="4225000" />
+      <workItem from="1566152494145" duration="338000" />
+      <workItem from="1573165280452" duration="650000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1527842037771</created>
@@ -640,86 +1083,37 @@
       <option name="project" value="LOCAL" />
       <updated>1537051832876</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="JS Changes">
+      <created>1539793596107</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1539793596107</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="389108000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <layout>
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32928476" />
-      <window_info anchor="right" id="Errors In Solution" order="3" weight="0.32991913" />
-      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
-      <window_info anchor="bottom" id="Unit Tests" order="10" weight="0.40890688" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39413682" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3273632" />
-      <window_info anchor="bottom" id="NuGet" order="7" weight="0.34008098" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49320653" visible="true" weight="0.33226836" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="4" weight="0.10915868" />
-      <window_info id="Structure" order="1" sideWeight="0.50286806" side_tool="true" weight="0.19527897" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3260606" />
-      <window_info id="Favorites" order="2" sideWeight="0.5067935" side_tool="true" weight="0.24494143" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32388663" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Build" order="14" weight="0.3213898" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.2994475" />
-    </layout>
-    <layout-to-restore>
-      <window_info anchor="bottom" id="NuGet" order="7" weight="0.34008098" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39413682" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49320653" visible="true" weight="0.24494143" />
-      <window_info id="Structure" order="1" sideWeight="0.50286806" side_tool="true" weight="0.19527897" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32928476" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Unit Tests" order="10" weight="0.40890688" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.2994475" />
-      <window_info anchor="right" id="Errors In Solution" order="3" weight="0.32991913" />
-      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32388663" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.2676617" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3273632" />
-      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" sideWeight="0.5067935" side_tool="true" visible="true" weight="0.24494143" />
-      <window_info anchor="bottom" id="Build" order="14" weight="0.3213898" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.10915868" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="UnityProjectConfiguration" isUnityUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
     <MESSAGE value="First" />
     <MESSAGE value="Second" />
     <MESSAGE value="JS Changes" />
@@ -728,687 +1122,142 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SerpoServer.Tests/UnitTest1.cs</url>
-          <line>28</line>
-          <properties documentPath="$PROJECT_DIR$/SerpoServer.Tests/UnitTest1.cs" initialLine="26">
+        <breakpoint suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="436" />
+        </breakpoint>
+        <line-breakpoint type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SerpoServer/Api/RequestManager.cs</url>
+          <line>124</line>
+          <properties documentPath="$PROJECT_DIR$/SerpoServer/Api/RequestManager.cs" initialLine="124">
             <startOffsets>
-              <startOffset value="836" />
+              <option value="4354" />
             </startOffsets>
             <endOffsets>
-              <endOffset value="857" />
+              <option value="4401" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="322" />
+          <option name="timeStamp" value="437" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SerpoServer/Api/PageManager.cs</url>
-          <line>101</line>
-          <properties documentPath="$PROJECT_DIR$/SerpoServer/Api/PageManager.cs" initialLine="92">
+          <url>file://$PROJECT_DIR$/SerpoServer/Lib/StringViewEngineHost.cs</url>
+          <line>13</line>
+          <properties documentPath="$PROJECT_DIR$/SerpoServer/Lib/StringViewEngineHost.cs" initialLine="13">
             <startOffsets>
-              <startOffset value="3704" />
+              <option value="323" />
             </startOffsets>
             <endOffsets>
-              <endOffset value="3775" />
+              <option value="343" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="352" />
+          <option name="timeStamp" value="439" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SerpoServer/Api/PageManager.cs</url>
-          <line>103</line>
-          <properties documentPath="$PROJECT_DIR$/SerpoServer/Api/PageManager.cs" initialLine="93">
+          <url>file://$PROJECT_DIR$/SerpoServer/Lib/StringViewEngineHost.cs</url>
+          <line>31</line>
+          <properties documentPath="$PROJECT_DIR$/SerpoServer/Lib/StringViewEngineHost.cs" initialLine="31">
             <startOffsets>
-              <startOffset value="3816" />
+              <option value="712" />
             </startOffsets>
             <endOffsets>
-              <endOffset value="3896" />
+              <option value="716" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="353" />
+          <option name="timeStamp" value="441" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/b6/25773ce2/NegotiatedResponse.cs</url>
-          <line>20</line>
-          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/b6/25773ce2/NegotiatedResponse.cs" initialLine="20">
-            <startOffsets>
-              <startOffset value="865" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="884" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="362" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/b6/25773ce2/NegotiatedResponse.cs</url>
-          <line>24</line>
-          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/b6/25773ce2/NegotiatedResponse.cs" initialLine="24">
-            <startOffsets>
-              <startOffset value="995" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="999" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="363" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SerpoServer/Api/PageManager.cs</url>
-          <line>59</line>
-          <properties documentPath="$PROJECT_DIR$/SerpoServer/Api/PageManager.cs" initialLine="54">
-            <startOffsets>
-              <startOffset value="2241" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="2270" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="371" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SerpoServer/Api/PageManager.cs</url>
-          <line>57</line>
-          <properties documentPath="$PROJECT_DIR$/SerpoServer/Api/PageManager.cs" initialLine="52">
-            <startOffsets>
-              <startOffset value="2178" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="2207" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="372" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SerpoServer.Tests/UnitTest1.cs</url>
-          <line>35</line>
-          <properties documentPath="$PROJECT_DIR$/SerpoServer.Tests/UnitTest1.cs" initialLine="35">
-            <startOffsets>
-              <startOffset value="983" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="1017" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="389" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs</url>
-          <line>24</line>
-          <properties documentPath="$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs" initialLine="18">
-            <startOffsets>
-              <startOffset value="500" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="537" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="390" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs</url>
-          <line>25</line>
-          <properties documentPath="$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs" initialLine="19">
-            <startOffsets>
-              <startOffset value="554" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="587" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="391" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SerpoServer/Routes/Admin/SettingsModule.cs</url>
-          <line>21</line>
-          <properties documentPath="$PROJECT_DIR$/SerpoServer/Routes/Admin/SettingsModule.cs" initialLine="21">
-            <startOffsets>
-              <startOffset value="736" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="773" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="392" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SerpoServer/Routes/Admin/SettingsModule.cs</url>
-          <line>20</line>
-          <properties documentPath="$PROJECT_DIR$/SerpoServer/Routes/Admin/SettingsModule.cs" initialLine="20">
-            <startOffsets>
-              <startOffset value="631" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="719" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="393" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs</url>
-          <line>42</line>
-          <properties documentPath="$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs" initialLine="36">
-            <startOffsets>
-              <startOffset value="1226" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="1242" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="394" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs</url>
-          <line>43</line>
-          <properties documentPath="$PROJECT_DIR$/SerpoServer/Api/SettingsManager.cs" initialLine="37">
-            <startOffsets>
-              <startOffset value="1255" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="1298" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="395" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SerpoServer/ConfigurationProvider.cs</url>
-          <line>27</line>
-          <properties documentPath="$PROJECT_DIR$/SerpoServer/ConfigurationProvider.cs" initialLine="27">
-            <startOffsets>
-              <startOffset value="-1" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="-1" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="396" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SerpoServer/ConfigurationProvider.cs</url>
-          <line>28</line>
-          <properties documentPath="$PROJECT_DIR$/SerpoServer/ConfigurationProvider.cs" initialLine="28">
-            <startOffsets>
-              <startOffset value="877" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="893" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="397" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SerpoServer/Api/StatManager.cs</url>
-          <line>28</line>
-          <properties documentPath="$PROJECT_DIR$/SerpoServer/Api/StatManager.cs" initialLine="28">
-            <startOffsets>
-              <startOffset value="752" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="854" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="412" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs</url>
-          <line>64</line>
-          <properties documentPath="$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs" initialLine="51">
-            <startOffsets>
-              <startOffset value="2336" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="2365" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="434" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs</url>
-          <line>63</line>
-          <properties documentPath="$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs" initialLine="50">
-            <startOffsets>
-              <startOffset value="2240" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="2316" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="435" />
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/4e/5c69a8c6/SuperSimpleViewEngine.cs</url>
+          <line>151</line>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/4e/5c69a8c6/SuperSimpleViewEngine.cs" initialLine="151" />
+          <option name="timeStamp" value="442" />
         </line-breakpoint>
       </breakpoints>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
       <default-breakpoints>
-        <breakpoint log-message="true" log-stack="true" type="DotNet Exception Breakpoints">
-          <properties />
-        </breakpoint>
+        <breakpoint enabled="true" log-message="true" log-stack="true" type="DotNet Exception Breakpoints" />
       </default-breakpoints>
-      <option name="time" value="441" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="DotNetProject">
-        <watch expression="RootPath" />
+        <watch expression="RootPath" language="C#" custom="RiderImportsList:" />
         <watch expression="$exception" />
         <watch expression="db" />
         <watch expression="_db" />
         <watch expression="_db" />
         <watch expression="CurrentUsers" />
         <watch expression="pages" />
+        <watch expression="this" />
+        <watch expression="global::Microsoft.Extensions.PlatformAbstractions.PlatformServices.Default.Application.ApplicationBasePath" />
+        <watch expression="path" />
+        <watch expression="assembly.GetManifestResourceNames()" />
+        <watch expression="code.ToString()" />
+        <watch expression="scope.Variables.Items[2]" />
       </configuration>
     </watches-manager>
   </component>
-  <component name="editorHistoryManager">
-    <entry file="das://c759f74e-e2e0-4b10-8879-11464392bcf9/schema/spoTest/table/spo_days">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Api/UserManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4AC8C765-EDCA-40FF-A6BA-C4318347A311/cb/4218a030/DefaultNancyBootstrapper.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="176" column="40" selection-start-line="176" selection-start-column="40" selection-end-line="176" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Bootstrap.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Api/SiteManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="71" selection-start-line="21" selection-start-column="71" selection-end-line="21" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Api/StatManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/modules/chart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="65" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/AccountModule.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/modules.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/modules.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/sortable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/SerpoServer.csproj">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/dom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/css/base.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/popper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/bootstrapmen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="12757" selection-start-line="15" selection-start-column="12757" selection-end-line="15" selection-end-column="12757" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_page.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Api/ServiceManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_modules.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/http.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="65" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Intepreter/PyRuntime.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/shared/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/modules/clock.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://c759f74e-e2e0-4b10-8879-11464392bcf9/schema/spoTest/table/spo_modules">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/MainModule.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Data/Connection.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="31" column="94" selection-start-line="31" selection-start-column="94" selection-end-line="31" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/jq.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="10364" selection-start-line="10364" selection-end-line="10364" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Data/Crud.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="86" selection-start-line="19" selection-start-column="86" selection-end-line="19" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/pages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="5" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Data/serposerver.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Data/serposervermssql.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1635">
-          <caret line="109" column="28" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Security/Identity.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="129" column="20" selection-start-line="129" selection-start-column="20" selection-end-line="129" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_days.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c759f74e-e2e0-4b10-8879-11464392bcf9/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="53" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/pages.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/ModulesModule.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Api/CrudManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Data/Models/spo_crud.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/cruds.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/Static/js/crud-worker.js" />
-    <entry file="das://c759f74e-e2e0-4b10-8879-11464392bcf9/schema/spoTest/table/spo_cruds">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Api/ModuleManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding>
-            <marker date="1537253266759" expanded="false" signature="6:104" ph="..." />
-            <marker date="1537253266759" expanded="true" signature="164:1473" ph="{...}" />
-            <marker date="1537253266759" expanded="true" signature="244:290" ph="{...}" />
-            <marker date="1537253266759" expanded="true" signature="649:777" ph="{...}" />
-            <marker date="1537253266759" expanded="true" signature="821:945" ph="{...}" />
-            <marker date="1537253266759" expanded="true" signature="1012:1315" ph="{...}" />
-            <marker date="1537253266759" expanded="true" signature="1066:1308" ph="{...}" />
-            <marker date="1537253266759" expanded="true" signature="1123:1198" ph="{...}" />
-            <marker date="1537253266759" expanded="true" signature="1219:1294" ph="{...}" />
-            <marker date="1537253266759" expanded="true" signature="1351:1458" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/page-editor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/crud-data.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Routes/Admin/PageModule.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-          <folding>
-            <marker date="1537633869735" expanded="false" signature="6:412" ph="..." />
-            <marker date="1537633869735" expanded="true" signature="492:3238" ph="{...}" />
-            <marker date="1537633869735" expanded="true" signature="580:3232" ph="{...}" />
-            <marker date="1537633869735" expanded="true" signature="692:1318" ph="{...}" />
-            <marker date="1537633869735" expanded="true" signature="797:947" ph="{...}" />
-            <marker date="1537633869735" expanded="true" signature="968:1287" ph="{...}" />
-            <marker date="1537633869735" expanded="true" signature="1355:1502" ph="{...}" />
-            <marker date="1537633869735" expanded="true" signature="1542:2097" ph="{...}" />
-            <marker date="1537633869735" expanded="true" signature="1606:1803" ph="{...}" />
-            <marker date="1537633869735" expanded="true" signature="1824:2072" ph="{...}" />
-            <marker date="1537633869735" expanded="true" signature="2138:2691" ph="{...}" />
-            <marker date="1537633869735" expanded="true" signature="2202:2383" ph="{...}" />
-            <marker date="1537633869735" expanded="true" signature="2404:2677" ph="{...}" />
-            <marker date="1537633869735" expanded="true" signature="2733:2884" ph="{...}" />
-            <marker date="1537633869735" expanded="true" signature="2917:3220" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Routes/DynamicModule.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
-          <folding>
-            <marker date="1531605264498" expanded="false" signature="6:166" ph="..." />
-            <marker date="1531605264498" expanded="true" signature="243:2393" ph="{...}" />
-            <marker date="1531605264498" expanded="true" signature="294:2387" ph="{...}" />
-            <marker date="1531605264498" expanded="true" signature="343:539" ph="{...}" />
-            <marker date="1531605264498" expanded="true" signature="568:766" ph="{...}" />
-            <marker date="1531605264498" expanded="true" signature="794:991" ph="{...}" />
-            <marker date="1531605264498" expanded="true" signature="1022:1222" ph="{...}" />
-            <marker date="1531605264498" expanded="true" signature="1256:1452" ph="{...}" />
-            <marker date="1531605264498" expanded="true" signature="1487:1685" ph="{...}" />
-            <marker date="1531605264498" expanded="true" signature="1719:1916" ph="{...}" />
-            <marker date="1531605264498" expanded="true" signature="1953:2153" ph="{...}" />
-            <marker date="1531605264498" expanded="true" signature="2194:2375" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Api/PageManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
-          <folding>
-            <marker date="1537722297981" expanded="false" signature="6:485" ph="..." />
-            <marker date="1537722297981" expanded="true" signature="543:4666" ph="{...}" />
-            <marker date="1537722297981" expanded="true" signature="817:899" ph="{...}" />
-            <marker date="1537722297981" expanded="true" signature="1980:2318" ph="{...}" />
-            <marker date="1537722297981" expanded="true" signature="2032:2125" ph="{...}" />
-            <marker date="1537722297981" expanded="true" signature="2364:2618" ph="{...}" />
-            <marker date="1537722297981" expanded="true" signature="2712:4664" ph="{...}" />
-            <marker date="1537722297981" expanded="true" signature="2936:3426" ph="{...}" />
-            <marker date="1537722297981" expanded="true" signature="3545:4218" ph="{...}" />
-            <marker date="1537722297981" expanded="true" signature="3665:3914" ph="{...}" />
-            <marker date="1537722297981" expanded="true" signature="3935:4019" ph="{...}" />
-            <marker date="1537722297981" expanded="true" signature="4235:4598" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding>
-            <marker date="1527930282835" expanded="false" signature="6:231" ph="..." />
-            <marker date="1527930282835" expanded="true" signature="253:728" ph="{...}" />
-            <marker date="1527930282835" expanded="true" signature="273:726" ph="{...}" />
-            <marker date="1527930282835" expanded="true" signature="326:396" ph="{...}" />
-            <marker date="1527930282835" expanded="true" signature="626:720" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="207" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SerpoServer/AdminViews/views/page-crud.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>RootPath</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>model[&quot;name&quot;]</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>model</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>model['name']</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>model.name</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>model.nme</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>((PythonDictionary)model)</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>((PythonDictionary)model</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>((PythonDictionary)model).get(&quot;)</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>model[&quot;name&quot;]¨</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
 </project>
