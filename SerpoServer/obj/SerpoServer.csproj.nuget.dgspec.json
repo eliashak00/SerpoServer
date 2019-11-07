@@ -1,0 +1,159 @@
+{
+  "format": 1,
+  "restore": {
+    "/Volumes/elias/Programmering/SerpoServer/SerpoServer/SerpoServer.csproj": {}
+  },
+  "projects": {
+    "/Volumes/elias/Programmering/SerpoServer/SerpoServer/SerpoServer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Volumes/elias/Programmering/SerpoServer/SerpoServer/SerpoServer.csproj",
+        "projectName": "SerpoServer",
+        "projectPath": "/Volumes/elias/Programmering/SerpoServer/SerpoServer/SerpoServer.csproj",
+        "packagesPath": "/Users/eliashakansson/.nuget/packages/",
+        "outputPath": "/Volumes/elias/Programmering/SerpoServer/SerpoServer/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/eliashakansson/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/nancyfx/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "DynamicLanguageRuntime": {
+              "target": "Package",
+              "version": "[1.2.2, )"
+            },
+            "IronPython": {
+              "target": "Package",
+              "version": "[2.7.9, )"
+            },
+            "LiteDB": {
+              "target": "Package",
+              "version": "[4.1.4, )"
+            },
+            "Microsoft.AspNetCore.Razor": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Razor.Runtime": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.Extensions.PlatformAbstractions": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.NETCore.Platforms": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Owin": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Microsoft.Owin.Hosting": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Mono.Posix.NETStandard": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.17, )"
+            },
+            "Nancy": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Nancy.Authentication.Stateless": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Nancy.Embedded": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Nancy.Owin": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Nancy.Validation.FluentValidation": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
+            "Owin": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "PetaPoco.Core.Compiled": {
+              "target": "Package",
+              "version": "[5.1.306, )"
+            },
+            "Quartz": {
+              "target": "Package",
+              "version": "[3.0.7, )"
+            },
+            "SixLabors.ImageSharp": {
+              "target": "Package",
+              "version": "[1.0.0-beta0005, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.0.601, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            },
+            "jose-jwt": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

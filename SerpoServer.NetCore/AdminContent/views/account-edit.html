@@ -1,0 +1,59 @@
+@Master['shared/layout.html'];
+
+@Section['js']users.js@EndSection
+<form>
+    @Section['sidebar']
+    <a onclick="save()" class="btn btn-primary btn-wide">Save Changes</a>
+    @EndSection
+    @Section['content']
+
+
+    <input class="form-control mb-1" id="userEmail" value="@Model.user_email" onchange="checkEmail()" required placeholder="User Email...">
+    <input class="form-control mb-1" id="userNick" value="@Model.user_nick" required placeholder="User Nickname...">
+    <input class="form-control mb-1" id="userPassword" required type="password" placeholder="User Password...">
+    <input class="form-control mb-1" id="userConfPassword" required type="password" placeholder="User Confirm Password...">
+
+    <select class="form-control mb-1" id="userRole" required>
+        <option>User Role</option>
+        <option value="0">Site Admin</option>
+        <option value="1">Global Admin</option>
+        <option value="2">Site User</option>
+    </select>
+
+
+    <script>
+        let role = '@Model.user_role';
+        if (role === 'SiteAdmin') {
+            $("#userRole").val(0);
+        }
+        if (role === 'GlobalAdmin') {
+            $("#userRole").val(1);
+        }
+        if (role === 'SiteUser') {
+            $("#userRole").val(2);
+        }
+
+        function checkEmail() {
+            let email = dom.getValue("userEmail");
+            http.get("/admin/email/" + email,
+                function(data, status) {
+                    if (status === 400) {
+                        dom.setError("Email does already exists!");
+                    }
+                });
+        }
+
+        function save() {
+            if (dom.getValue("userPassword") !== dom.getValue("userConfPassword")) {
+                dom.setError("Passwords are not equal!");
+            }
+            users.createoredit(;@
+            Model.user_id, dom.getValue("userNick"), dom.getValue("userEmail"), dom.getValue("userConfPassword"),
+                dom.getValue("userRole"),  );;
+            location.reload();
+        }
+    </script>
+
+
+    @EndSection
+</form>

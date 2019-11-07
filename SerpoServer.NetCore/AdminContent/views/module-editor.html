@@ -1,0 +1,36 @@
+@Master['shared/layout.html'];
+
+@Section['js']modules.js@EndSection
+<form>
+    @Section['sidebar']
+    <a onclick="save()" class="btn btn-primary btn-wide mb-2">Save Changes</a>
+    <input class="form-control mb-1" placeholder="Module name..." id="moduleName" value="@Model.module_name">
+    @EndSection
+    @Section['content']
+
+
+    <div class="mt-2">
+
+        <label>JavaScript:</label>
+        <div id="moduleJs">@Model.module_js</div>
+    </div>
+    <script>
+
+        let editor = ace.edit("moduleJs");
+        @
+        IfNot.Model.module_js;
+        editor.setValue("$('#area /* MODULE NAME */').html(`HTML GOES HERE`);");
+        @
+        EndIf;
+        editor.setTheme("ace/theme/monokai");
+        editor.session.setMode("ace/mode/javascript");
+
+        function save() {
+
+            modules.createoredit(;@
+            Model.module_id, dom.getValue('moduleName', editor.getValue()));;
+        }
+    </script>
+
+    @EndSection
+</form>

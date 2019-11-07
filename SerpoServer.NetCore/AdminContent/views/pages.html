@@ -1,0 +1,81 @@
+@Master['shared/layout.html'];
+
+@Section['js']cruds.js@EndSection
+
+@Section['js2']pages.js@EndSection
+
+
+@Section['sidebar']
+<a href="/admin/pages/createoredit" class="btn btn-primary btn-wide">Create new Page</a>
+<a href="/admin/pages/createoredit?type=crud" class="btn btn-primary btn-wide mt-2">Create new CRUD</a>
+<select onchange="showAfter()" id="showing" class="mt-2 form-control">
+    <option value="pages">Currently Showing: PAGES</option>
+    <option value="crud">Currently Showing: CRUDS</option>
+</select>
+@IfNot.ShowCruds
+<select onchange="sortAfter()" id="sorting" class="mt-2 form-control">
+    <option>Sort After</option>
+    <option value="get">GET</option>
+    <option value="post">POST</option>
+    <option value="put">PUT</option>
+    <option value="delete">DELETE</option>
+</select>
+@EndIf
+<script>
+    if (urlParams['sort']) {
+        dom.setValue("sorting", urlParams['sort']);
+    }
+    if (urlParams['show']) {
+        dom.setValue("showing", urlParams['show']);
+    }
+
+    function sortAfter() {
+        let after = dom.getValue('sorting');
+        window.location = "/admin/pages?sort=" + after;
+    }
+
+    function showAfter() {
+        let after = dom.getValue('showing');
+        window.location = "/admin/pages?show=" + after;
+    }
+</script>
+@EndSection
+
+@Section['content']
+
+<div class="row">
+
+    @Each.Cruds
+    <div class="col-md-5 m-1 card card-lg">
+        <div class="card-body">
+            <h5 class="card-subtitle mb-1 text-muted">@Current.crud_route</h5>
+            <h6 class="card-subtitle text-muted">@Current.crud_table</h6>
+            <a href="/admin/pages/createoredit?type=crud&page=@Current.crud_id" class="card-link">Edit</a>
+            @If.Current.crud_data
+            <a href="/admin/pages/data/@Current.crud_id" class="card-link">Show Data</a>
+            @EndIf
+            @If.Current.crud_haspsw
+            <a role="button" class="card-link" data-toggle="popover" title="Password is:" data-content="@Current.crud_password">Show Password</button>
+            @EndIf
+            <a onclick="cruds.remove(;@Current.crud_id);" href="#" class="card-link">Delete</a>
+
+        </div>
+    </div>
+    @EndEach
+
+    @Each.Pages
+    <div class="col-md-5 m-1 card card-lg">
+        <div class="card-body">
+            <h5 class="card-title">@Current.page_route</h5>
+
+            <h6 class="card-subtitle mb-2 text-muted">@Current.page_methods</h6>
+            <a href="/admin/pages/createoredit?page=@Current.page_id" class="card-link">Edit</a>
+            <a onclick="pages.remove(;@Current.page_id);" href="#" class="card-link">Delete</a>
+        </div>
+    </div>
+    @EndEach
+
+</div>
+
+
+@EndSection

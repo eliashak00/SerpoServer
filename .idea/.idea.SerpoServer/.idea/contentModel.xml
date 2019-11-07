@@ -8,7 +8,6 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="SerpoServer" t="IncludeRecursive">
-        <e p="._.DS_Store" t="Include" />
         <e p="Admin" t="Include">
           <e p="._.DS_Store" t="Include" />
           <e p="AccountModule.cs" t="Include" />
@@ -36,6 +35,14 @@
         <e p="Bootstrap.cs" t="Include" />
         <e p="ConfigurationProvider.cs" t="Include" />
         <e p="Conventions" t="Include" />
+        <e p="Data" t="Include">
+          <e p="Models" t="Include">
+            <e p="Enums" t="Include">
+              <e p="RequestMethods.cs~" t="Include" />
+              <e p="ResponseMethods.cs~" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Database" t="Include">
           <e p="._.DS_Store" t="Include" />
           <e p="CallDb.cs" t="Include" />
@@ -104,7 +111,6 @@
         <e p="OwinStart.cs" t="Include" />
         <e p="RootPathProvider.cs" t="Include" />
         <e p="Routes" t="Include">
-          <e p="._.DS_Store" t="Include" />
           <e p="DynamicModule.cs" t="Include" />
           <e p="InstallModule.cs" t="Include" />
         </e>
@@ -115,7 +121,6 @@
           <e p="ShedulerBase.cs" t="Include" />
         </e>
         <e p="Security" t="Include">
-          <e p="._.DS_Store" t="Include" />
           <e p="Hashing.cs" t="Include" />
           <e p="Identity.cs" t="Include" />
           <e p="JwtToken.cs" t="Include" />

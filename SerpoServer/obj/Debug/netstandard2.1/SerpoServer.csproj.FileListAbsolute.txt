@@ -1,0 +1,10 @@
+Z:\Programmering\SerpoServer\SerpoServer\obj\Debug\netstandard2.1\SerpoServer.csprojAssemblyReference.cache
+Z:\Programmering\SerpoServer\SerpoServer\obj\Debug\netstandard2.1\SerpoServer.Resources.resources
+Z:\Programmering\SerpoServer\SerpoServer\obj\Debug\netstandard2.1\SerpoServer.csproj.GenerateResource.cache
+Z:\Programmering\SerpoServer\SerpoServer\obj\Debug\netstandard2.1\SerpoServer.AssemblyInfoInputs.cache
+Z:\Programmering\SerpoServer\SerpoServer\obj\Debug\netstandard2.1\SerpoServer.AssemblyInfo.cs
+Z:\Programmering\SerpoServer\SerpoServer\bin\Debug\netstandard2.1\SerpoServer.deps.json
+Z:\Programmering\SerpoServer\SerpoServer\bin\Debug\netstandard2.1\SerpoServer.dll
+Z:\Programmering\SerpoServer\SerpoServer\bin\Debug\netstandard2.1\SerpoServer.pdb
+Z:\Programmering\SerpoServer\SerpoServer\obj\Debug\netstandard2.1\SerpoServer.dll
+Z:\Programmering\SerpoServer\SerpoServer\obj\Debug\netstandard2.1\SerpoServer.pdb

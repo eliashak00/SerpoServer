@@ -1,0 +1,16 @@
+{
+  "connstring": "Data Source=DESKTOP-DNTQ1C4\\SQLEXPRESS;Initial Catalog=serpoTest;Integrated Security=True",
+  "dbtype": "mysql",
+  "emailport": null,
+  "emailpsw": null,
+  "emailserver": null,
+  "emailuser": null,
+  "compress": false,
+  "cache": false,
+  "storagePath": null,
+  "imageHeight": 0,
+  "imageWidth": 0,
+  "telemetry": false,
+  "logoutHours": 0,
+  "redisConn": null
+}

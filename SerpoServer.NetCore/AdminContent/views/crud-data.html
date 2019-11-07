@@ -1,0 +1,76 @@
+@Master['shared/layout.html'];
+
+@Section['js']cruds.js@EndSection
+
+
+@Section['content']
+
+<table class="table">
+    <thead>
+    <tr>
+
+    </tr>
+    </thead>
+    <tbody>
+
+
+    </tbody>
+</table>
+
+<script>
+
+    let data = JSON.parse(`@Model.Data.crud_json
+`);
+
+    let struct = JSON.parse(`@Model.Data.crud_struct
+`);
+    for (let i = 0; i < struct.length; i++) {
+        let s = struct[i];
+        $("table thead tr").append(`<th scope="col">${s.Name}</th>`);
+    }
+    for (let i = 0; i < data.length; i++) {
+        let d = data[i];
+        let jsx = `<tr id="item${i}">`;
+        let waitlist = [];
+        for (let p in d) {
+            let struct = getStruct(p);
+            if (struct !== null) {
+                if (struct.Type == "id") {
+                    jsx += `<td>${d[p]}</td>`;
+                } else {
+                    waitlist.push(d[p]);
+                }
+            }
+
+        }
+        for (let j = 0; j < waitlist.length; j++) {
+            jsx += `<td>${waitlist[j]}</td>`;
+        }
+        jsx += `<td><button onclick="removeItem(${i})" class="ml-4 btn btn-danger">X</button>
+<button onclick="editItem(${i})" class="ml-4 btn btn-warning"><span class="fa fa-pen"> </span></button></td></tr>`;
+        $("table tbody").append(jsx);
+
+    }
+
+    function removeItem(id) {
+        delete data[id];
+        $("#item" + id).remove();
+    }
+
+    function editItem(id) {
+
+    }
+
+    function getStruct(p) {
+        for (let i = 0; i < struct.length; i++) {
+            let s = struct[i];
+            if (s.Name == p) {
+                return s;
+
+            }
+
+        }
+        return null;
+    }
+</script>
+@EndSection
